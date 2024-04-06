@@ -46,19 +46,16 @@ def run_search_trial(img_path: str,
 	answer = '-1' # -1 if model failed to provide a valid response.
 	i = 0 # Counter to keep track of the number of attempts. Limit to n_attempts.
 	while answer == '-1' and i < n_attempts:
-		try:
-			# Get the vision model response.
-			trial_response = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=task_payload)
-			trial_response = trial_response.json()['choices'][0]['message']['content']
+		# Get the vision model response.
+		trial_response = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=task_payload)
+		trial_response = trial_response.json()['choices'][0]['message']['content']
 
-			# Make sure the vision model response is valid.
-			trial_parse_prompt = parse_prompt + '\n' + trial_response
-			parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
-			answer = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=parse_payload)
-			answer = answer.json()['choices'][0]['message']['content']
-		except KeyError as e:
-			print('    Failed on attempt: ', i, ' with error: ', e)
-			i += 1
+		# Make sure the vision model response is valid.
+		trial_parse_prompt = parse_prompt + '\n' + trial_response
+		parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
+		answer = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=parse_payload)
+		answer = answer.json()['choices'][0]['message']['content']
+		i += 1
 	return answer, trial_response
 
 
@@ -98,10 +95,15 @@ def main():
 	}
 	# Run all the trials.
 	for i, trial in tqdm(results_df.iterrows()):
+		# Only run the trial if it hasn't been run before.
 		if type(trial.response)!=str:
-			answer, trial_response = run_search_trial(trial.path, headers, task_payload, parse_payload, parse_prompt)
-			results_df.loc[i, 'response'] = trial_response
-			results_df.loc[i, 'answer'] = answer
+			try:
+				answer, trial_response = run_search_trial(trial.path, headers, task_payload, parse_payload, parse_prompt)
+				results_df.loc[i, 'response'] = trial_response
+				results_df.loc[i, 'answer'] = answer
+			except Exception as e:
+				print(f'Failed on trial {i} with error: {e}')
+				break # Stop the loop if there is an error and save the progress.
 
 	# Save the results.
 	results_df.to_csv(f'output/{args.task}_results.csv', index=False)
