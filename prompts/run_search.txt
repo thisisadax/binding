@@ -1,0 +1,8 @@
+The following image depicts a classic serial search task from cognitive psychology.
+The image contains several objects with two different shape types (e.g. hashtags and triangles) and two different colors (e.g. red and blue). 
+Your task is to determine if all objects of the same shape type also have the same color. 
+If all objects of the same shape have the same color, respond with "0", and if some objects of the same shape type have different colors, respond with "1".
+For example, if all of the hashtags are red and all of the triangles are blue, then all of the shapes of the same type have the same color, so you should respond with “0”. 
+On the other hand, if some of the hashtags are red and some of the triangles are blue, you should respond with “1”.
+The object types aren't limited to hashtags and triangles, and the colors aren't limited to red and blue.
+Start your answer by describing the objects that you see in the image, and then provide your answer.

@@ -1,0 +1,14 @@
+{
+    "model": "gpt-4",
+    "messages": [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": null
+                }]
+        }
+    ],
+    "max_tokens": 10
+}

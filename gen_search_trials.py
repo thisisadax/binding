@@ -97,6 +97,9 @@ def main():
 	# Create directory for serial search exists.
 	os.makedirs('./data/serial_search', exist_ok=True)
 
+	# Initialize results DataFrame for storing task performance later.
+	results_df = pd.DataFrame(columns=['path', 'incongruent', 'n_shapes', 'response', 'answer'])
+
 	# Generate the trials.
 	for n in tqdm(args.n_shapes):
 		for i in range(args.n_trials):
@@ -116,9 +119,30 @@ def main():
 			rgb2 = rgb_values[rgb2_ind]
 			# Generate the congruent and incongruent trials
 			congruent_trial, incongruent_trial = make_search_trials(shape1_img, shape2_img, rgb1, rgb2, n_shapes=n, size=24)
-			# Save the trials
-			congruent_trial.save(f'./data/serial_search/congruent-{n}_{i}.png')
-			incongruent_trial.save(f'./data/serial_search/incongruent-{n}_{i}.png')
+			# Save the trials and their metadata.
+			congruent_trial_path = f'./data/serial_search/congruent-{n}_{i}.png'
+			congruent_trial.save(congruent_trial_path)
+			results_df = results_df._append({
+				'path': congruent_trial_path,
+				'incongruent': False,
+				'n_shapes': n,
+				'response': None,
+				'answer': None
+			}, ignore_index=True)
+	
+			# Add the incongruent trial as a row to the DataFrame
+			incongruent_trial_path = f'./data/serial_search/incongruent-{n}_{i}.png'
+			incongruent_trial.save(incongruent_trial_path)
+			results_df = results_df._append({
+				'path': incongruent_trial_path,
+				'incongruent': True,
+				'n_shapes': n,
+				'response': None,
+				'answer': None
+			}, ignore_index=True)
+
+	# Save results DataFrame to CSV
+	results_df.to_csv('./output/search_results.csv', index=False)
 
 if __name__ == '__main__':
 	main()

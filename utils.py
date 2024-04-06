@@ -77,3 +77,14 @@ def resize(image: np.ndarray, size: int = 12) -> np.ndarray:
     image = Image.fromarray(image_array.astype('uint8'), 'RGB')
     resized_image = image.resize((size, size), Image.LANCZOS)
     return np.transpose(np.array(resized_image), (2, 0, 1))
+
+
+def encode_image(image_path):
+    """
+    Encode an image as a base64 string.
+
+    Parameters:
+    image_path (str): The path to the image.
+    """
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
