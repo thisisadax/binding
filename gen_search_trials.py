@@ -77,7 +77,7 @@ def parse_args() -> argparse.Namespace:
 	Returns:
 	argparse.Namespace: The parsed command line arguments.
 	"""
-	parser = argparse.ArgumentParser(description="Generate search trials.")
+	parser = argparse.ArgumentParser(description='Generate serial search trials.')
 	parser.add_argument('--n_shapes', type=int, nargs='+', default=[4, 8, 12, 16, 32], help='Number of stimuli to present.')
 	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per condition.')
 	parser.add_argument('--colors', type=str, nargs='+', default=['red', 'green', 'blue'], help='Colors to use for the shapes.')
