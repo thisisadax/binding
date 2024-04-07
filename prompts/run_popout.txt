@@ -1,0 +1,4 @@
+In the provided image, you will see multiple shapes. 
+Your task is to determine if there is a shape that stands out based on its color, known as an "oddball." 
+If you spot an oddball, respond with the word "different." If all shapes are identical in color, respond with the word "same." 
+Please provide your answer as a single word, "same" or "different," without any further explanation.
