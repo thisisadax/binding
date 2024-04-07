@@ -12,7 +12,11 @@ from tqdm import tqdm
 from utils import *
 
 
-def make_popout_trials(target_img: np.array, distractor_img: np.array, rgb: tuple, n_shapes: int = 10, size: int = 20) -> tuple:
+def make_popout_trials(target_img: np.array, 
+					   distractor_img: np.array, 
+					   rgb: tuple, 
+					   n_shapes: int = 10, 
+					   size: int = 20) -> tuple:
 	"""
 	Generate two trials. One trial contains a popout stimulus, the other does not.
 
@@ -31,12 +35,15 @@ def make_popout_trials(target_img: np.array, distractor_img: np.array, rgb: tupl
 	opposite_rgb = 255 - rgb  # Calculate the opposite color
 	rgb_distractor = color_shape(distractor_img.astype(np.float32), opposite_rgb)
 	small_distractor = resize(rgb_distractor, size=size)
-	popout_trial = place_shapes(small_target, small_distractor, n_shapes=n_shapes)
-	uniform_trial = place_shapes(small_target, None, n_shapes=n_shapes)
+	popout_trial = place_shapes(small_target, small_distractor, n_shapes=n_shapes, img_size=size)
+	uniform_trial = place_shapes(small_target, None, n_shapes=n_shapes, img_size=size)
 	return uniform_trial, popout_trial
 
 
-def place_shapes(source_shape: np.array, oddball_shape: np.array, n_shapes: int = 10) -> Image:
+def place_shapes(source_shape: np.array, 
+				 oddball_shape: np.array, 
+				 n_shapes: int = 10, 
+				 img_size: int = 20) -> Image:
 	"""
 	Places shapes on a canvas.
 
@@ -54,9 +61,9 @@ def place_shapes(source_shape: np.array, oddball_shape: np.array, n_shapes: int 
 	positions = np.zeros([n_shapes, 2])
 	for i in range(n_shapes):
 		if i==0 and oddball_shape is not None:
-			positions = paste_shape(oddball_shape, positions, canvas_img, i)
+			positions = paste_shape(oddball_shape, positions, canvas_img, i, img_size=img_size)
 			continue
-		positions = paste_shape(source_shape, positions, canvas_img, i)
+		positions = paste_shape(source_shape, positions, canvas_img, i, img_size=img_size)
 	return canvas_img
 
 def parse_args() -> argparse.Namespace:
@@ -69,7 +76,8 @@ def parse_args() -> argparse.Namespace:
 	parser = argparse.ArgumentParser(description='Generate serial search trials.')
 	parser.add_argument('--n_shapes', type=int, nargs='+', default=[5,10,15,20,25,30,35,40,45,50], help='Number of stimuli to present.')
 	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
-	parser.add_argument('--size', type=int, default=12, help='Size of the shapes to paste in the image.')
+	parser.add_argument('--size', type=int, default=24, help='Size of the shapes to paste in the image.')
+	parser.add_argument('--colors', type=str, nargs='+', default=None, help='Colors to use for the shapes.')
 	return parser.parse_args()
 
 
@@ -77,12 +85,17 @@ def main():
 	# Parse command line arguments.
 	args = parse_args()
 
-	# Load the all shapes and valid colors.
+	# Load the all shapes and set up the RGB colors to use for generation.
 	imgs = np.load('imgs.npy')
-	rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
-
+	if args.colors is None:
+		cmap = mpl.colormaps['gist_rainbow']
+		colors = cmap(np.linspace(0, 1, 100))
+		rgb_values = np.array([rgba[:3]*255 for rgba in colors])
+	else:
+		rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
+	
 	# Create directory for serial search exists.
-	os.makedirs('.data/popout', exist_ok=True)
+	os.makedirs('data/popout', exist_ok=True)
 
 	# Initialize results DataFrame for storing task performance later.
 	results_df = pd.DataFrame(columns=['path', 'popout', 'n_shapes', 'response', 'answer'])
@@ -97,7 +110,7 @@ def main():
 			rgb = rgb_values[np.random.choice(rgb_values.shape[0], size=1)[0]]
 			uniform_trial, popout_trial = make_popout_trials(shape1_img, shape2_img, rgb, n_shapes=n, size=args.size)
 			# Save the trials and their metadata.
-			uniform_trial_path = f'./data/popout/uniform-{n}_{i}.png'
+			uniform_trial_path = f'data/popout/uniform-{n}_{i}.png'
 			uniform_trial.save(uniform_trial_path)
 			results_df = results_df._append({
 				'path': uniform_trial_path,
@@ -108,7 +121,7 @@ def main():
 			}, ignore_index=True)
 	
 			# Add the incongruent trial as a row to the DataFrame
-			popout_trial_path = f'./data/popout/popout-{n}_{i}.png'
+			popout_trial_path = f'data/popout/popout-{n}_{i}.png'
 			popout_trial.save(popout_trial_path)
 			results_df = results_df._append({
 				'path': popout_trial_path,
@@ -119,8 +132,7 @@ def main():
 			}, ignore_index=True)
 
 	# Save results DataFrame to CSV
-	results_df.to_csv('./output/popout_results.csv', index=False)
+	results_df.to_csv('output/popout_results.csv', index=False)
 
 if __name__ == '__main__':
 	main()
-
