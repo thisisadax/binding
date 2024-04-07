@@ -1,123 +1,126 @@
-import base64
+import argparse
 from glob import glob
 import os
-import re
-import requests
 
 import matplotlib as mpl
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 import numpy as np
-from openai import OpenAI
 import pandas as pd
-import plotly.express as px
 from PIL import Image
-#from tenacity import retry, stop_after_attempt, wait_random_exponential
 from tqdm import tqdm
 
-# Store all 100 unicode characters.
-imgs = np.load('imgs.npy')
-''' Plot a subset of the images
-fig, axes = plt.subplots(8, 8, figsize=(7, 7), sharex=True, sharey=True, tight_layout=True)
-for i, ax in enumerate(axes.flat):
-    ax.imshow(imgs[i], cmap='gray')
-    ax.axis('off')
-'''
+from utils import *
 
-def make_trial(target_img, distractor_img, rgb, n_shapes=10, size=20):
-    rgb_target = color_shape(target_img.astype(np.float32), rgb)
-    small_target = resize(rgb_target, size=size)
-    
-    opposite_rgb = 255 - rgb  # Calculate the opposite color
-    rgb_distractor = color_shape(distractor_img.astype(np.float32), opposite_rgb)
-    small_distractor = resize(rgb_distractor, size=size)
-    
-    oddball_trial = place_shapes(small_target, small_distractor, n_shapes=n_shapes)
-    same_trial = place_shapes(small_target, None, n_shapes=n_shapes)
 
-    return same_trial, oddball_trial
-def place_shapes(source_shape, oddball_shape, n_shapes=10):
-    canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
-    canvas = np.transpose(canvas, (1, 2, 0))
-    canvas_img = Image.fromarray(canvas)
-    
-    positions = np.zeros([n_shapes, 2])
-    if oddball_shape is not None:
-        positions = paste_shape(oddball_shape, positions, canvas_img, 0)
-        start_index = 1
-    else:
-        start_index = 0
-    
-    for i in range(start_index, n_shapes):
-        positions = paste_shape(source_shape, positions, canvas_img, i)
+def make_popout_trials(target_img: np.array, distractor_img: np.array, rgb: tuple, n_shapes: int = 10, size: int = 20) -> tuple:
+	"""
+	Generate two trials. One trial contains a popout stimulus, the other does not.
 
-    return canvas_img
+	Args:
+		target_img (np.array): The target image.
+		distractor_img (np.array): The distractor image (if None, there is no popout stimulus).
+		rgb (tuple): The RGB color for the target image.
+		n_shapes (int, optional): The number of shapes. Defaults to 10.
+		size (int, optional): The size of the shapes. Defaults to 20.
 
-# Helper function to paste images and add labels
-def paste_shape(shape, positions, canvas_img, i, img_size = 20):
-    #print(f"Shape: {shape.shape}, Positions: {positions.shape}")  # Debug print statement
-    img = Image.fromarray(np.transpose(shape, (1, 2, 0)))
-    position = np.array(np.random.randint(12, 244, size=2)).reshape(1,-1)
-    while np.any(np.linalg.norm(positions-position, axis=1) < img_size):
-        position = np.array(np.random.randint(img_size, 256-img_size, size=2)).reshape(1,-1)
-    canvas_img.paste(img, tuple(position.squeeze()))
-    positions[i] = position
-    return positions
+	Returns:
+		tuple: A tuple containing the non-popout and the popout trial.
+	"""
+	rgb_target = color_shape(target_img.astype(np.float32), rgb)
+	small_target = resize(rgb_target, size=size)
+	opposite_rgb = 255 - rgb  # Calculate the opposite color
+	rgb_distractor = color_shape(distractor_img.astype(np.float32), opposite_rgb)
+	small_distractor = resize(rgb_distractor, size=size)
+	popout_trial = place_shapes(small_target, small_distractor, n_shapes=n_shapes)
+	uniform_trial = place_shapes(small_target, None, n_shapes=n_shapes)
+	return uniform_trial, popout_trial
 
-def color_shape(img, rgb):
-    img /= img.max()  # normalize image
-    rgb = rgb.astype(np.float32)  # Ensure rgb is a floating-point array before division
-    rgb /= rgb.max()  # normalize rgb code
-    colored_img = (1 - img) * rgb.reshape((3, 1, 1))
-    colored_img += img
-    return (colored_img * 255).astype(np.uint8)
 
-def resize(image, size=12):
-    image_array = np.transpose(image, (1, 2, 0))
-    image = Image.fromarray(image_array.astype('uint8'), 'RGB')
-    resized_image = image.resize((size, size), Image.LANCZOS)
-    return np.transpose(np.array(resized_image), (2, 0, 1))
+def place_shapes(source_shape: np.array, oddball_shape: np.array, n_shapes: int = 10) -> Image:
+	"""
+	Places shapes on a canvas.
 
-# Generate all possible shapes.
-cmap = mpl.colormaps['gist_rainbow']
-colors = cmap(np.linspace(0, 1, 100)) #colors = ['red', 'green', 'blue', 'purple']
-rgb_values = np.array([rgba[:3]*255 for rgba in colors]) #rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
-shape_inds = np.arange(imgs.shape[0])
-n_trials = 5
-n_shapes = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+	Args:
+		source_shape (np.array): The source shape.
+		oddball_shape (np.array): The oddball shape.
+		n_shapes (int, optional): The number of shapes. Defaults to 10.
 
-for n in tqdm(n_shapes): 
-    for i in range(n_trials):
-        target_img = imgs[37]  # Circle index
-        distractor_img = imgs[1]  # Diamond index
-        #shape_inds = np.random.choice(imgs.shape[0], size=2, replace=False)
-        #target_img = imgs[shape_inds[0]]  # Circle index
-        #distractor_img = imgs[shape_inds[1]]  # Diamond index
-        rgb = rgb_values[np.random.choice(rgb_values.shape[0], size=1)[0]]
-        same_trial, oddball_trial = make_trial(target_img, distractor_img, rgb, n_shapes=n)
-        same_trial.save(f'./imgs/same-{n}_{i}.png')
-        oddball_trial.save(f'./imgs/diff-{n}_{i}.png')
+	Returns:
+		Image: The canvas with the shapes placed on it.
+	"""
+	canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
+	canvas = np.transpose(canvas, (1, 2, 0))
+	canvas_img = Image.fromarray(canvas)
+	positions = np.zeros([n_shapes, 2])
+	for i in range(n_shapes):
+		if i==0 and oddball_shape is not None:
+			positions = paste_shape(oddball_shape, positions, canvas_img, i)
+			continue
+		positions = paste_shape(source_shape, positions, canvas_img, i)
+	return canvas_img
 
-# Specify the directory where images are saved
-image_directory = '.data/popout'
-# Use glob to get all the .png files in that directory
-image_paths = glob(os.path.join(image_directory, '*.png')) # only get 100 trial images.
+def parse_args() -> argparse.Namespace:
+	"""
+	Parse command line arguments.
 
-# Define a function to display a grid of images
-def display_images(image_paths, rows=2, cols=5):
-    fig, ax = plt.subplots(rows, cols, figsize=(15, 6))
-    for i, ax in enumerate(ax.flatten()):
-        if i < len(image_paths):
-            img = Image.open(image_paths[i])
-            ax.imshow(img)
-            ax.axis('off')
-        else:
-            ax.axis('off')
-    plt.tight_layout()
-    plt.show()
+	Returns:
+	argparse.Namespace: The parsed command line arguments.
+	"""
+	parser = argparse.ArgumentParser(description='Generate serial search trials.')
+	parser.add_argument('--n_shapes', type=int, nargs='+', default=[5,10,15,20,25,30,35,40,45,50], help='Number of stimuli to present.')
+	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
+	parser.add_argument('--size', type=int, default=12, help='Size of the shapes to paste in the image.')
+	return parser.parse_args()
 
-# Display the first 10 images in the directory
-#display_images(image_paths, rows=2, cols=5)
 
+def main():
+	# Parse command line arguments.
+	args = parse_args()
+
+	# Load the all shapes and valid colors.
+	imgs = np.load('imgs.npy')
+	rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
+
+	# Create directory for serial search exists.
+	os.makedirs('.data/popout', exist_ok=True)
+
+	# Initialize results DataFrame for storing task performance later.
+	results_df = pd.DataFrame(columns=['path', 'popout', 'n_shapes', 'response', 'answer'])
+
+	# Generate the trials.
+	for n in tqdm(args.n_shapes):
+		for i in range(args.n_trials):
+			# Get the images for the selected shapes
+			shape1_img = imgs[37] # Circle index
+			shape2_img = imgs[1]  # Diamond index
+			# Generate the congruent and incongruent trials
+			rgb = rgb_values[np.random.choice(rgb_values.shape[0], size=1)[0]]
+			uniform_trial, popout_trial = make_popout_trials(shape1_img, shape2_img, rgb, n_shapes=n, size=args.size)
+			# Save the trials and their metadata.
+			uniform_trial_path = f'./data/popout/uniform-{n}_{i}.png'
+			uniform_trial.save(uniform_trial_path)
+			results_df = results_df._append({
+				'path': uniform_trial_path,
+				'popout': False,
+				'n_shapes': n,
+				'response': None,
+				'answer': None
+			}, ignore_index=True)
+	
+			# Add the incongruent trial as a row to the DataFrame
+			popout_trial_path = f'./data/popout/popout-{n}_{i}.png'
+			popout_trial.save(popout_trial_path)
+			results_df = results_df._append({
+				'path': popout_trial_path,
+				'incongruent': True,
+				'n_shapes': n,
+				'response': None,
+				'answer': None
+			}, ignore_index=True)
+
+	# Save results DataFrame to CSV
+	results_df.to_csv('./output/popout_results.csv', index=False)
+
+if __name__ == '__main__':
+	main()
 

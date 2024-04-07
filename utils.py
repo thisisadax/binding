@@ -56,6 +56,7 @@ def color_shape(img: np.ndarray, rgb: np.ndarray) -> np.ndarray:
     np.ndarray: The colored image.
     """
     img /= img.max()  # normalize image
+    rgb = rgb.astype(np.float32)  # Ensure rgb is a floating-point array before division
     rgb /= rgb.max()  # normalize rgb code
     colored_img = (1-img) * rgb.reshape((3,1,1))
     colored_img += img

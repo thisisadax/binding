@@ -79,7 +79,7 @@ def parse_args() -> argparse.Namespace:
 	"""
 	parser = argparse.ArgumentParser(description='Generate serial search trials.')
 	parser.add_argument('--n_shapes', type=int, nargs='+', default=[4, 8, 12, 16, 32], help='Number of stimuli to present.')
-	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per condition.')
+	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
 	parser.add_argument('--colors', type=str, nargs='+', default=['red', 'green', 'blue'], help='Colors to use for the shapes.')
 	return parser.parse_args()
 
