@@ -16,7 +16,7 @@ from openai import OpenAI
 from utils import encode_image
 
 # NOTE (declan): Is it worth it to add exponential backoff with tenacity here?
-def run_search_trial(img_path: str, 
+def run_trial(img_path: str, 
 					 headers: Dict[str, str], 
 					 task_payload: Dict, 
 					 parse_payload: Dict,
@@ -96,9 +96,9 @@ def main():
 	# Run all the trials.
 	for i, trial in tqdm(results_df.iterrows()):
 		# Only run the trial if it hasn't been run before.
-		if type(trial.response)!=str:
+		if len(trial.response) != 0:
 			try:
-				answer, trial_response = run_search_trial(trial.path, headers, task_payload, parse_payload, parse_prompt)
+				answer, trial_response = run_trial(trial.path, headers, task_payload, parse_payload, parse_prompt)
 				results_df.loc[i, 'response'] = trial_response
 				results_df.loc[i, 'answer'] = answer
 			except Exception as e:

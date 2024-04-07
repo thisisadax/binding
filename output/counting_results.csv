@@ -1,0 +1,31 @@
+path,n_objects,properties,response,answer
+data/clevr/images/CLEVR_new_000632.png,6,"[{'shape': 'cylinder', 'color': 'purple'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'brown'}, {'shape': 'cube', 'color': 'yellow'}, {'shape': 'cylinder', 'color': 'brown'}, {'shape': 'sphere', 'color': 'purple'}]","In the image, there are five distinct objects, each with a different color and shape:
+
+1. A yellow cube
+2. A brown cylinder
+3. A purple cylinder
+4. A blue sphere
+5. A purple sphere
+
+Counting each of these objects, there is a total of:
+
+5 objects in the image.",5
+data/clevr/images/CLEVR_new_000610.png,6,"[{'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'cylinder', 'color': 'green'}, {'shape': 'sphere', 'color': 'yellow'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000612.png,6,"[{'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'blue'}, {'shape': 'cylinder', 'color': 'red'}, {'shape': 'sphere', 'color': 'green'}, {'shape': 'sphere', 'color': 'purple'}, {'shape': 'sphere', 'color': 'brown'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000616.png,6,"[{'shape': 'cylinder', 'color': 'purple'}, {'shape': 'sphere', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cube', 'color': 'brown'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'red'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000641.png,6,"[{'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'sphere', 'color': 'purple'}, {'shape': 'cube', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'blue'}, {'shape': 'cylinder', 'color': 'gray'}, {'shape': 'cube', 'color': 'yellow'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000644.png,6,"[{'shape': 'sphere', 'color': 'purple'}, {'shape': 'sphere', 'color': 'brown'}, {'shape': 'cylinder', 'color': 'brown'}, {'shape': 'sphere', 'color': 'gray'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cube', 'color': 'blue'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000604.png,6,"[{'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'brown'}, {'shape': 'cube', 'color': 'green'}, {'shape': 'sphere', 'color': 'purple'}, {'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'blue'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000636.png,6,"[{'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'yellow'}, {'shape': 'cube', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'red'}, {'shape': 'cube', 'color': 'green'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000626.png,6,"[{'shape': 'cylinder', 'color': 'brown'}, {'shape': 'cylinder', 'color': 'blue'}, {'shape': 'sphere', 'color': 'gray'}, {'shape': 'sphere', 'color': 'blue'}, {'shape': 'cylinder', 'color': 'blue'}, {'shape': 'sphere', 'color': 'cyan'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000621.png,6,"[{'shape': 'sphere', 'color': 'cyan'}, {'shape': 'sphere', 'color': 'brown'}, {'shape': 'cube', 'color': 'brown'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'sphere', 'color': 'yellow'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000630.png,6,"[{'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cube', 'color': 'blue'}, {'shape': 'cube', 'color': 'purple'}, {'shape': 'cylinder', 'color': 'purple'}, {'shape': 'sphere', 'color': 'cyan'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000633.png,6,"[{'shape': 'cube', 'color': 'green'}, {'shape': 'cylinder', 'color': 'red'}, {'shape': 'sphere', 'color': 'brown'}, {'shape': 'cube', 'color': 'brown'}, {'shape': 'sphere', 'color': 'blue'}, {'shape': 'cylinder', 'color': 'blue'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000614.png,6,"[{'shape': 'sphere', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'green'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'sphere', 'color': 'purple'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000620.png,6,"[{'shape': 'cube', 'color': 'blue'}, {'shape': 'cube', 'color': 'red'}, {'shape': 'sphere', 'color': 'green'}, {'shape': 'sphere', 'color': 'gray'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'red'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000602.png,6,"[{'shape': 'sphere', 'color': 'gray'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cube', 'color': 'green'}, {'shape': 'cylinder', 'color': 'red'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'sphere', 'color': 'blue'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000645.png,6,"[{'shape': 'cube', 'color': 'green'}, {'shape': 'cylinder', 'color': 'purple'}, {'shape': 'sphere', 'color': 'red'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cube', 'color': 'yellow'}, {'shape': 'cube', 'color': 'cyan'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000639.png,6,"[{'shape': 'sphere', 'color': 'yellow'}, {'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'yellow'}, {'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'cube', 'color': 'yellow'}, {'shape': 'cube', 'color': 'red'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000646.png,6,"[{'shape': 'sphere', 'color': 'blue'}, {'shape': 'sphere', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'gray'}, {'shape': 'cube', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'blue'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000638.png,6,"[{'shape': 'cube', 'color': 'cyan'}, {'shape': 'cube', 'color': 'red'}, {'shape': 'sphere', 'color': 'gray'}, {'shape': 'cylinder', 'color': 'brown'}, {'shape': 'cylinder', 'color': 'blue'}, {'shape': 'sphere', 'color': 'brown'}]",0.0,0.0
+data/clevr/images/CLEVR_new_000608.png,6,"[{'shape': 'sphere', 'color': 'green'}, {'shape': 'cylinder', 'color': 'yellow'}, {'shape': 'sphere', 'color': 'brown'}, {'shape': 'cube', 'color': 'cyan'}, {'shape': 'cylinder', 'color': 'purple'}, {'shape': 'cube', 'color': 'gray'}]",0.0,0.0
