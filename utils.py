@@ -44,13 +44,14 @@ def paste_shape(shape: np.ndarray,
     return positions
 
 
-def color_shape(img: np.ndarray, rgb: np.ndarray) -> np.ndarray:
+def color_shape(img: np.ndarray, rgb: np.ndarray, bg_color: float = 1) -> np.ndarray:
     """
     Color a grayscale image with a given RGB code.
 
     Parameters:
     img (np.ndarray): The grayscale image.
     rgb (np.ndarray): The RGB code.
+    bg_color (float): The background color. Default is 1.
 
     Returns:
     np.ndarray: The colored image.
@@ -59,7 +60,7 @@ def color_shape(img: np.ndarray, rgb: np.ndarray) -> np.ndarray:
     rgb = rgb.astype(np.float32)  # Ensure rgb is a floating-point array before division
     rgb /= rgb.max()  # normalize rgb code
     colored_img = (1-img) * rgb.reshape((3,1,1))
-    colored_img += img
+    colored_img += img * bg_color
     return (colored_img * 255).astype(np.uint8)
 
 

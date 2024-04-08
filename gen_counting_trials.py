@@ -1,99 +1,96 @@
-import base64
-from glob import glob
+import argparse
 import os
-import re
-import requests
 
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 import numpy as np
-from openai import OpenAI
-import pandas as pd
-import plotly.express as px
 from PIL import Image
-#from tenacity import retry, stop_after_attempt, wait_random_exponential
-from tqdm import tqdm
 
-# Store all 100 unicode characters.
-imgs = np.load('imgs.npy')
-''' #Plot a subset of the images
-fig, axes = plt.subplots(8, 8, figsize=(7, 7), sharex=True, sharey=True, tight_layout=True)
-for i, ax in enumerate(axes.flat):
-    ax.imshow(imgs[i], cmap='gray')
-    ax.axis('off')
-'''
+from utils import *
 
-def make_trial(target_img, rgb, n_shapes=50, size=32):
-    rgb_target = color_shape(target_img.astype(np.float32), rgb)
-    small_target = resize(rgb_target, size=size)
-    counting_trial = place_shapes(small_target, None, n_shapes=n_shapes)
-    return counting_trial
 
-def place_shapes(source_shape, oddball_shape, n_shapes=10):
-    # Define the canvas to draw images on, font, and drawing tool.
-    canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
-    canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
-    canvas_img = Image.fromarray(canvas)
-    # Add the shapes to the canvas.
-    positions = np.zeros([n_shapes, 2])
-    for i in range(n_shapes):
-        # If it's an oddball trial and we're on the first shape, paste the oddball shape.
-        if i==0 and oddball_shape is not None:
-            positions = paste_shape(oddball_shape, positions, canvas_img, i)
-            continue
-        positions = paste_shape(source_shape, positions, canvas_img, i)
-    return canvas_img
+def make_counting_trial(imgs, n_shapes=10, n_unique=5, size=32, uniform=False, sigma=0.1):
+	# sample the shapes to include in the trial.
+	unique_inds = np.random.choice(len(imgs), n_unique, replace=False)
+	shape_inds = np.random.choice(unique_inds, n_shapes, replace=True)
+	shape_imgs = imgs[shape_inds]
+	# color the shapes
+	mu = np.random.uniform(0,1)
+	colors = generate_isoluminant_colors(n_shapes, mu=mu, sigma=sigma, uniform=uniform)
+	colored_imgs = [color_shape(img.astype(np.float32), rgb) for img, rgb in zip(shape_imgs, colors)]
+	small_imgs = [resize(img, size=size) for img in colored_imgs]
+	counting_trial = place_shapes(small_imgs, img_size=size)
+	return counting_trial
 
-# Helper function to paste images and add labels
-def paste_shape(shape, positions, canvas_img, i, shape_radius=12):
-    img = Image.fromarray(np.transpose(shape, (1, 2, 0)))
-    max_attempts = 100  # Maximum number of attempts to find a non-overlapping position
-    attempt = 0
-    while attempt < max_attempts:
-        position = np.random.randint(12, 244, size=2)
-        # Check distance from all other shapes; assume other shapes have similar radius for simplicity
-        if all(np.linalg.norm(pos - position) >= 2 * shape_radius for pos in positions if np.any(pos)):
-            canvas_img.paste(img, tuple(position))
-            positions[i] = position
-            return positions
-        attempt += 1
-    raise Exception("Failed to place shape without overlap after multiple attempts.")
+def place_shapes(shape_imgs, img_size=32):
+	# Define the canvas to draw images on, font, and drawing tool.
+	canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255 #204
+	canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
+	canvas_img = Image.fromarray(canvas)
+	# Add the shapes to the canvas.
+	n_shapes = len(shape_imgs)
+	positions = np.zeros([n_shapes, 2])
+	for i, img in enumerate(shape_imgs):
+		positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
+	return canvas_img
 
-def color_shape(img, rgb):
-    img /= img.max()  # normalize image
-    if rgb.max() > 0:
-        rgb /= rgb.max()  # normalize rgb code
-    else: 
-        pass
-    colored_img = (1-img) * rgb.reshape((3,1,1))
-    colored_img += img
-    return (colored_img * 255).astype(np.uint8)
+def generate_isoluminant_colors(num_colors, saturation=1, lightness=0.8, mu=0.5, sigma=0.1, uniform=False):
+	if uniform:
+		hues = np.linspace(0, 1, num_colors, endpoint=False)
+	else:
+		hues = np.random.normal(loc=mu, scale=sigma, size=num_colors) % 1.0
+	hsl_colors = [(hue, saturation, lightness) for hue in hues]
+	rgb_colors = [mcolors.hsv_to_rgb(color) for color in hsl_colors]
+	return rgb_colors
 
-def resize(image, size=24):
-    image_array = np.transpose(image, (1, 2, 0))
-    image = Image.fromarray(image_array.astype('uint8'), 'RGB')
-    resized_image = image.resize((size, size), Image.LANCZOS)
-    return np.transpose(np.array(resized_image), (2, 0, 1))
+def parse_args() -> argparse.Namespace:
+	"""
+	Parse command line arguments.
 
-n_trials = 10
-n_shapes = [1,2,3,4,5,6,7,8,9,10,12,14,16,18,20]
+	Returns:
+	argparse.Namespace: The parsed command line arguments.
+	"""
+	parser = argparse.ArgumentParser(description='Generate serial search trials.')
+	parser.add_argument('--n_shapes', type=int, nargs='+', default=[2,4,6,8,10], help='Number of stimuli to present.')
+	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
+	parser.add_argument('--size', type=int, default=24, help='Size of the shapes to paste in the image.')
+	parser.add_argument('--object_inds', type=int, nargs='+', default=[37], help='Indices of the objects to include in the trials.')
+	parser.add_argument('--n_unique', type=int, default=None, help='Number of unique object shapes to include on each trial.')
+	parser.add_argument('--uniform', type=bool, default=False, help='Whether to use uniform colors (i.e. maximally distinct)')
+	parser.add_argument('--sigma', type=float, default=0.1, help='Standard deviation of the hue distribution.')
+	return parser.parse_args()
 
-# Generate all possible shapes.
-cmap = mpl.colormaps['gist_rainbow']
-#colors = cmap(np.linspace(0, 1, 100)) #colors = ['red', 'green', 'blue', 'purple']
-colors = ['black']
-#rgb_values = np.array([rgba[:3]*255 for rgba in colors])
-rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
+def main():
+	# Parse command line arguments.
+	args = parse_args()
+	assert args.n_unique <= len(args.object_inds), 'Number of unique objects must be less than or equal to the number of objects.'
+	imgs = np.load('imgs.npy')
+	imgs = imgs[np.array(args.object_inds)]  # sample only the shapes that we want to include in the trials.
 
-for n in n_shapes:
-    for i in range(n_trials):
-        #target_ind = np.random.choice(imgs.shape[0], size=1)[0]
-        target_ind = 37  # Circle index
-        rgb = rgb_values[np.random.choice(rgb_values.shape[0], size=1)[0]]
-        trial = make_trial(imgs[target_ind], rgb, n_shapes=n)
-        trial.save(f'./data/counting/counting-{n}_{i}.png')
+	# Create directory for serial search exists.
+	os.makedirs('data/counting', exist_ok=True)
 
-# Display the first 10 images in the directory
-#display_images(image_paths, rows=2, cols=5)
+	# Initialize results DataFrame for storing task performance later.
+	results_df = pd.DataFrame(columns=['path', 'n_shapes', 'response', 'answer'])
+
+	# Generate the trials.
+	for n in args.n_shapes:
+		for i in range(args.n_trials):
+			trial = make_counting_trial(imgs, n_shapes=n, n_unique=args.n_unique, size=args.size, uniform=args.uniform, sigma=args.sigma)
+
+			# Save the trials and their metadata.
+			trial_path = f'data/counting/counting-{n}_{i}.png'
+			trial.save(trial_path)
+			trial.save(trial_path)
+			results_df = results_df._append({
+				'path': trial_path,
+				'incongruent': False,
+				'n_shapes': n,
+				'response': None,
+				'answer': None
+			}, ignore_index=True)
+
+	# Save results DataFrame to CSV
+	results_df.to_csv('./output/search_results.csv', index=False)
+
+if __name__ == '__main__':
+	main()
