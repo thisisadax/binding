@@ -98,7 +98,7 @@ def make_shape_trial(source1, features, source_relations, target_relations):
     target_features = features[~features.ind.isin([source1.values[0], source2.values[0]])]  # exclude the source pair
 
     # If the task is bigger_than/smaller_than, make sure the correct target1 has the same size as source1.
-    if source_relations[-1] == False:
+    if not source_relations[-1]:
         target_features1 = target_features[
             target_features['size'] == source1['size']]  # make sure the correct target1 has the same size as source1.
         target_features1 = target_features1[(target_features1['shape'] != source1['shape']) & (
@@ -133,9 +133,9 @@ def make_shape_trial(source1, features, source_relations, target_relations):
     # sort the pairs by the trial type
     correct_side = np.random.rand() > 0.5
     if correct_side:
-        return source1, source2, correct1, correct2, incorrect1, incorrect2, correct_side
+        return source1, source2, correct1, correct2, incorrect1, incorrect2, 1
     else:
-        return source1, source2, incorrect2, incorrect1, correct2, correct1, correct_side
+        return source1, source2, incorrect2, incorrect1, correct2, correct1, 2
 
 
 def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect1, incorrect2):
@@ -146,7 +146,8 @@ def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect
     source_imgs, correct_target_imgs, incorrect_target_imgs = trial_imgs[:2], trial_imgs[2:4], trial_imgs[4:]
 
     # Make the trial randomly assigning the correct pair to either the left or right side.
-    trial_img, source_pair, t1_pair, t2_pair = make_trial(source_imgs, correct_target_imgs, incorrect_target_imgs)
+    trial_img, source_pair, t1_pair, t2_pair = make_trial(
+        source_imgs, correct_target_imgs, incorrect_target_imgs)
     target1_imgs, target2_imgs = correct_target_imgs, incorrect_target_imgs
     return trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs
 
@@ -160,7 +161,6 @@ def generate_rmts_trial_data():
     simple_imgs = imgs[simple_inds]
     simple_imgs = [cv2.resize(i, (96, 96)) for i in simple_imgs]
 
-
     # Generate all possible shapes.
     colors = ['red', 'green', 'blue', 'purple']
     rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
@@ -173,15 +173,13 @@ def generate_rmts_trial_data():
             all_shapes.append(rgb_shape)
     test = np.stack(all_shapes)
 
-
     # Simple easily nameable colors and shapes.
     colors = ['red', 'green', 'blue', 'purple']
-    rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
     shapes = ['triangle', 'star', 'heart', 'cross']
+    rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
 
     # Generate all possible shapes.
-    all_shapes = []
-    all_features = []
+    all_shapes, all_features = [], []
     ind = 0
     for i, shape in enumerate(simple_imgs):
         for j, rgb in enumerate(rgb_values):
@@ -203,7 +201,9 @@ def generate_rmts_trial_data():
     target1_2_cols = ['t1_2_ind', 't1_2_shape', 't1_2_color', 't1_2_size', 't1_2_path']
     target2_1_cols = ['t2_1_ind', 't2_1_shape', 't2_1_color', 't2_1_size', 't2_1_path']
     target2_2_cols = ['t2_2_ind', 't2_2_shape', 't2_2_color', 't2_2_size', 't2_2_path']
-    col_names = trial_cols + source1_cols + source2_cols + target1_1_cols + target1_2_cols + target2_1_cols + target2_2_cols
+    col_names = (
+            trial_cols + source1_cols + source2_cols + target1_1_cols
+            + target1_2_cols + target2_1_cols + target2_2_cols)
 
     # Set up a dataframe to store all the paths for the trials that we want to save.
     same_shape_relations = [np.array([True, True, True]), np.array([False, True, True])]
@@ -217,7 +217,16 @@ def generate_rmts_trial_data():
     for i, relations in enumerate(tqdm(all_relations)):
         for j, source1 in features.iterrows():
             source1, source2, target1_1, target1_2, target2_1, target2_2, correct_side = make_shape_trial(source1, features, relations[0], relations[1])
+            if source1['size'] == 'large' and source2['size'] == 'small':
+                continue
+            if target1_1['size'] == 'large' and target1_2['size'] == 'small':
+                continue
+            if target2_1['size'] == 'large' and target2_2['size'] == 'small':
+                continue
+
             trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2)
+
+            # Save the relevant images.
             os.makedirs(f'data/RMTS/trial{i*len(features)+j}', exist_ok=True)
             trial_path = f'data/RMTS/trial{i*len(features)+j}/trial.png'
             source_path = f'data/RMTS/trial{i*len(features)+j}/source_pair.png'
@@ -229,7 +238,6 @@ def generate_rmts_trial_data():
             target1_2_path = f'data/RMTS/trial{i*len(features)+j}/target1_2.png'
             target2_1_path = f'data/RMTS/trial{i*len(features)+j}/target2_1.png'
             target2_2_path = f'data/RMTS/trial{i*len(features)+j}/target2_2.png'
-            # Save the relevant images.
             source_imgs[0].save(source1_path)
             source_imgs[1].save(source2_path)
             target1_imgs[0].save(target1_1_path)
@@ -240,20 +248,21 @@ def generate_rmts_trial_data():
             source_pair.save(source_path)
             t1_pair.save(target1_path)
             t2_pair.save(target2_path)
-            trial_df.loc[i*len(features)+j, 'trial_type'] = relation_names[i]
-            trial_df.loc[i*len(features)+j, 'correct_target'] = int(correct_side)+1
-            trial_df.loc[i*len(features)+j, 'trial_path'] = trial_path
-            trial_df.loc[i*len(features)+j, 'source_path'] = source_path
-            trial_df.loc[i*len(features)+j, 'target1_path'] = target1_path
-            trial_df.loc[i*len(features)+j, 'target2_path'] = target2_path
-            trial_df.loc[i*len(features)+j, source1_cols] = list(source1.values) + [source1_path]
-            trial_df.loc[i*len(features)+j, source2_cols] = list(source2.values) + [source2_path]
-            trial_df.loc[i*len(features)+j, target1_1_cols] = list(target1_1.values) + [target1_1_path]
-            trial_df.loc[i*len(features)+j, target1_2_cols] = list(target1_2.values) + [target1_2_path]
-            trial_df.loc[i*len(features)+j, target2_1_cols] = list(target2_1.values) + [target2_1_path]
-            trial_df.loc[i*len(features)+j, target2_2_cols] = list(target2_2.values) + [target2_2_path]
 
-    trial_df.to_csv('rmts_trial_df.csv', index=False)
+            trial_df.loc[i*len(features) + j, 'trial_type'] = relation_names[i]
+            trial_df.loc[i*len(features) + j, 'correct_target'] = int(correct_side)
+            trial_df.loc[i*len(features) + j, 'trial_path'] = trial_path
+            trial_df.loc[i*len(features) + j, 'source_path'] = source_path
+            trial_df.loc[i*len(features) + j, 'target1_path'] = target1_path
+            trial_df.loc[i*len(features) + j, 'target2_path'] = target2_path
+            trial_df.loc[i*len(features) + j, source1_cols] = list(source1.values) + [source1_path]
+            trial_df.loc[i*len(features) + j, source2_cols] = list(source2.values) + [source2_path]
+            trial_df.loc[i*len(features) + j, target1_1_cols] = list(target1_1.values) + [target1_1_path]
+            trial_df.loc[i*len(features) + j, target1_2_cols] = list(target1_2.values) + [target1_2_path]
+            trial_df.loc[i*len(features) + j, target2_1_cols] = list(target2_1.values) + [target2_1_path]
+            trial_df.loc[i*len(features) + j, target2_2_cols] = list(target2_2.values) + [target2_2_path]
+
+    trial_df.loc[~(trial_df == 0).all(axis=1)].to_csv('data/RMTS/rmts_trial_df.csv', index=False)
 
 
 if __name__ == '__main__':
