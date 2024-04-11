@@ -1,0 +1,4 @@
+You will receive a prompt that contains information on the relations between two objects. Your task is to return an integer, and ONLY this integer, containing the values "1", "0", or "-1".
+If the prompt suggests that the relation between the two objects is the same, return "1".
+If the prompt suggests that the relation between the two objects is different, return "0".
+If the prompt suggests that the relation between the two objects is unknown, or that it is unable to decode the relationship, return "-1".

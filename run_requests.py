@@ -1,8 +1,9 @@
-import argparse
-from glob import glob
+import re
 import json
-import requests
 import time
+import argparse
+import requests
+
 from tqdm import tqdm
 from typing import Dict, Any, Union, List
 from pathlib import Path
@@ -25,7 +26,7 @@ def run_trial(
     parse_prompt: str,
     n_attempts: int = 5,
     max_tokens: int = 200,
-) -> str:
+):
     """
     Run a trial of the serial search task.
 
@@ -41,9 +42,12 @@ def run_trial(
     Returns:
     str: The response and the parsed response from the trial.
     """
+    # Update the max number of tokens.
+    task_payload["max_tokens"] = max_tokens
+
     # Encode the image and update the task payload.
-    if isinstance(img_path, list):
-        image = encode_image(img_path)
+    if isinstance(img_path, (list, tuple)):
+        image = encode_image(img_path[0])
         task_payload["messages"][0]["content"][1]["image_url"][
             "url"
         ] = f"data:image/jpeg;base64,{image}"
@@ -73,7 +77,29 @@ def run_trial(
             headers=headers,
             json=task_payload,
         )
-        trial_response = trial_response.json()["choices"][0]["message"]["content"]
+
+        try:
+            trial_response = trial_response.json()["choices"][0]["message"]["content"]
+        except KeyError as e:
+            # If we've hit a rate limit, then wait and try again.
+            if 'error' in trial_response.json():
+                # possibly encountered an error
+                if 'Please try again in' not in trial_response.json()['error']['message']:
+                    n_attempts += 1
+                    continue
+
+                # we will receive a message containing "Please try again in <x>s."
+                # x will be some decimal number of seconds (e.g., 12.132)
+                wait_time = float(re.search('Please try again in (\\d+\\.?\\d*)s',
+                                            trial_response.json()['error']['message']).group(1))
+                print(f"Rate limit hit. Waiting for {wait_time} seconds.")
+                time.sleep(wait_time)
+                continue
+
+            # make debugging easy
+            print(trial_response)
+            print(trial_response.json())
+            raise e
 
         # Make sure the vision model response is valid.
         trial_parse_prompt = parse_prompt + "\n" + trial_response
@@ -87,6 +113,7 @@ def run_trial(
         )
         answer = answer.json()["choices"][0]["message"]["content"]
         i += 1
+        time.sleep(2)  # not too many requests in a short period of time
 
     return answer, trial_response
 

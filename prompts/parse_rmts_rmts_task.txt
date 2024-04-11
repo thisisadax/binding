@@ -1,0 +1,1 @@
+Given the following message output, tell me what target pair the model has selected. Your answer should be a single integer of either “1”, “2”, or “0” if you determine that the model has selected no specific pair.
