@@ -78,6 +78,11 @@ def run_trial(
             json=task_payload,
         )
 
+        # check for easily-avoidable errors
+        if 'error' in trial_response.json():
+            if 'API key' in trial_response.json()['error']['message']:
+                raise ValueError("API key is invalid.")
+
         try:
             trial_response = trial_response.json()["choices"][0]["message"]["content"]
         except KeyError as e:
@@ -90,11 +95,16 @@ def run_trial(
 
                 # we will receive a message containing "Please try again in <x>s."
                 # x will be some decimal number of seconds (e.g., 12.132)
-                wait_time = float(re.search('Please try again in (\\d+\\.?\\d*)s',
-                                            trial_response.json()['error']['message']).group(1))
-                print(f"Rate limit hit. Waiting for {wait_time} seconds.")
-                time.sleep(wait_time)
-                continue
+                try:
+                    wait_time = float(re.search('Please try again in (\\d+\\.?\\d*)s',
+                                                trial_response.json()['error']['message']).group(1))
+                    print(f"Rate limit hit. Waiting for {wait_time} seconds.")
+                    time.sleep(wait_time)
+                    continue
+                except KeyError as e:
+                    # if we can't parse the wait time, then raise the error
+                    print(trial_response.json())
+                    raise e
 
             # make debugging easy
             print(trial_response)
@@ -114,6 +124,118 @@ def run_trial(
         answer = answer.json()["choices"][0]["message"]["content"]
         i += 1
         time.sleep(2)  # not too many requests in a short period of time
+
+    return answer, trial_response
+
+
+# NOTE (declan): Is it worth it to add exponential backoff with tenacity here?
+def run_trial_azure(
+    img_path: Union[str, List[str]],
+    headers: Dict[str, str],
+    task_payload: Dict,
+    parse_payload: Dict,
+    parse_prompt: str,
+    n_attempts: int = 5,
+    max_tokens: int = 200,
+):
+    """
+    Run a trial of the serial search task.
+
+    Parameters:
+    img_path (str): The path to the image for the trial.
+    headers (Dict[str, str]): The headers for the API request.
+    task_payload (Dict): The payload for the vision model request.
+    parse_payload (Dict): The payload for the parsing model request.
+    parse_prompt (str): The prompt for the parsing model.
+    n_attempts (int): The number of attempts to make. Default is 5.
+    max_tokens (int): The maximum number of tokens for the API request. Default is 200.
+
+    Returns:
+    str: The response and the parsed response from the trial.
+    """
+    # Update the max number of tokens.
+    task_payload["max_tokens"] = max_tokens
+
+    # Encode the image and update the task payload.
+    if isinstance(img_path, (list, tuple)):
+        image = encode_image(img_path[0])
+        task_payload["messages"][0]["content"][1]["image_url"][
+            "url"
+        ] = f"data:image/jpeg;base64,{image}"
+
+        for i, path in enumerate(img_path[1:]):
+            image = encode_image(path)
+            task_payload["messages"][0]["content"].append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/jpeg;base64,{image}"
+                }
+            })
+    else:
+        image = encode_image(img_path)
+        task_payload["messages"][0]["content"][1]["image_url"][
+            "url"
+        ] = f"data:image/jpeg;base64,{image}"
+
+    # Until the model provides a valid response, keep trying.
+    answer = "-1"  # -1 if model failed to provide a valid response.
+    i = 0  # Counter to keep track of the number of attempts. Limit to n_attempts.
+    trial_response = None
+    while answer == "-1" and i < n_attempts:
+        # Get the vision model response.
+        trial_response = requests.post(
+            "https://gpt4-ilia-2024-japan-east.openai.azure.com/openai/deployments/gpt-4-vision-preview/chat/completions?api-version=2023-12-01-preview",
+            headers=headers,
+            json=task_payload,
+        )
+
+        # check for easily-avoidable errors
+        if 'error' in trial_response.json():
+            if 'API key' in trial_response.json()['error']['message']:
+                raise ValueError("API key is invalid.")
+            if trial_response.json()['error']['code'] == '404':
+                raise Exception(trial_response.json())
+
+        try:
+            trial_response = trial_response.json()["choices"][0]["message"]["content"]
+        except KeyError as e:
+            # If we've hit a rate limit, then wait and try again.
+            if 'error' in trial_response.json():
+                # possibly encountered an error
+                if 'Please try again in' not in trial_response.json()['error']['message']:
+                    n_attempts += 1
+                    continue
+
+                # we will receive a message containing "Please try again in <x>s."
+                # x will be some decimal number of seconds (e.g., 12.132)
+                try:
+                    wait_time = float(re.search('Please try again in (\\d+\\.?\\d*)s',
+                                                trial_response.json()['error']['message']).group(1))
+                    print(f"Rate limit hit. Waiting for {wait_time} seconds.")
+                    time.sleep(wait_time)
+                    continue
+                except KeyError as e:
+                    # if we can't parse the wait time, then raise the error
+                    print(trial_response.json())
+                    raise e
+
+            # make debugging easy
+            print(trial_response)
+            print(trial_response.json())
+            raise e
+
+        # Make sure the vision model response is valid.
+        trial_parse_prompt = parse_prompt + "\n" + trial_response
+        parse_payload["messages"][0]["content"][0][
+            "text"
+        ] = trial_parse_prompt  # update the payload
+        answer = requests.post(
+            "https://gpt4-ilia-2024-japan-east.openai.azure.com/openai/deployments/gpt-4-vision-preview/chat/completions?api-version=2023-12-01-preview",
+            headers=headers,
+            json=parse_payload,
+        )
+        answer = answer.json()["choices"][0]["message"]["content"]
+        i += 1
 
     return answer, trial_response
 

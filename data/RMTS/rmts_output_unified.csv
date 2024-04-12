@@ -1,0 +1,900 @@
+trial_image,rmts_answer,rmts_response,correct_target
+data/RMTS/trial0/trial.png,1,"The matching target pair is Target Pair 1.
+
+Here is the reasoning:
+- The source pair has two objects that are the same shape (triangles), the same size, and the same color (red).
+- Target Pair 1 has two objects that are the same shape (hearts), the same size, and the same color (pink).
+- Target Pair 2 has two objects that have different shapes (star vs. smaller star), different sizes, but the same color (blue).
+
+Therefore, Target Pair 1 shares all the same abstract relations with the source pair, which are same shape, same size, and same color.",1
+data/RMTS/trial1/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here is the reasoning:
+- Both objects in the source pair are red triangles. This means that the source pair has the same shape and same color. 
+- Both objects in Target Pair 1 are blue hearts. This means that Target Pair 1 also has the same shape and same color. 
+- Both objects in Target Pair 2 are blue and one is a triangle and the other is a star. This means Target Pair 2 has different shapes, but the same color.
+
+Therefore, Target Pair 1 matches the abstract relations of the source pair because they both have the same shape and same color, whereas Target Pair 2 does not match because it has different shapes.",1
+data/RMTS/trial2/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+
+Source Pair: 
+- Shape: same (both triangles)
+- Color: same (both green)
+- Size: different (one large, one small)
+
+Target Pair 1:
+- Shape: different (heart and star)
+- Color: same (both green)
+- Size: same (both are of similar size)
+
+Target Pair 2:
+- Shape: same (both stars)
+- Color: different (one pink, one dark pink/purple)
+- Size: different (one large, one small)
+
+Only Target Pair 2 shares the same relations with the source pair, which are the same shape relation, different color relation, and different size relation.",2
+data/RMTS/trial3/trial.png,0,"The matching target pair is Target Pair 2.
+
+The source pair features two green triangles of the same size.
+
+Target Pair 1 features two blue stars of the same size. The relation of shape in the Target Pair 1 (different shapes) does not match the relation in the Source Pair (same shape). The relation of color (same color) and size (same size) do correspond, but since the shape relation does not match, this pair cannot be considered the matching target pair.
+
+Target Pair 2 features a blue star and a blue triangle of different sizes. The relation of shape (different shapes) does not match the source pair, but the relations of color (same color) and size (different size) do correspond. Since the source pair has objects of the same shape and size, and the target pair 2 has objects of different size, it cannot be the matching target pair either.
+
+Thus, none of the target pairs provided perfectly match all the relations of the source pair, but since the task specifies that only one target pair will share all the same relations with the source pair, it appears there may be an error in the given task. However, if we were to choose the pair that shares atleast one relation with the source pair, it would be Target Pair 2 as it matches the color.",1
+data/RMTS/trial4/trial.png,1,"The matching target pair is Target Pair 1.
+
+Here's the explanation:
+- The source pair features two objects that are the same shape (triangle), the same color (blue), and the same size.
+- Target Pair 1 features two objects that are the same shape (cross), the same color (pink), and the same size.
+- Target Pair 2 features two objects that are different shapes (star and heart), different colors (pink and red), and different sizes.
+
+Therefore, Target Pair 1 shares the same abstract relations with the source pair - same shape, same color, and same size - while Target Pair 2 does not.",1
+data/RMTS/trial5/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here's the reasoning:
+
+Source pair:
+- Both objects are the same shape (triangles)
+- Both objects are the same color (blue)
+- Both objects are the same size
+
+Target Pair 1:
+- Both objects are the same shape (hearts)
+- Both objects are the same color (green)
+- Both objects are the same size
+
+Target Pair 2:
+- Objects have different shapes (star and heart)
+- Objects have the different colors (blue and purple)
+- Objects have different sizes
+
+Target Pair 1 shares all the same relations with the source pair: the objects in Target Pair 1 are the same shape, color, and size relative to each other, which matches the relations observed in the source pair. Target Pair 2 does not have the same relations because its objects differ in all three features.",1
+data/RMTS/trial6/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here's the reasoning:
+
+- Shape: In the source pair, both objects have the same shape (triangle). In Target Pair 1, both objects have the same shape (heart). In Target Pair 2, the objects have different shapes (triangle and 'X').
+- Color: In the source pair, both objects have the same color (pink). In Target Pair 1, both objects have the same color (green). In Target Pair 2, the objects have different colors (green and light green).
+- Size: In the source pair, both objects are of different sizes (one smaller and one larger triangle). In Target Pair 1, both objects are of different sizes (one smaller and one larger heart). In Target Pair 2, both objects are of the same size.
+
+Target Pair 1 matches all the relations of the source pair (same shape, same color, different size), whereas Target Pair 2 does not match all the relations (different shapes, different colors, same size). Therefore, Target Pair 1 is the correct match.",1
+data/RMTS/trial7/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+
+First, let's assess the features of the source pair: both objects are triangles (shape), they are the same color (pink), and they are the same size.
+
+Now let's look at Target Pair 1: both objects are stars (shape), they are the same color (red), and they are also the same size.
+
+Finally, Target Pair 2: one object is a triangle and the other is a star (shape), they are different colors (purple and pink), and they are also different sizes.
+
+The relations over the features for the source pair are: same shape (both triangles), same color (both pink), and same size.
+
+Comparing the relations over the features of each target pair with the source pair:
+
+- Target Pair 1 has the same color and size relations, but a different shape relation (it does not match because the source pair has the same shapes while target pair 1 has different shapes).
+- Target Pair 2 has the same relations over the features as the source pair, but with a different instantiation of the features: different shapes, different colors, and different sizes.
+
+Since Target Pair 2 shares the same abstract relations over the features with the source pair (despite having different specific shapes and colors), it is the matching target pair.",1
+data/RMTS/trial8/trial.png,2,"The matching target pair in this scenario is Target Pair 2.
+
+Explanation:
+- The source pair has two red stars, one smaller than the other.
+- Target Pair 1 has a purple cross and a pink heart, which have different shapes and colors but the same size.
+- Target Pair 2 has two green triangles, one smaller than the other.
+
+The relation between the objects in the source pair is that they have the same shape and color but different sizes (smaller/larger). Target Pair 2 shares this same relation - the objects have the same shape and color but different sizes. Target Pair 1 does not share all these relations, as the objects have different shapes and colors. Therefore, Target Pair 2 is the matching pair.",2
+data/RMTS/trial9/trial.png,1,"The target pair that shares the same relations with the source pair is Target Pair 1.
+
+Here is the reasoning:
+
+1. The source pair has two objects that are the same shape (stars), the same color (red), and different sizes (one is larger than the other).
+2. Target Pair 1 has two objects that are the same shape (triangles), the same color (purple), and different sizes (one is smaller than the other). This matches the relations in the source pair.
+3. Target Pair 2 has two objects that are different shapes (triangle and ‘x’ shape), different colors (green and blue), and different sizes. This does not match the relations in the source pair as they have both a color and shape difference, whereas the source pair only has a size difference.
+
+Therefore, Target Pair 1 is the correct answer.",1
+data/RMTS/trial10/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- For the source pair, the two objects have the same shape (stars), same color (green), and different size (one star is bigger than the other).
+- For Target Pair 1, the two objects have the same shape (hearts), same color (blue), and same size (both hearts are the same size).
+- For Target Pair 2, the two objects have the same shape (stars), same color (blue), and different size (one star is bigger than the other).
+
+The abstract relations present in the source pair are the same shape, same color, and different size. Target Pair 2 matches these relations exactly, whereas Target Pair 1 does not match the relation of size (it has same size instead of different size).",1
+data/RMTS/trial11/trial.png,1,"The matching target pair is Target Pair 1.
+
+Here's the reasoning:
+
+Source Pair: same shape (star), same color (green), different size
+Target Pair 1: same shape (heart), same color (red), different size
+Target Pair 2: different shape (cross and heart), different color (purple and pink), different size
+
+Target Pair 1 shares all the same relations with the source pair: same shape (both objects in the pair have the same shape as each other), same color (both objects in the pair are the same color), and different size (the two objects in the pair are different sizes).
+
+Target Pair 2 does not share the same relations. It has different shapes, different colors, and different sizes, which does not match the relations in the source pair.",1
+data/RMTS/trial12/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here's the reasoning:
+- Source Pair: Two blue stars of different size.
+- Target Pair 1: Two purple crosses of different size.
+- Target Pair 2: One pink heart and one purple star of different size.
+
+The relations between the objects in the Source Pair are: same shape (both stars), same color (both blue), and different size. 
+
+The relations between the objects in Target Pair 1 are: same shape (both crosses), same color (both purple), and different size. 
+
+The relations between the objects in Target Pair 2 are: different shape (one heart, one star), different color (one pink, one purple), and different size.
+
+Thus, Target Pair 1 shares the same abstract relations with the Source Pair because both pairs have objects with the same shape, same color, and different sizes.",1
+data/RMTS/trial13/trial.png,1,"The matching target pair is Target Pair 1.
+
+Reasoning:
+1. Source Pair: Both objects are the same shape (stars), same color (blue), and same size.
+2. Target Pair 1: Both objects are the same shape (hearts), same color (red), and same size.
+3. Target Pair 2: Both objects have different shapes (one star and one something else), same color (red), and different sizes.
+
+The abstract relations in Target Pair 1 match those of the Source Pair, as both have objects that are the same shape, color, and size as each other. Target Pair 2 does not match because it includes objects of different shapes and sizes.",1
+data/RMTS/trial14/trial.png,2,"Step 1:
+Source Pair: Both objects are stars (shape), both are pink (color), and they are different sizes.
+Target Pair 1: The objects are different shapes (a heart and a star), different colors (green and pink), and different sizes.
+Target Pair 2: The objects are the same shape (hearts), the same color (blue), and different sizes.
+
+Step 2:
+Source Pair Relations: Same shape, same color, different size.
+Target Pair 1 Relations: Different shape, different color, different size.
+Target Pair 2 Relations: Same shape, same color, different size.
+
+Step 3:
+The target pair that shares the same relations with the source pair is Target Pair 2, as it also has the same shape, same color, and different size.
+
+Therefore, the matching target pair is Target Pair 2.",2
+data/RMTS/trial15/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning: 
+- The source pair consists of two objects that are different shapes (stars), the same color (pink), and the same size (large). 
+- Target Pair 1 consists of two objects that are different shapes (cross and heart), different colors (green and dark green), and the same size (large). This pair does not match the source pair's relations because the colors are different.
+- Target Pair 2 consists of two objects that are different shapes (triangle and inverted triangle), the same color (blue), and the same size (small). This pair matches the source pair's relations of different shapes, same color, and same size. 
+
+Therefore, Target Pair 2 shares the same abstract relations with the source pair and is the correct match.",2
+data/RMTS/trial16/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+
+1. Features of the objects in each pair:
+- Source Pair: Two red hearts of different sizes (a smaller heart on the left and a larger heart on the right).
+- Target Pair 1: A red cross on the left and a red heart on the right of the same size.
+- Target Pair 2: Two blue stars of different sizes (a smaller star on the left and a larger star on the right).
+
+2. Relations over the features represented in each pair:
+- Source Pair: Both objects have the same shape (heart), same color (red), and different sizes (small and large).
+- Target Pair 1: The objects have different shapes (cross and heart), the same color (red), and the same size.
+- Target Pair 2: The objects have the same shape (star), the same color (blue), and different sizes (small and large).
+
+3. Comparing the relations:
+- In Target Pair 1, the relation of same/different shape does not match the source pair's relation, and the relation of size is also different from the source pair.
+- In Target Pair 2, the relations match the source pair's relations: both pairs have the same shape (albeit different specific shapes), same color (albeit different specific colors), and different sizes.
+
+Therefore, Target Pair 2 shares all the same abstract relations with the source pair.",2
+data/RMTS/trial17/trial.png,1,"The matching target pair is Target Pair 2. 
+
+The source pair features two hearts that are both red and the same size, therefore the relations are: same shape, same color, and same size. 
+
+Target Pair 1 features two stars that are both blue and the same size, which also has the relations: same shape, same color, and same size. 
+
+However, Target Pair 2 features a green cross and a green triangle of different sizes, so the relations are: different shape, same color, and different size, which does not match the relations of the source pair.
+
+Therefore, Target Pair 1 matches the relations of the source pair and is the correct answer.",1
+data/RMTS/trial18/trial.png,2,"The correct matching target pair is Target Pair 2.
+
+Here's the reasoning:
+
+Source Pair: 
+- Shape: Same (Both objects are hearts)
+- Color: Same (Both objects are green)
+- Size: Same (Both objects are the same size)
+
+Target Pair 1:
+- Shape: Same (Both objects are triangles)
+- Color: Same (Both objects are blue)
+- Size: Same (Both objects are the same size)
+
+Target Pair 2:
+- Shape: Different (One object is a heart, the other is a star)
+- Color: Different (One object is pink, the other is purple)
+- Size: Different (One object is smaller than the other)
+
+The source pair has the same shape, same color, and same size for both objects. Target Pair 1 also has objects with the same shape, color, and size, making it seem like a match initially. However, the key here is that Target Pair 2 actually shares the correct abstract relations with the source pair. In the source pair, the shape, color, and size relations between the two hearts are all the same, as in they do not differ from each other. In Target Pair 2, the relation between the two objects for each feature is 'different', which is exactly the same abstract relationship as in the source pair. Although Target Pair 1 has objects with the same relations over their features, they do not match the abstract relations of the source pair.
+
+Therefore, Target Pair 2 is the matching pair because it accurately reflects the same abstract relations as the source pair: different shape, different color, and different size.",1
+data/RMTS/trial19/trial.png,1,"The matching target pair is Target Pair 1.
+
+To explain the reasoning:
+1. Features of the Source Pair: both objects are hearts (shape), green (color), and the same size.
+2. Relations represented in the Source Pair: same shape, same color, and same size.
+3. Features of Target Pair 1: both objects are triangles (shape), blue (color), and the same size.
+4. Relations represented in Target Pair 1: same shape, same color, and same size.
+5. Features of Target Pair 2: both objects are crosses (shape), pink (color), and the same size.
+6. Relations represented in Target Pair 2: same shape, same color, and same size.
+
+Both Target Pairs 1 and 2 share the same relation in terms of size with the Source Pair. However, Target Pair 1 matches the Source Pair in having the same shape and same color relations, while Target Pair 2 has different shapes and colors. Therefore, Target Pair 1 is the only one that shares all the same relations with the Source Pair.",2
+data/RMTS/trial20/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here is the reasoning:
+
+1. The source pair consists of two hearts that are the same shape, same color, but different sizes.
+2. Target Pair 1 consists of two crosses that are the same shape, same color, and the same size. This does not share the same relations with the source pair because the sizes of the objects in the source pair are different, while in Target Pair 1, they are the same.
+3. Target Pair 2 consists of a triangle and a star that are different shapes, different colors, and different sizes. This matches the relations of the source pair because, like the source pair, the shapes and colors are the same, and the sizes are different.
+
+Therefore, Target Pair 2 is the correct answer.",1
+data/RMTS/trial21/trial.png,2,"The matching target pair is Target Pair 2.
+
+Source Pair:
+- Shape: same (both are hearts)
+- Color: same (both are blue)
+- Size: different (one is larger than the other)
+
+Target Pair 1:
+- Shape: different (one is a cross, one is a triangle)
+- Color: same (both are blue)
+- Size: different (one is larger than the other)
+
+Target Pair 2:
+- Shape: same (both are X-shapes)
+- Color: same (both are pink)
+- Size: different (one is larger than the other)
+
+The relations over the features in Target Pair 2 match those of the Source Pair: same shape, same color, and different size. Target Pair 1 does not match because it has different shapes, while the Source Pair has the same shapes.",2
+data/RMTS/trial22/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+
+1. Identify the features of the objects in each pair:
+Source Pair: Two heart shapes, both pink, one large and one small.
+Target Pair 1: Two different shapes (triangle and heart), both blue, different sizes (one larger, one smaller).
+Target Pair 2: Two star shapes, both blue, one large and one small.
+
+2. Identify the relations over the features represented in each pair:
+Source Pair: same shape (heart), same color (pink), different sizes.
+Target Pair 1: different shapes, same color (blue), different sizes.
+Target Pair 2: same shape (star), same color (blue), different sizes.
+
+3. Determine which target pair shares the same relations with the source pair:
+Target Pair 1 does not match because it has different shapes, while the source pair has the same shape. Target Pair 2 matches the relations of the source pair: same shape, same color, and different sizes. 
+
+Therefore, Target Pair 2 is the correct match.",2
+data/RMTS/trial23/trial.png,2,"The matching target pair is Target Pair 2. 
+
+1. The source pair features two objects that are the same shape (hearts), the same color (pink), and the same size.
+2. The relations over the features in the source pair are: same shape, same color, and same size.
+3. Target Pair 1 features two objects that are the same shape (triangles), same color (blue), and same size. The relations over the features in Target Pair 1 are: same shape, same color, and same size, but the objects are not the same as the source pair objects.
+4. Target Pair 2 features two objects that are different shapes (heart and star), the same color (blue), and different sizes. The relations over the features in Target Pair 2 are: different shape, same color, and different size, which matches the abstract relations of the source pair but with a different color.
+
+Therefore, Target Pair 2 shares the same abstract relations with the source pair, making it the matching target pair.",1
+data/RMTS/trial24/trial.png,1,"The target pair that shares the same abstract relations with the source pair is Target Pair 1.
+
+The source pair features two red X's that are the same shape, same color, and same size. Therefore, the relations are that both objects in the pair are identical in all three features.
+
+For Target Pair 1, there are two blue triangles that are also the same shape, same color, and same size. This matches the identical relations of the source pair.
+
+For Target Pair 2, there is a green triangle and a green star that are different in shape (triangle vs. star), the same in color (both green), but different in size (one is larger than the other). These relations do not match those of the source pair.
+
+Therefore, Target Pair 1 is the correct match.",1
+data/RMTS/trial25/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here is the reasoning:
+- The source pair consists of two objects with the same shape (red crosses), the same color (red), and different sizes.
+- Target Pair 1 consists of two objects with the same shape (green stars), the same color (green), and different sizes.
+- Target Pair 2 consists of two objects with different shapes (star and triangle), the same color (green), and different sizes.
+
+Thus, Target Pair 1 shares the same abstract relations with the source pair: same shape, same color, and different sizes.",2
+data/RMTS/trial26/trial.png,2,"The matching target pair is Target Pair 2. Here's the reasoning:
+
+1. The source pair features two green crosses. They are the same shape (crosses), same color (green), and same size.
+
+2. Target Pair 1 has a red triangle and a red star. They have different shapes (triangle vs star), same color (red), and different sizes (triangle is larger than the star).
+
+3. Target Pair 2 has two purple hearts. They have the same shape (hearts), same color (purple), and same size.
+
+Comparing the relations of the features between the source pair and the target pairs, we can see that Target Pair 2 shares all the same relations with the source pair: same shape, same color, and same size. Meanwhile, Target Pair 1 has different shapes and sizes, so it does not match the source pair relations.",2
+data/RMTS/trial27/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here’s the reasoning:
+- In the source pair, the two objects have the same shape (crosses), the same color (green), and the same size (large).
+- In Target Pair 1, the two objects have the same shape (stars), different colors (pink and purple), and the same size (large).
+- In Target Pair 2, the two objects have different shapes (triangle and cross), the same color (green), and the same size (large).
+
+Since the relations in the Source Pair are same shape, same color, and same size, and only Target Pair 2 matches these relations (different shapes being the only deviation which can be acceptable as there are no two objects of the same shape in the target pairs), it is the correct match.",1
+data/RMTS/trial28/trial.png,2,"The matching target pair is Target Pair 2.
+
+The reasoning is as follows:
+
+1. In the source pair, both objects have the same shape (cross), but different colors (blue and purple) and different sizes (large and small).
+
+2. In target pair 1, both objects have the same color (green), which differs from the source pair which has different colors.
+Target pair 1 also has the same size for both objects, while the source pair has objects of different sizes.
+Lastly, they have different shapes (cross and star), but the source pair also has the same shape for both objects. 
+
+Therefore, target pair 1 does not share the same abstract relations with the source pair over all the features.
+
+3. In target pair 2, both objects have the same shape (star), which matches the source pair which also has the same shape for both objects.
+Target pair 2 also has objects of different colors (pink and purple) and different sizes (large and small), which perfectly matches the source pair's relations over those features.
+
+Therefore, Target Pair 2 shares all the same abstract relations with the source pair over shape, color, and size.",2
+data/RMTS/trial29/trial.png,1,"The matching target pair is target pair #1.
+
+Reasoning:
+1. In the source pair, both objects are the same shape (both are crosses), same color (both are blue), and same size (both are large).
+2. In target pair #1, both objects are the same shape (both are stars), same color (both are green), and same size (both are small).
+3. In target pair #2, the objects are different shapes (one is a star and one is a heart), different colors (one is red and one is pink), and different sizes (one is medium and one is large).
+
+Therefore, target pair #1 shares all the same relations with the source pair as they both have objects that are the same shape, color, and size. Target pair #2 does not share these relations.",1
+data/RMTS/trial30/trial.png,2,"The matching target pair for the source pair is Target Pair 2.
+
+First, let's identify the features of the objects in each pair:
+
+- Source Pair: both objects are the same shape (cross), same color (purple), and same size.
+- Target Pair 1: both objects are the same shape (heart), same color (red) but different sizes. 
+- Target Pair 2: both objects are different shapes (star and cross), same color (red), and different sizes.
+
+Now, let's identify the relations over the features represented in each pair:
+
+- Source Pair: same shape, same color, same size.
+- Target Pair 1: same shape, same color, different size.
+- Target Pair 2: different shape, same color, different size.
+
+Comparing the relations, we can see that Target Pair 2 shares all the same relations with the Source Pair: 
+
+- Source Pair and Target Pair 2 both have objects with different shapes from each other, but they retain the same color (purple for the source, red for the target), and they have different sizes. This matches the relational representation of the Source Pair.
+
+Therefore, Target Pair 2 is the matching pair.",1
+data/RMTS/trial31/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+
+Source Pair: 
+- Shape: Different (star vs. star)
+- Color: Same (pink vs. pink)
+- Size: Same (big vs. big)
+
+Target Pair 1:
+- Shape: Same (triangle vs. triangle)
+- Color: Same (blue vs. blue)
+- Size: Same (small vs. small)
+
+Target Pair 2:
+- Shape: Different (heart vs. cross)
+- Color: Different (red vs. blue)
+- Size: Different (big vs. small)
+
+Since the relations between the objects in Target Pair 2 are the same as the relations between the objects in the Source Pair (different shape, same color, and same size), Target Pair 2 is the matching pair.",1
+data/RMTS/trial32/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here is the reasoning:
+
+1. The source pair consists of two red triangles of different sizes.
+2. The relations between the objects in the source pair are: same shape (both are triangles), same color (both are red), different size (one is smaller, the other is larger).
+
+Now, let's analyze the target pairs:
+
+Target Pair 1:
+- Two blue stars of the same size.
+- Relations: same shape (both are stars), same color (both are blue), same size (both are equal in size).
+- This pair does not match the source pair because the size relation is different (source pair has different sizes, while target pair 1 has the same size).
+
+Target Pair 2:
+- One green triangle and one red triangle of different sizes.
+- Relations: different shape (one is a triangle, one is a star), different color (one is green, one is red), different size (one is smaller, the other is larger).
+- This pair matches the source pair because both pairs have objects with the same relations over the features: same shape (both pairs have triangles), same color (both pairs have red objects), and different size (both pairs have objects of different sizes).",1
+data/RMTS/trial33/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- The source pair has two objects with the same shape (triangles), different colors (both red), and the same size.
+- Target Pair 1 has two objects with different shapes (star and pentagon), different colors (blue and green), and the same size.
+- Target Pair 2 has two objects with the same shape (crosses), different colors (violet and pink), and the same size.
+
+Thus, Target Pair 2 shares the same relations with the source pair: same shape, different color, same size.",2
+data/RMTS/trial34/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- Source Pair: Two triangles (same shape), green (same color), different sizes.
+- Target Pair 1: Two hearts (same shape), red (same color), same size.
+- Target Pair 2: One triangle and one square (different shapes), blue (same color), different sizes.
+
+When comparing the relations of the source pair to each target pair:
+- Target Pair 1 does not match the source pair because the sizes are the same, while the source pair has different sizes.
+- Target Pair 2 matches the source pair because it has different shapes and sizes, like the source pair, and both objects are the same color, which is also true for the source pair.
+
+Thus, Target Pair 2 shares all the same relations with the source pair.",1
+data/RMTS/trial35/trial.png,1,"The matching target pair is Target Pair 1.
+
+Here is the reasoning:
+
+Source Pair: 
+- Features: Two green triangles of the same size. 
+- Relations: Same shape, same color, same size.
+
+Target Pair 1: 
+- Features: Two blue crosses of the same size. 
+- Relations: Same shape, same color, same size.
+
+Target Pair 2: 
+- Features: One small pink heart and one large blue heart. 
+- Relations: Same shape, different color, different size.
+
+Comparing the relations:
+- Target Pair 1 has the same relations as the Source Pair: same shape, same color, and same size.
+- Target Pair 2 does not have the same relations. It has a different shape relation, and different color and size relations compared to the Source Pair.
+
+Therefore, Target Pair 1 is the correct match as it shares all the same abstract relations with the Source Pair.",1
+data/RMTS/trial36/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+- The source pair consists of two blue triangles that are identical in shape, color, and size.
+- Target Pair 1 consists of two green stars that are the same in shape and size but different in color.
+- Target Pair 2 consists of a blue star and a red star that are the same in shape but different in color and size.
+
+The relations in the source pair are: same shape, same color, and same size. 
+Target Pair 2 shares the same relations with the source pair because both pairs have objects with the same shape (triangles in the source pair, stars in Target Pair 2) but different colors (blue in the source pair, blue and red in Target Pair 2) and different sizes (identical sizes in the source pair, and different sizes in Target Pair 2). 
+
+Therefore, Target Pair 2 is the answer as it matches all the relations of the source pair.",1
+data/RMTS/trial37/trial.png,1,"The matching target pair is Target Pair 1. 
+
+Here is the reasoning:
+1. The source pair features two blue triangles of the same size.
+2. The relationship between the objects in the source pair is: same shape, same color, and same size.
+3. Looking at Target Pair 1, it consists of two pink stars of the same size. The relationship here is: same shape, same color, and same size, which matches the relationship of the source pair.
+4. Looking at Target Pair 2, it consists of one red star and one pink star of the same size. The relationship here is: different shape, different color, and same size, which does not match the relationship of the source pair.
+
+Therefore, the correct answer is Target Pair 1 because it shares the same abstract relations with the source pair.",1
+data/RMTS/trial38/trial.png,2,"The matching target pair is Target Pair 2.
+
+First, let us identify the features of the objects in each pair:
+
+Source Pair:
+- Shape: Triangle
+- Color: Purple
+- Size: Small and large
+
+Target Pair 1:
+- Shape: Flower
+- Color: Green
+- Size: Same size
+
+Target Pair 2:
+- Shape: Star
+- Color: Different (Red and Purple)
+- Size: Small and large
+
+Now, let us identify the relations over the features represented in each pair:
+
+Source Pair:
+- Shape: Same
+- Color: Same
+- Size: Different
+
+Target Pair 1:
+- Shape: Same
+- Color: Same
+- Size: Same (this does not match the source pair)
+
+Target Pair 2:
+- Shape: Same
+- Color: Different
+- Size: Different (this matches the source pair)
+
+Therefore, Target Pair 2 shares the same abstract relations with the source pair: same shape, different color, and different size. Hence, Target Pair 2 is the matching target pair.",1
+data/RMTS/trial39/trial.png,1,"The matching target pair is Target Pair 1.
+
+Explanation:
+- The source pair consists of two triangles that are the same shape, same color (pink), and same size.
+- Target Pair 1 consists of two stars that are the same shape, same color (green), and same size.
+- Target Pair 2 consists of two stars that are the same shape but different colors (one blue, one green) and the same size.
+
+Target Pair 1 shares the same relations with the source pair as they both have objects with the same shape, same color, and same size. Target Pair 2 does not share all the same relations because the colors are different.",1
+data/RMTS/trial40/trial.png,1,"The matching target pair is Target Pair 1.
+
+The source pair is composed of two red stars of different sizes (one small, one large). Therefore, the relationship between the objects in the source pair is: same shape (both stars), same color (both red), and different size (one small, one large).
+
+Target Pair 1 is composed of two triangles, one red and one pink, of different sizes (one small, one large). Therefore, the relationship between the objects in Target Pair 1 is: same shape (both triangles), different color (one red, one pink), and different size (one small, one large).
+
+Target Pair 2 is composed of two blue hearts of the same size. Therefore, the relationship between the objects in Target Pair 2 is: same shape (both hearts), same color (both blue), and same size (both large).
+
+Comparing the relations of the source pair with the two target pairs, the relations of Target Pair 1 (same shape, different color, different size) match the relations of the source pair (same shape, same color, different size). Note that while the specific colors are different, the relation of ""different color"" is consistent between the source pair and Target Pair 1. 
+
+Therefore, Target Pair 1 is the correct answer.",2
+data/RMTS/trial41/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- In the source pair, the two objects have the same shape (stars), the same color (red), and the same size (large).
+- In Target Pair 1, the two objects have the same shape (crosses), the same color (purple), but different sizes (one is larger than the other). This pair does not match the source pair because the sizes are different.
+- In Target Pair 2, the two objects have the same shape (stars), different colors (pink and blue), and the same size (small). This pair matches the source pair in terms of shape and size but not color. However, the relation is the same because in the source pair the color relation is ""same,"" and in Target Pair 2, the color relation is ""different,"" and since the source pair doesn't define the relation of the color being the same or different, the important factor is that the Target Pair 2 has the same relation of the color within its own pair, which is ""different.""
+
+Therefore, Target Pair 2 best matches the source pair in terms of the relations over the features represented.",1
+data/RMTS/trial42/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- The source pair consists of two green stars, meaning they have the same shape, same color, and are the same size.
+- Target Pair 1 consists of two red triangles. They have the same shape and are the same size, but they do not have the same color as the source pair.
+- Target Pair 2 consists of two triangles, one blue and one pink. They have the same shape but different colors and are the same size. 
+
+Target Pair 2 matches the source pair because both pairs have objects with the same shape, different colors, and the same size.",1
+data/RMTS/trial43/trial.png,1,"The matching target pair is Target Pair 1. 
+Here's the reasoning:
+
+- In the source pair, both objects have the same shape (stars), the same color (green), and the same size (large).
+- In Target Pair 1, both objects have the same shape (hearts), the same color (blue), and the same size (small).
+- In Target Pair 2, the objects have different shapes (triangle and square), different colors (purple and red), and different sizes (small and large).
+
+Therefore, Target Pair 1 shares the same abstract relations with the source pair - both pairs consist of objects that are the same in shape, color, and size. Target Pair 2 does not share these relations, as the objects differ in all three features.",1
+data/RMTS/trial44/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here's the reasoning:
+
+Source Pair: 
+- Shape: same (both stars)
+- Color: same (both blue)
+- Size: different (one big, one small)
+
+Target Pair 1:
+- Shape: different (one star, one cross)
+- Color: different (one blue, one red)
+- Size: different (one big, one small)
+
+Target Pair 2:
+- Shape: different (both triangles)
+- Color: same (both green)
+- Size: different (one big, one small)
+
+Comparing the relations between the source pair and the target pairs, we see that Target Pair 2 shares the same abstract relations as the source pair: both pairs have objects that are different shapes but the same color, and they vary in size. 
+
+Target Pair 1 does not match because it has different shapes and different colors, which is not the same relation as the source pair. 
+
+Thus, the correct answer is Target Pair 2.",2
+data/RMTS/trial45/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here's the reasoning:
+1. Source Pair: Both objects are the same shape (stars), same color (blue), and same size.
+2. Target Pair 1: Both objects are the same shape (crosses), same color (pink), but different sizes.
+3. Target Pair 2: Both objects are different shapes (cross and X), same color (pink), and different sizes.
+
+We are looking for the target pair with the same relations as the source pair in terms of shape, color, and size. The source pair has two objects with the same shape, color, and size. Target Pair 1 does not match because the sizes are different despite having the same shape and color. Target Pair 2 matches because it has two objects with different shapes, same color, and different sizes, just like the source pair.
+
+Therefore, Target Pair 2 shares the same abstract relations with the source pair.",1
+data/RMTS/trial46/trial.png,2,"The matching target pair is Target Pair 2.
+
+Reasoning:
+1. Identify the features of the objects in each pair:
+- Source Pair: Both objects are stars, both are pink, and both are the same size.
+- Target Pair 1: One object is a star, one is a cross; one is pink, one is green; both are the same size.
+- Target Pair 2: Both objects are crosses, both are green, and both are the same size.
+
+2. Identify the relations over the features represented in each pair:
+- Source Pair: Same shape, same color, same size.
+- Target Pair 1: Different shape, different color, same size.
+- Target Pair 2: Same shape, same color, same size.
+
+3. Determine which target pair shares the same relations with the source pair:
+- Target Pair 1 does not share the same shape or color relations as the source pair.
+- Target Pair 2 shares all the same relations as the source pair: same shape (crosses), same color (green), and same size.
+
+Therefore, Target Pair 2 is the correct match.",2
+data/RMTS/trial47/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning: 
+The source pair features two stars that are the same shape (star), same color (purple), and same size (large), which means they share all three relations among the features.
+
+Target Pair 1 features a triangle and a triangle that are different shapes, same color (green), and different sizes (one small, one medium). This pair does not share the same relations as the source pair because the shapes and sizes are different.
+
+Target Pair 2 features two X's that are the same shape (X), same color (red), and same size (medium). This pair shares the same relations as the source pair (same shape, same color, and same size), making it the correct match.",2
+data/RMTS/trial48/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+- In the source pair, both objects have the same shape (hearts), same color (red), and same size.
+- In Target Pair 1, the objects have different shapes (cross and star), different colors (blue and red), and same size.
+- In Target Pair 2, the objects have the same shape (stars), same color (blue), and same size.
+
+Target Pair 2 shares all the same relations with the source pair (same shape, same color, and same size), while Target Pair 1 does not. Therefore, Target Pair 2 is the correct match.",2
+data/RMTS/trial49/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+- In the source pair, the objects have the same shape (heart), same color (red), and same size (large).
+- In target pair 1, the objects have different shapes (triangle and circle), different colors (purple and green), and different sizes (small and large).
+- In target pair 2, the objects have the same shape (X), same color (blue), and same size (medium).
+
+Thus, target pair 2 shares all the same relations with the source pair: same shape, same color, and same size.",2
+data/RMTS/trial50/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Let's analyze the source and target pairs in terms of shape, color, and size:
+
+Source Pair:
+- Shape: Same (both objects are hearts)
+- Color: Same (both objects are green)
+- Size: Same (both objects are the same size)
+
+Target Pair 1:
+- Shape: Different (one star and one different star-like shape)
+- Color: Different (one blue, one red)
+- Size: Different (one larger, one smaller)
+
+Target Pair 2:
+- Shape: Same (both objects are stars)
+- Color: Different (one dark blue, one light blue)
+- Size: Same (both objects are the same size)
+
+Comparing the relationships in each pair to the source pair, we can determine that Target Pair 2 matches the relations of the source pair in terms of shape and size, but not color. However, since we are looking for the pair that shares the same abstract relations, this difference in color does not affect the relationship since in the source pair both objects are of the same color (relation: same color) and in Target Pair 2, both objects are also of the same color (relation: same color), just a different shade. Thus, Target Pair 2 shares the same relationships as the source pair, making it the correct match.",2
+data/RMTS/trial51/trial.png,1,"The matching target pair is Target Pair 1. 
+
+The source pair features two green hearts of the same size. The relations over these features are same shape, same color, and same size.
+
+Target Pair 1 features two star-shaped objects of different colors (blue and pink) but the same size. These objects share the same relations as the source pair: same shape (both are stars, just as both objects in the source pair are hearts), different colors (blue and pink, just as the source pair objects are both green), and same size (both objects in the target pair are of the same size, matching the source pair's objects which are also of the same size).
+
+Target Pair 2 features two star-shaped objects of the same color (pink) but of different sizes. These objects do not share the same relations as the source pair, as they differ in size and do not both differ in color as the source objects do.
+
+Therefore, Target Pair 1 is the correct match as it shares all the same relations with the source pair.",2
+data/RMTS/trial52/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+First, let's identify the features and relations in the source pair:
+- Shape: Different (one heart, one spade)
+- Color: Same (both blue)
+- Size: Same (both small)
+
+Now let's compare each target pair with the source pair:
+
+Target Pair 1:
+- Shape: Different (one heart, one diamond) - Matches source pair
+- Color: Different (one green, one red) - Does not match source pair
+- Size: Different (one small, one large) - Does not match source pair
+
+Target Pair 2:
+- Shape: Different (one triangle, one circle) - Matches source pair
+- Color: Same (both purple) - Matches source pair
+- Size: Same (both large) - Matches source pair
+
+Therefore, Target Pair 2 shares all the same abstract relations with the source pair: the shapes are different, the colors are the same, and the sizes are the same. This makes it the correct answer.",2
+data/RMTS/trial53/trial.png,2,"The matching target pair is Target Pair 2.
+
+- The source pair has the same shape (both hearts), the same color (both blue), and the same size (both large).
+- Target Pair 1 has different shapes (star and cross), different colors (blue and red), and the same size (both small).
+- Target Pair 2 has different shapes (triangle and triangle), the same color (both pink), and different sizes (small and large).
+
+Target Pair 2 shares the same relations with the source pair: both pairs have objects with the same color and different sizes. Although the shapes are different in Target Pair 2, the relation of the shapes is the same as the source pair - they are the same. Therefore, Target Pair 2 matches the relations of the source pair.",2
+data/RMTS/trial54/trial.png,2,"The matching target pair is Target Pair 1.
+
+First, let's identify the features and relations in the source pair:
+- Shape: both objects are hearts, so the relation is ""same shape.""
+- Color: both objects are pink, so the relation is ""same color.""
+- Size: both objects are of the same size, so the relation is ""same size.""
+
+Now, let's compare the target pairs to the source pair:
+
+Target Pair 1:
+- Shape: there's a heart and a star, so the relation is ""different shape.""
+- Color: there's a blue heart and a red star, so the relation is ""different color.""
+- Size: both objects are of different sizes, so the relation is ""different size.""
+This target pair does not match the relations of the source pair, as all the relations are different.
+
+Target Pair 2:
+- Shape: both objects are stars, so the relation is ""same shape.""
+- Color: both objects are blue, so the relation is ""same color.""
+- Size: both objects are of the same size, so the relation is ""same size.""
+This target pair matches the relations of the source pair, as all the relations are the same.
+
+Therefore, Target Pair 2 is the matching target pair.",2
+data/RMTS/trial55/trial.png,1,"The matching target pair is Target Pair 1.
+
+Explanation:
+- In the source pair, both objects have the same shape (heart), same color (pink), and same size.
+- In Target Pair 1, both objects have the same shape (star), same color (green), and same size.
+- In Target Pair 2, the objects have the same shape (triangle), but different colors (purple and red) and different sizes.
+
+Therefore, Target Pair 1 shares the same abstract relations with the source pair: same shape, same color, and same size.",1
+data/RMTS/trial56/trial.png,2,"The target pair that shares the same abstract relations with the source pair is Target Pair 2.
+
+Here is the explanation:
+- In the source pair, both objects have the same shape (crosses), the same color (red), and the same size.
+- In Target Pair 1, both objects have the same shape (stars), but they differ in color (blue) and are the same size. This pair does not match the source pair relation of same color.
+- In Target Pair 2, both objects have different shapes (star and cross), different colors (pink and red), but they are the same size. This pair matches the source pair relations because they both have the same size objects, even though the shapes and colors are different. 
+
+Thus, Target Pair 2 is the correct matching pair because the objects in the pair have the same relation with respect to size, just like in the source pair.",1
+data/RMTS/trial57/trial.png,1,"The target pair that matches the relations of the source pair is Target Pair 1.
+
+Explanation:
+- The source pair features two objects that have the same shape (cross), the same color (red), and different sizes (one is larger than the other).
+- Target Pair 1 features two objects that have the same shape (star), the same color (green), and different sizes (one is larger than the other).
+- Target Pair 2 features two objects that have different shapes (triangle and diamond), different colors (red and purple), and the same size.
+
+Therefore, Target Pair 1 shares the same abstract relations with the source pair: same shape, same color, and different sizes.",1
+data/RMTS/trial58/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+- In the source pair, both objects have the same shape (cross), the same color (green), and the same size.
+- In target pair 1, the objects have different shapes (triangle and square), different colors (green and red), and the same size. 
+- In target pair 2, the objects have the same shape (heart), the same color (red), and the same size.
+
+Thus, Target Pair 2 shares the same relations (same shape, same color, same size) with the source pair, whereas Target Pair 1 does not.",2
+data/RMTS/trial59/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here is the reasoning:
+- Source Pair: Both objects have the same shape (crosses), same color (green), and same size (large). 
+- Target Pair 1: The objects have different shapes (heart and star), different colors (green and pink), but the same size (large). 
+- Target Pair 2: The objects have the same shape (triangles), same color (blue), and same size (small).
+
+Since the source pair has objects that share all the same relations (same shape, color, and size), the target pair that matches these relations is Target Pair 2, where the objects also share all the same relations. Target Pair 1 does not match because the objects have different shapes and different colors, which does not match the same relations of the source pair.",2
+data/RMTS/trial60/trial.png,2,"Target pair 2 is the matching pair. 
+
+Here's the reasoning: 
+- In the source pair, the two objects are of the same shape (star), different colors (blue and blue), and the same size (both are equally sized). 
+- In target pair 1, the two objects have different shapes (triangle and circle), different colors (red and green), and different sizes (one is larger than the other).
+- In target pair 2, the two objects have the same shape (triangle), different colors (purple and pink), and the same size (both are equally sized).
+
+Since target pair 2 matches the source pair in all three relational features (same shape, different color, same size), it is the correct answer. Target pair 1 does not match the source pair in shape or size, only in color, so it is not the correct answer.",2
+data/RMTS/trial61/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here is the reasoning:
+- The source pair consists of two blue objects with a cross shape and are the same size.
+- Target Pair 1 consists of a red object with a star shape and a blue object with a cross shape. They are the same size. The color relation is different and the shape relation is different compared to the source pair.
+- Target Pair 2 consists of two green objects with a star shape that are the same size. The color and shape are the same as each other, but different from the source pair, just like the source pair has the same color and shape as each other.
+
+Therefore, the relations in Target Pair 2 match the relations in the source pair:
+- Same/different shape: Both objects in Target Pair 2 have the same shape, just like both objects in the source pair have the same shape.
+- Same/different color: Both objects in Target Pair 2 have the same color, just like both objects in the source pair have the same color.
+- Same/different size: Both objects in Target Pair 2 are the same size, just like both objects in the source pair are the same size.",2
+data/RMTS/trial62/trial.png,2,"The matching target pair is Target Pair 2.
+
+First, we need to identify the features of the objects in the source pair:
+
+- Shape: X-shape
+- Color: Pink
+- Size: Same size
+
+Next, let's look at the features of the objects in each target pair:
+
+Target Pair 1:
+- Shape: Heart-shape
+- Color: Red
+- Size: Same size
+
+Target Pair 2:
+- Shape: Different shapes (circle and heart)
+- Color: Different colors (blue and green)
+- Size: Different sizes (small and large)
+
+Now, let's identify the relations over the features represented in the source pair and compare them to the target pairs:
+
+Source Pair:
+- Shape: Same shape
+- Color: Same color
+- Size: Same size
+
+Target Pair 1 relations:
+- Shape: Same shape
+- Color: Same color
+- Size: Same size
+
+Target Pair 2 relations:
+- Shape: Different shapes
+- Color: Different colors
+- Size: Different sizes
+
+Comparing the relations, we can see that Target Pair 2 shares all the same relations with the source pair, which are ""same shape,"" ""same color,"" and ""same size."" While Target Pair 1 has objects with the same shape, color, and size within its pair, it does not mirror the relations of the source pair of having different shapes, colors, and sizes.
+
+Therefore, Target Pair 2 is the correct match.",1
+data/RMTS/trial63/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+1. Source Pair: Both objects have the same shape (cross), the same color (pink), and the same size (equal size).
+
+2. Target Pair 1: The two objects have different shapes (star and cross), different colors (blue and red), and the same size (equal size).
+
+3. Target Pair 2: The two objects have the same shape (heart), the same color (green), and the same size (equal size).
+
+When comparing the relations over the features for each target pair with those of the source pair, Target Pair 2 is the only pair that shares the same relations: same shape, same color, and same size. Target Pair 1 does not match the source pair because the shapes and colors are different.",2
+data/RMTS/trial64/trial.png,2,"The matching target pair is Target Pair 2. Here is the reasoning:
+ 
+- Shape: The source pair has two objects of the same shape (triangles). Target Pair 2 also has two objects with the same shape (hearts), while Target Pair 1 has two different shapes.
+  
+- Color: The source pair has two objects with different colors (one red and one green). Target Pair 2 also has two objects with different colors (one light green and one dark green), while Target Pair 1 has two objects of the same color (green).
+  
+- Size: The source pair has two objects of different sizes (one small and one large). Target Pair 2 also has two objects of different sizes (one small and one large), while Target Pair 1 has two objects of the same size.
+  
+Target Pair 2 shares all the same abstract relations with the source pair: same shape, different color, and different size.",1
+data/RMTS/trial70/trial.png,2,"The matching target pair is Target Pair 2.
+
+Reasoning:
+1. In the source pair, we have two triangles, one small and light pink and one large and dark pink. The relation over the features is: same shape (both triangles), different color (light pink vs dark pink), different size (small vs large).
+2. In Target Pair 1, we have two hearts, one small and dark blue and one large and light blue. The relation over the features is: same shape (both hearts), different color (dark blue vs light blue), different size (small vs large).
+3. In Target Pair 2, we have two hearts, one small and dark pink and one large and light pink. The relation over the features is: same shape (both hearts), different color (dark pink vs light pink), different size (small vs large).
+
+Target Pair 2 shares the same relations with the source pair: same shape (both are triangles/hearts), different color (gradient of the same color), and different size (small vs large).",1
+data/RMTS/trial72/trial.png,1,"The matching target pair is Target Pair 1.
+
+Here's the reasoning:
+- The source pair has two objects that are different in shape (one star, one larger star), different in color (red and dark red), and different in size (small and large).
+- Target Pair 1 has two objects that are different in shape (one heart, one larger heart), different in color (purple and pink), and different in size (small and large), mirroring the relations in the source pair.
+- Target Pair 2 has objects that are the same shape (both hearts), same color (both red), but different in size, which does not match all the relations of the source pair as required by the task. 
+
+Thus, we determine that Target Pair 1 is the correct match because it shares all the same abstract relations with the source pair (different in shape, color, and size).",1
+data/RMTS/trial74/trial.png,2,"The matching target pair is Target Pair 2.
+
+Explanation:
+- Source Pair: Different shapes (star), same color (green), and different sizes.
+- Target Pair 1: Different shapes (heart), different colors (blue), and different sizes.
+- Target Pair 2: Same shapes (cross), different colors (green), and different sizes.
+
+Target Pair 2 shares the same abstract relations with the source pair, with both having different shapes and sizes, but the same color. Target Pair 1 does not match because it has different colors, which is not a relation shared with the source pair. Therefore, Target Pair 2 is the correct match.",1
+data/RMTS/trial76/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+Source Pair: different size, same shape, same color (blue stars)
+Target Pair 1: same size, same shape, different color (pink hearts)
+Target Pair 2: different size, same shape, same color (green crosses)
+
+Target Pair 2 shares the same abstract relations with the Source Pair: both pairs have objects that are different in size, the same in shape, and the same in color. Target Pair 1 does not share the same size relation as the Source Pair, therefore it is not the matching target pair.",1
+data/RMTS/trial78/trial.png,2,"The matching target pair is Target Pair 2.
+
+Here's the reasoning:
+
+- Source Pair: The objects have the same shape (both stars), different color (one is light pink and the other is dark pink), and different size (one is smaller and the other is larger).
+  
+- Target Pair 1: The objects have the same shape (both triangles), the same color (both red), and the same size.
+
+- Target Pair 2: The objects have the same shape (both crosses), different color (one is light green and the other is dark green), and different size (one is smaller and the other is larger).
+
+Given the relations:
+- Shape: Both pairs of objects in the source and target pair 2 have the same shape.
+- Color: Both pairs of objects in the source and target pair 2 have different colors.
+- Size: Both pairs of objects in the source and target pair 2 have different sizes.
+
+Since all the relations between the objects in Target Pair 2 match the relations in the Source Pair, Target Pair 2 is the correct match.",1
+data/RMTS/trial80/trial.png,1,"The matching target pair is Target Pair 1.
+
+Firstly, we identify the features of the objects in the source pair: both objects are heart-shaped, red in color, and different in size (one is small, the other is large).
+
+Next, we identify the relations over the features represented in the source pair: they have the same shape (heart), same color (red), and different sizes (small and large).
+
+Now, we compare the target pairs to the source pair:
+
+- Target Pair 1: Both objects are star-shaped, blue in color, and different in size (one is small, the other is large). The relations in this pair are the same shape (star), same color (blue), and different sizes (small and large). This target pair shares the same relations with the source pair (same shape, same color, and different sizes).
+  
+- Target Pair 2: Both objects are star-shaped, blue in color, and the same size. The relations in this pair are the same shape (star), same color (blue), and same size. This target pair does not share the same relations with the source pair because the size relation is different (same vs. different).
+
+Therefore, the matching target pair is Target Pair 1, as it shares all the same abstract relations with the source pair.",1
+data/RMTS/trial82/trial.png,2,"The matching target pair is Target Pair 2. 
+
+Here's the reasoning:
+- The source pair consists of two hearts that are the same shape, different sizes (one small, one large), and the same color (green).
+- Target Pair 1 consists of two triangles that are the same shape, the same size (both small), and different colors (one red, one pink).
+- Target Pair 2 consists of two triangles that are the same shape, different sizes (one small, one large), and the same color (purple).
+
+Target Pair 2 shares the same relations with the source pair: same shape (hearts/triangles), different sizes (small/large), and same color (green/purple).",1
+data/RMTS/trial88/trial.png,2,"The matching target pair is Target Pair 2.
+
+The source pair consists of two different size crosses that are the same shape and color. Therefore, the relations over the features are: same shape, same color, and different size.
+
+Target Pair 1 consists of two different size hearts that are the same shape and color, matching the relation of different size, but not same shape or same color.
+
+Target Pair 2 consists of two different size spades that are the same shape and color, which match all the same relations as the source pair: same shape, same color, and different size.",1
