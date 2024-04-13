@@ -17,10 +17,23 @@ from openai import OpenAI
 from utils import encode_image
 
 
+def get_header(api_info, model='gpt-4-azure') -> Dict[str, str]:
+    if model == 'gpt-4-vision-azure':
+        return {
+            "Content-Type": "application/json",
+            "api-key": "{}".format(api_info['azure_api_key'])
+        }
+    if model == 'gpt-4':
+        return {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer {}".format(api_info['openai_api_key'])
+        }
+
+
 # NOTE (declan): Is it worth it to add exponential backoff with tenacity here?
 def run_trial(
     img_path: Union[str, List[str]],
-    headers: Dict[str, str],
+    api_info: Dict[str, str],
     task_payload: Dict,
     parse_payload: Dict,
     parse_prompt: str,
@@ -32,7 +45,7 @@ def run_trial(
 
     Parameters:
     img_path (str): The path to the image for the trial.
-    headers (Dict[str, str]): The headers for the API request.
+    api_info(Dict[str, str]): The API information.
     task_payload (Dict): The payload for the vision model request.
     parse_payload (Dict): The payload for the parsing model request.
     parse_prompt (str): The prompt for the parsing model.
@@ -65,6 +78,9 @@ def run_trial(
         task_payload["messages"][0]["content"][1]["image_url"][
             "url"
         ] = f"data:image/jpeg;base64,{image}"
+
+    # Get the relevant headers
+    headers = get_header(api_info, model='gpt-4')
 
     # Until the model provides a valid response, keep trying.
     answer = "-1"  # -1 if model failed to provide a valid response.
@@ -131,7 +147,7 @@ def run_trial(
 # NOTE (declan): Is it worth it to add exponential backoff with tenacity here?
 def run_trial_azure(
     img_path: Union[str, List[str]],
-    headers: Dict[str, str],
+    api_info: Dict[str, str],
     task_payload: Dict,
     parse_payload: Dict,
     parse_prompt: str,
@@ -143,7 +159,7 @@ def run_trial_azure(
 
     Parameters:
     img_path (str): The path to the image for the trial.
-    headers (Dict[str, str]): The headers for the API request.
+    api_info(Dict[str, str]): The API information.
     task_payload (Dict): The payload for the vision model request.
     parse_payload (Dict): The payload for the parsing model request.
     parse_prompt (str): The prompt for the parsing model.
@@ -184,8 +200,8 @@ def run_trial_azure(
     while answer == "-1" and i < n_attempts:
         # Get the vision model response.
         trial_response = requests.post(
-            "https://gpt4-ilia-2024-japan-east.openai.azure.com/openai/deployments/gpt-4-vision-preview/chat/completions?api-version=2023-12-01-preview",
-            headers=headers,
+            "https://gpt4-ilia-2024-switzerland-north.openai.azure.com/openai/deployments/gpt-4-vision-preview/chat/completions?api-version=2023-12-01-preview",
+            headers=get_header(api_info, model='gpt-4-vision-azure'),
             json=task_payload,
         )
 
@@ -230,8 +246,8 @@ def run_trial_azure(
             "text"
         ] = trial_parse_prompt  # update the payload
         answer = requests.post(
-            "https://gpt4-ilia-2024-japan-east.openai.azure.com/openai/deployments/gpt-4-vision-preview/chat/completions?api-version=2023-12-01-preview",
-            headers=headers,
+            "https://gpt4-ilia-2024-switzerland-north.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2023-12-01-preview",
+            headers=get_header(api_info, model='gpt-4-vision-azure'),
             json=parse_payload,
         )
         answer = answer.json()["choices"][0]["message"]["content"]

@@ -1,4 +1,4 @@
-The following set of three images depict a trial of the relational match to sample task with three features: shape, color, and size. These three images depict three different pairs of objects: the source pair, target pair #1, and target pair #2. Your task is to identify which target pair shares the same abstract relations with the source pair. The possible relations are same/different shape, same/different color, and same/different size. Only one target pair will share the same relations with the source pair.
+The following set of three images depict a trial of the relational match to sample task with three features: shape, color, and size. Only one target pair will share the same relations with the source pair.
 Now, given the source pair and the two target pairs, identify the matching target pair. To accomplish this task, you can use the following steps:
 1. Identify the features of the objects in each pair (i.e. shape, color, and size).
 2. Identify the relations over the features represented in each pair.

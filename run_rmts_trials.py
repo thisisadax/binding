@@ -22,12 +22,8 @@ relations = ['shape', 'color', 'size']
 
 # OpenAI API Key and header.
 with open("my_api_key.json", "r") as f:
-    api_key = json.load(f)["azure_api_key"]
-headers = {
-    "Content-Type": "application/json",
-    # "Authorization": f"Bearer {api_key}"
-    "api-key": api_key
-}
+    api_info = json.load(f)
+
 
 # rmts task parameters
 with open(os.path.join(os.path.dirname(__file__), 'prompts/run_rmts_unified.txt'), 'r') as f:
@@ -80,7 +76,7 @@ def run_single_rmts_trial_decomposed(info, rmts_only=False):
                     task_payload["messages"][0]["content"][0]["text"] = prompt
                     answer, trial_response = run_trial(
                         img_path=[source_image, target1_image, target2_image],
-                        headers=headers,
+                        api_info=api_info,
                         task_payload=task_payload,
                         parse_payload=parse_payload,
                         parse_prompt=feature_decoding_prompt,
@@ -105,7 +101,7 @@ def run_single_rmts_trial_decomposed(info, rmts_only=False):
                 task_payload["messages"][0]["content"][0]["text"] = prompt
                 answer, trial_response = run_trial(
                     img_path=[source_image, target1_image, target2_image],
-                    headers=headers,
+                    api_info=api_info,
                     task_payload=task_payload,
                     parse_payload=parse_payload,
                     parse_prompt=relation_decoding_prompt,
@@ -124,7 +120,7 @@ def run_single_rmts_trial_decomposed(info, rmts_only=False):
     task_payload["messages"][0]["content"][0]["text"] = decomposed_rmts_prompt
     answer, trial_response = run_trial(
         img_path=[source_image, target1_image, target2_image],
-        headers=headers,
+        api_info=api_info,
         task_payload=task_payload,
         parse_payload=parse_payload,
         parse_prompt=rmts_prompt,
@@ -177,7 +173,7 @@ def run_single_rmts_trial_unified(info, rmts_only=False):
                     task_payload["messages"][0]["content"][0]["text"] = prompt
                     answer, trial_response = run_trial(
                         img_path=trial_image,
-                        headers=headers,
+                        api_info=api_info,
                         task_payload=task_payload,
                         parse_payload=parse_payload,
                         parse_prompt=feature_decoding_prompt,
@@ -202,7 +198,7 @@ def run_single_rmts_trial_unified(info, rmts_only=False):
                 task_payload["messages"][0]["content"][0]["text"] = prompt
                 answer, trial_response = run_trial(
                     img_path=trial_image,
-                    headers=headers,
+                    api_info=api_info,
                     task_payload=task_payload,
                     parse_payload=parse_payload,
                     parse_prompt=relation_decoding_prompt,
@@ -221,7 +217,7 @@ def run_single_rmts_trial_unified(info, rmts_only=False):
     task_payload["messages"][0]["content"][0]["text"] = unified_rmts_prompt
     answer, trial_response = run_trial(
         img_path=trial_image,
-        headers=headers,
+        api_info=api_info,
         task_payload=task_payload,
         parse_payload=parse_payload,
         parse_prompt=rmts_prompt,

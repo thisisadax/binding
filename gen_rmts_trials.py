@@ -121,7 +121,7 @@ def make_shape_trial(source1, features, source_relations, target_relations):
 
     # if incorrect1 has the same size as the first source and the relation is a
     # size relation, make sure that the relation is correct.
-    if source_relations[-1] == False:
+    if not source_relations[-1]:
         if incorrect1['size'] == source1['size']:
             incorrect2_inds = get_pair_inds(incorrect1, features, target_relations)
         else:
@@ -157,25 +157,13 @@ def generate_rmts_trial_data():
     imgs = np.load('imgs.npy')
 
     # Plot only some test characters.
-    simple_inds = [9, 98, 96, 24] #, 59, 55]
+    simple_inds = [9, 98, 96, 24, 59, 51] #, 59, 55]
     simple_imgs = imgs[simple_inds]
     simple_imgs = [cv2.resize(i, (96, 96)) for i in simple_imgs]
 
-    # Generate all possible shapes.
-    colors = ['red', 'green', 'blue', 'purple']
-    rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
-    all_shapes = []
-    for shape in tqdm(simple_imgs):
-        for rgb in rgb_values:
-            rgb_shape = color_shape(shape.astype(np.float32), rgb)
-            small_shape = resize(rgb_shape)
-            all_shapes.append(small_shape)
-            all_shapes.append(rgb_shape)
-    test = np.stack(all_shapes)
-
     # Simple easily nameable colors and shapes.
-    colors = ['red', 'green', 'blue', 'purple']
-    shapes = ['triangle', 'star', 'heart', 'cross']
+    colors = ['red', 'green', 'blue', 'purple', 'orange', 'black']
+    shapes = ['triangle', 'star', 'heart', 'cross', 'pentagon', 'spade']
     rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
 
     # Generate all possible shapes.
@@ -217,12 +205,12 @@ def generate_rmts_trial_data():
     for i, relations in enumerate(tqdm(all_relations)):
         for j, source1 in features.iterrows():
             source1, source2, target1_1, target1_2, target2_1, target2_2, correct_side = make_shape_trial(source1, features, relations[0], relations[1])
-            if source1['size'] == 'large' and source2['size'] == 'small':
-                continue
-            if target1_1['size'] == 'large' and target1_2['size'] == 'small':
-                continue
-            if target2_1['size'] == 'large' and target2_2['size'] == 'small':
-                continue
+            # if source1['size'] == 'large' and source2['size'] == 'small':
+            #     continue
+            # if target1_1['size'] == 'large' and target1_2['size'] == 'small':
+            #     continue
+            # if target2_1['size'] == 'large' and target2_2['size'] == 'small':
+            #     continue
 
             trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2)
 
