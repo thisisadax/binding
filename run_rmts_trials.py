@@ -89,10 +89,8 @@ def run_single_rmts_trial_decomposed(info, rmts_only=False):
                     output_data[(f'{desired_pair_name}_{desired_numeral}_'
                                  f'feature_{desired_feature}_response')] = trial_response
                     p_bar.update(1)
-        p_bar.close()
 
         # run all the relation decoding prompts
-        p_bar = tqdm(total=len(pair_names) * len(relations), desc="Running relation decoding prompts")
         for desired_pair in pair_names:
             for desired_relation in relations:
                 prompt = relation_decoding_task.format(pair_name=desired_pair, relation=desired_relation)
@@ -159,7 +157,7 @@ def run_single_rmts_trial_unified(info, rmts_only=False):
     # run all the feature decoding prompts
     if not rmts_only:
         p_bar = tqdm(total=len(pair_names) * len(numeral_direction) * len(features),
-                     desc="Running feature decoding prompts")
+                     desc="Running feature/relation decoding prompts")
         for desired_pair in pair_names:
             for desired_numeral, desired_direction in numeral_direction:
                 for desired_feature in features:
@@ -186,10 +184,8 @@ def run_single_rmts_trial_unified(info, rmts_only=False):
                     output_data[(f'{desired_pair_name}_{desired_numeral}_'
                                  f'feature_{desired_feature}_response')] = trial_response
                     p_bar.update(1)
-        p_bar.close()
 
         # run all the relation decoding prompts
-        p_bar = tqdm(total=len(pair_names) * len(relations), desc="Running relation decoding prompts")
         for desired_pair in pair_names:
             for desired_relation in relations:
                 prompt = relation_decoding_task.format(pair_name=desired_pair, relation=desired_relation)
@@ -274,10 +270,42 @@ def run_full_rmts_only_task(df):
     output_df_unified.to_csv('data/RMTS/rmts_output_unified.csv', index=False)
 
 
+def run_sharded_full_task(df):
+    output_decomposed_df = pd.DataFrame()
+    output_unified_df = pd.DataFrame()
+
+    # run the complete decomposed + unified tasks for each trial in the sharded dataframe
+    for i, row in tqdm(df.iterrows(), total=len(df), desc="Running RMTS task"):
+        output_data_decomposed = run_single_rmts_trial_decomposed(row)
+        output_data_unified = run_single_rmts_trial_unified(row)
+
+        # save the output
+        if i == 0:
+            output_decomposed_df = pd.DataFrame(output_data_decomposed, index=[0])
+            output_unified_df = pd.DataFrame(output_data_unified, index=[0])
+        else:
+            output_decomposed_df.loc[i] = output_data_decomposed
+            output_unified_df.loc[i] = output_data_unified
+
+        # check the accuracy
+        print(
+            "Row {i}: Correct = {correct}, Decomposed = {decomposed}, Unified = {unified}".format(
+                i=i,
+                correct=row['correct_target'],
+                decomposed=output_data_decomposed['rmts_answer'],
+                unified=output_data_unified['rmts_answer']
+            )
+        )
+
+    return output_decomposed_df, output_unified_df
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--task', type=str, default='rmts_only',
-                    choices=['workspace', 'rmts_only'])
+                    choices=['workspace', 'rmts_only', 'relations'], )
+    ap.add_argument('--shard', type=int, default=0,
+                    help="Shard number to run the task on")
     args = ap.parse_args()
 
     # load the trial dataframe
@@ -318,7 +346,25 @@ if __name__ == '__main__':
 
         output_decomposed.to_csv('data/RMTS/rmts_trial_output_decomposed.csv', index=False)
         output_unified.to_csv('data/RMTS/rmts_trial_output_unified.csv', index=False)
+    elif args.task == 'relations':
+        # sample the nth shard of the big dataframe
+        df = pd.read_csv('data/RMTS/rmts_trial_df.csv')
+        shard_size = len(df) // 15
+        start_idx = args.shard * shard_size
+        end_idx = (args.shard + 1) * shard_size
+        task_df = df.iloc[start_idx:end_idx]
+
+        # run the task and save it
+        decomposed_df, unified_df = run_sharded_full_task(task_df)
+        decomposed_df.to_csv(f'data/RMTS/rmts_output_decomposed_shard_{args.shard}.csv', index=False)
+        unified_df.to_csv(f'data/RMTS/rmts_output_unified_shard_{args.shard}.csv', index=False)
+
     else:
-        run_full_rmts_only_task(pd.read_csv('data/RMTS/rmts_trial_df.csv'))
+        pass
+
+
+
+
+
 
 
