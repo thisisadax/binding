@@ -157,13 +157,13 @@ def generate_rmts_trial_data():
     imgs = np.load('imgs.npy')
 
     # Plot only some test characters.
-    simple_inds = [9, 98, 96, 24, 59, 51] #, 59, 55]
+    simple_inds = [9, 98, 96, 24, 100, 101]  #, 59, 51] #, 59, 55]
     simple_imgs = imgs[simple_inds]
     simple_imgs = [cv2.resize(i, (96, 96)) for i in simple_imgs]
 
     # Simple easily nameable colors and shapes.
-    colors = ['red', 'green', 'blue', 'purple', 'orange', 'black']
-    shapes = ['triangle', 'star', 'heart', 'cross', 'pentagon', 'spade']
+    colors = ['red', 'green', 'blue', 'purple', 'saddlebrown', 'black']
+    shapes = ['triangle', 'star', 'heart', 'cross', 'circle', 'square']
     rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
 
     # Generate all possible shapes.
@@ -205,12 +205,12 @@ def generate_rmts_trial_data():
     for i, relations in enumerate(tqdm(all_relations)):
         for j, source1 in features.iterrows():
             source1, source2, target1_1, target1_2, target2_1, target2_2, correct_side = make_shape_trial(source1, features, relations[0], relations[1])
-            # if source1['size'] == 'large' and source2['size'] == 'small':
-            #     continue
-            # if target1_1['size'] == 'large' and target1_2['size'] == 'small':
-            #     continue
-            # if target2_1['size'] == 'large' and target2_2['size'] == 'small':
-            #     continue
+            if source1['size'] == 'large' and source2['size'] == 'small':
+                continue
+            if target1_1['size'] == 'large' and target1_2['size'] == 'small':
+                continue
+            if target2_1['size'] == 'large' and target2_2['size'] == 'small':
+                continue
 
             trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2)
 

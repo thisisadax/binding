@@ -204,6 +204,7 @@ def run_trial_azure(
             headers=get_header(api_info, model='gpt-4-vision-azure'),
             json=task_payload,
         )
+        print(trial_response.json())
 
         # check for easily-avoidable errors
         if 'error' in trial_response.json():
@@ -252,6 +253,8 @@ def run_trial_azure(
         )
         answer = answer.json()["choices"][0]["message"]["content"]
         i += 1
+        print('waiting for 45 seconds')
+        time.sleep(45)
 
     return answer, trial_response
 
