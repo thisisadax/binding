@@ -87,7 +87,7 @@ def main():
 			trial = make_describe_trial(imgs, n_shapes=n, n_unique=args.n_unique, size=args.size, uniform=args.uniform, sigma=args.sigma)
 
 			# Save the trials and their metadata.
-			trial_path = f'data/counting/counting-{n}_{i}.png'
+			trial_path = f'data/describe/describe-{n}_{i}.png'
 			trial.save(trial_path)
 			trial.save(trial_path)
 			results_df = results_df._append({
