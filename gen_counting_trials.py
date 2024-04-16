@@ -90,7 +90,7 @@ def main():
 			}, ignore_index=True)
 
 	# Save results DataFrame to CSV
-	results_df.to_csv('./output/search_results.csv', index=False)
+	results_df.to_csv('./output/counting_results.csv', index=False)
 
 if __name__ == '__main__':
 	main()

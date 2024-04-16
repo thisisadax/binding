@@ -35,10 +35,12 @@ def paste_shape(shape: np.ndarray,
     np.ndarray: The updated positions of the shapes on the canvas.
     """
     img = Image.fromarray(np.transpose(shape, (1, 2, 0)))
-    position = np.array(np.random.randint(img_size, 256-img_size, size=2)).reshape(1,-1)
+    #position = np.array(np.random.randint(img_size, 256-img_size, size=2)).reshape(1,-1)
+    position = np.array(np.random.randint(0, 256-img_size, size=2)).reshape(1,-1)
     # Keep trying to find a position that is far enough from the other shapes.
     while np.any(np.linalg.norm(positions-position, axis=1) < img_size):
-        position = np.array(np.random.randint(img_size, 256-img_size, size=2)).reshape(1,-1)
+        #position = np.array(np.random.randint(img_size, 256-img_size, size=2)).reshape(1,-1)
+        position = np.array(np.random.randint(0, 256-img_size, size=2)).reshape(1,-1)
     canvas_img.paste(img, tuple(position.squeeze()))
     positions[i] = position
     return positions

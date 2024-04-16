@@ -1,6 +1,7 @@
 import argparse
 from typing import Optional, Tuple
 import numpy as np
+from PIL import Image, ImageDraw, ImageFont
 
 from utils import *
 
@@ -32,12 +33,22 @@ def place_shapes(shape1: np.ndarray,
 	for i in range(n_shapes//2):
 		# If it's an oddball trial and we're on the first shape, paste the oddball shape.
 		if i==0 and shape3 is not None:
-			positions = paste_shape(shape1, positions, canvas_img, 2*i, img_size=size)
+			#positions = paste_shape(shape1, positions, canvas_img, 2*i, img_size=size)
 			positions = paste_shape(shape3, positions, canvas_img, 2*i+1, img_size=size)
 			continue
 		positions = paste_shape(shape1, positions, canvas_img, 2*i, img_size=size)
 		positions = paste_shape(shape2, positions, canvas_img, 2*i+1, img_size=size)
 	return canvas_img
+
+
+def letter_img(letter: str):
+	assert len(letter)==1 # make sure the string is just a letter.
+	img = Image.new('RGB', (32, 32), (255, 255, 255))
+	font = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Black.ttf', size=28)
+	draw = ImageDraw.Draw(img)
+	draw.text((7, -4), letter, (0,0,0), font=font)
+	img_array = np.transpose(np.array(img), (2, 0, 1))
+	return img_array
 
 
 def make_search_trials(shape1_img: np.ndarray, 
@@ -78,9 +89,12 @@ def parse_args() -> argparse.Namespace:
 	argparse.Namespace: The parsed command line arguments.
 	"""
 	parser = argparse.ArgumentParser(description='Generate serial search trials.')
-	parser.add_argument('--n_shapes', type=int, nargs='+', default=[4, 8, 12, 16, 32], help='Number of stimuli to present.')
+	parser.add_argument('--n_shapes', type=int, nargs='+', default=[4, 6, 8, 10, 16, 32], help='Number of stimuli to present.')
 	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
-	parser.add_argument('--colors', type=str, nargs='+', default=['red', 'green', 'blue'], help='Colors to use for the shapes.')
+	parser.add_argument('--colors', type=str, nargs='+', default=None, help='Colors to use for the shapes.')
+	parser.add_argument('--shape_inds', type=int, nargs='+', default=None, help='Indices of the shapes to use when generating the shape trials (e.g. [1,37] for diamond and circle).')
+	parser.add_argument('--size', type=int, default=28, help='Size to reshape the shapes to.')
+	parser.add_argument('--use_letters', type=bool, default=False, help='Whether or not to use letters as stimuli.')
 	return parser.parse_args()
 
 
@@ -88,11 +102,25 @@ def main():
 	# Parse command line arguments.
 	args = parse_args()
 
-	# Generate all possible shapes.
-	imgs = np.load('imgs.npy')
-	rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
-	shape_inds = np.arange(imgs.shape[0])
-	rgb_inds = np.arange(rgb_values.shape[0])
+	# Load the shapes to generate trials with. 
+	if args.shape_inds:
+		assert args.use_letters=='False'
+		imgs = np.load('imgs.npy')
+		shape_inds = np.array(args.shape_inds) #np.arange(imgs.shape[0])
+	elif args.use_letters:
+		img1 = letter_img('L')
+		img2 = letter_img('T')
+		imgs = np.stack([img1, img2])
+		shape_inds = np.array([0,1])
+
+	# Set up the colors to use when generating the stimuli.
+	if args.colors is None:
+		cmap = mpl.colormaps['gist_rainbow']
+		colors = cmap(np.linspace(0, 1, 100))
+		rgb_values = np.array([rgba[:3] for rgba in colors])
+	else:
+		rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
+		rgb_inds = np.arange(rgb_values.shape[0])
 
 	# Create directory for serial search exists.
 	os.makedirs('./data/serial_search', exist_ok=True)
@@ -104,7 +132,7 @@ def main():
 	for n in tqdm(args.n_shapes):
 		for i in range(args.n_trials):
 			# Randomly select an index for the first shape
-			shape1_ind = np.random.choice(imgs.shape[0], size=1)[0]
+			shape1_ind = np.random.choice(shape_inds, size=1)[0]
 			# Randomly select an index for the second shape, making sure it's not the same as the first shape
 			shape2_ind = np.random.choice(shape_inds[shape_inds!=shape1_ind], size=1)[0]
 			# Get the images for the selected shapes
@@ -113,10 +141,10 @@ def main():
 			# Randomly select an index for the first color
 			rgb1_ind = np.random.choice(rgb_values.shape[0], size=1)[0]
 			# Randomly select an index for the second color, making sure it's not the same as the first color
-			rgb2_ind = np.random.choice(rgb_inds[rgb_inds!=rgb1_ind], size=1)[0]
+			# rgb2_ind = np.random.choice(rgb_inds[rgb_inds!=rgb1_ind], size=1)[0]
 			# Get the RGB values for the selected colors
 			rgb1 = rgb_values[rgb1_ind]
-			rgb2 = rgb_values[rgb2_ind]
+			rgb2 = 1-rgb1 #rgb_values[rgb2_ind]
 			# Generate the congruent and incongruent trials
 			congruent_trial, incongruent_trial = make_search_trials(shape1_img, shape2_img, rgb1, rgb2, n_shapes=n, size=24)
 			# Save the trials and their metadata.

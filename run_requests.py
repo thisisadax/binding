@@ -12,6 +12,7 @@ import pandas as pd
 import openai
 from openai import OpenAI
 
+import time
 
 from utils import encode_image
 
@@ -55,6 +56,8 @@ def run_trial(img_path: str,
 		parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
 		answer = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=parse_payload)
 		answer = answer.json()['choices'][0]['message']['content']
+		#print(f'Trial response: {str(trial_response).strip()}')
+		#print(f'Parsed response: {answer}')
 		i += 1
 	return answer, trial_response
 
@@ -96,9 +99,11 @@ def main():
 	# Run all the trials.
 	for i, trial in tqdm(results_df.iterrows()):
 		# Only run the trial if it hasn't been run before.
-		if len(trial.response) != 0:
+		if type(trial.response) != str:
+			time.sleep(5) # Wait for 1 second to avoid rate limiting.
 			try:
 				answer, trial_response = run_trial(trial.path, headers, task_payload, parse_payload, parse_prompt)
+				print(f'Trial {i} answer: {answer}')
 				results_df.loc[i, 'response'] = trial_response
 				results_df.loc[i, 'answer'] = answer
 			except Exception as e:

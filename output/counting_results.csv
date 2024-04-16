@@ -1,0 +1,4274 @@
+path,n_shapes,response,answer,incongruent
+data/counting/counting-1_0.png,1,"The image contains a single green dot or circle against a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_1.png,1,"The image features a singular, small blue dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_2.png,1,"The image is very simple and contains a single object, which appears to be a blue dot or circle centered in the middle of a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_3.png,1,"There is a single red dot or circle in the center of the image against a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_4.png,1,"The image displays a single green dot against a plain, light background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_5.png,1,"The image displays a single red dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_6.png,1,"The image contains a single blue dot on a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_7.png,1,"The image shows a single orange dot against a plain white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_8.png,1,"The image contains a single object: a green dot or circle on a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_9.png,1,"In the image, there is a single purple dot against a white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_10.png,1,"The image appears to be simple, showing a plain background (likely white) with a single small, round, magenta-colored dot positioned towards the bottom right corner.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_11.png,1,"The image contains a single object: a green dot or circle against a white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_12.png,1,"The image contains a single object, which appears to be a small turquoise dot or circle against a plain, light background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_13.png,1,"I see a single blue dot or circle on a white background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_14.png,1,"The image consists of a single object, which appears to be a small green dot or circle on a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_15.png,1,"The image contains a single green dot on a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_16.png,1,"The image contains a single purple dot on a plain background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_17.png,1,"The image appears to contain a single object, which is a small purple dot or circle towards the bottom right of a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_18.png,1,"In the image, there is a single object that appears to be a small purple dot or circle located towards the top left corner.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_19.png,1,"The image appears to contain a single small yellow or light green circle against a predominantly white background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_20.png,1,"The image you've provided appears to contain one small green circle against a plain background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_21.png,1,"The image shows a single purple dot against a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_22.png,1,"The image you've provided appears to show a single purple dot or circle on a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_23.png,1,"The image contains a single blue dot against a plain, white background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_24.png,1,"In the image, there appears to be a single blue dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_25.png,1,"The image consists of a single object, which appears to be a small green dot or circle against a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_26.png,1,"In the image provided, I see one small purple dot against a plain white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_27.png,1,"I see a small, solid purple circle toward the bottom right corner of an otherwise blank and white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_28.png,1,"In the image, there is a single blue dot against a plain background. There are no other discernible objects in the image.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_29.png,1,"The image contains a single blue dot against a plain background. There are no other discernible objects in the image.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_30.png,1,"The image contains a single teal or turquoise colored circle placed on a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_31.png,1,"The image appears to contain just one object: a small green dot against a plain white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_32.png,1,"The image appears to consist of a plain background with a single small blue dot or circle toward the bottom of the image.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_33.png,1,"The image displays a single blue dot against a plain white background. There are no other distinguishable objects present.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_34.png,1,"The image shows a plain background with a single yellow dot or circle at the center.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_35.png,1,"The image you've provided displays a single blue dot against a white background. There is only one object in this image.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_36.png,1,"The image contains one orange dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_37.png,1,"The image contains a single small orange dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_38.png,1,"The image contains a single green dot (or circle) against a plain background.
+
+The number of objects in the image is:
+1",1,False
+data/counting/counting-1_39.png,1,"The image contains a single turquoise-colored dot against a white background. There are no other distinguishable objects present in the image.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_40.png,1,"The image contains a single object, which appears to be a small purple dot or circle against a plain, light background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_41.png,1,"The image contains a single purple dot against a plain background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_42.png,1,"The image shows a single small purple dot against a plain background. 
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_43.png,1,"The image contains a single yellow-green object, which appears to be a small ball or a circle.
+
+The number of objects in the image is:
+
+1",1,False
+data/counting/counting-1_44.png,1,"The image displays a single blue dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_45.png,1,"The image contains a single green dot on a white background.
+
+The number of objects in the image is:
+1",1,False
+data/counting/counting-1_46.png,1,"The image features a plain background with a single small yellow circle.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_47.png,1,"The image contains a single green dot against a plain white background.
+
+There is 1 object in the image.",1,False
+data/counting/counting-1_48.png,1,"The image contains a single green dot against a plain background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_49.png,1,"The image contains a single object, which is a small green circle (or dot) against a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_50.png,1,"The image contains a single teal/dark cyan-colored dot or circle against a plain, light background. There are no other discernible objects in the image.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_51.png,1,"The image shows a single small cyan dot or circle on a white background.
+
+The number of objects in the image is:
+
+1",1,False
+data/counting/counting-1_52.png,1,"The image contains a single green dot or circle against a plain white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_53.png,1,"The image shows a single, small, pink dot or circle against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_54.png,1,"The image appears to be a simple white background with a single small yellow dot or circle in the upper left quadrant.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_55.png,1,"The image contains a single, small, green circle centered on a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_56.png,1,"The image consists of a single purple circle on a plain background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_57.png,1,"The image contains a single green dot against a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_58.png,1,"The image appears to contain a single green dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_59.png,1,"The image appears to show a single orange dot against a plain background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_60.png,1,"The image shows a single small, solid-colored circle against a plain background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_61.png,1,"The image appears to contain a single small blue dot against a plain white background. 
+
+The number of objects in the image is: 
+
+1",1,False
+data/counting/counting-1_62.png,1,"The image displays a single blue dot against a plain background.
+
+The number of objects in the image is:
+
+1",1,False
+data/counting/counting-1_63.png,1,"The image displays a solid green circle on a plain background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_64.png,1,"The image contains a single turquoise-colored dot against a plain white background. 
+
+The number of objects in the image is:
+1",1,False
+data/counting/counting-1_65.png,1,"The image contains a single green dot against a plain, light background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_66.png,1,"The image appears to contain a single object, which is a green dot or circle located towards the bottom left corner of the image. There do not seem to be any other distinguishable objects visible.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_67.png,1,"The image you've provided appears to be a simple white background with a single small orange dot towards the bottom right corner.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_68.png,1,"The image displays a single, small, pink or magenta-colored circle against a plain white background.
+
+The total number of objects in the image is: 1",1,False
+data/counting/counting-1_69.png,1,"The image shows a single red dot against a plain white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_70.png,1,"The image displays a single blue dot against a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_71.png,1,"The image displays a single green dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_72.png,1,"The image is very minimal with a solid light background, and there appears to be only one object visible: a small pink dot or circle located towards the top of the image.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_73.png,1,"The image contains a single teal-colored dot against a plain white background. 
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_74.png,1,"The image contains a single object, which is a small blue dot or circle on a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_75.png,1,"The image shows a single small purple dot or circle against a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_76.png,1,"The image contains a single red dot against a plain, white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_77.png,1,"The image contains a single red dot on a plain background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_78.png,1,"The image contains only one object: a small blue dot or circle.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_79.png,1,"The image shows a single small purple dot against a white background. There are no other discernible objects within the frame.
+
+The number of objects in the image is 1.",1,False
+data/counting/counting-1_80.png,1,"The image contains a single blue dot against a plain background. There are no other discernible objects to describe.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_81.png,1,"The image contains a single green dot or circle on a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_82.png,1,"The image contains a single purple dot against a white background.
+
+The number of objects in the image is:
+
+1",1,False
+data/counting/counting-1_83.png,1,"The image contains a single blue dot against a white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_84.png,1,"The image contains a single object, which appears to be a small, pink or magenta circle on a white background. 
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_85.png,1,"The image contains a single object, which appears to be a small, pink dot or circle against a plain white background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_86.png,1,"The image appears to contain a single small red dot against a plain white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_87.png,1,"The image contains a single, small orange circle against a white background.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_88.png,1,"The image contains a single pink dot against a plain, light background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_89.png,1,"The image shows a single red dot against a plain white background. There are no other objects visible in the image.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_90.png,1,"The image features a plain background with a single red dot centered towards the bottom of the image.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_91.png,1,"In the image, there is a single blue dot against a white background.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_92.png,1,"The image shows a single red dot against a plain, light-colored background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_93.png,1,"The image shows a plain white background with a small pink dot towards the bottom right corner.
+
+The number of objects in the image: 1.",1,False
+data/counting/counting-1_94.png,1,"The image contains just one object: a green dot situated towards the upper portion of the image.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-1_95.png,1,"The image contains a single yellow circle situated towards the bottom left corner against a plain background.
+
+The number of objects in the image is:
+1",1,False
+data/counting/counting-1_96.png,1,"The image shows a single small green circle against a plain white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_97.png,1,"The image you've provided is very minimal and contains only one object that is easily discernible. It is a small, solid red circle against a plain white background.
+
+Number of objects in the image: 1.",1,False
+data/counting/counting-1_98.png,1,"The image contains a single purple dot or circle on a plain white background.
+
+The number of objects in the image is: 1.",1,False
+data/counting/counting-1_99.png,1,"The image contains a single yellow circle on a plain white background. There are no other distinguishable objects present.
+
+Number of objects in the image: 1",1,False
+data/counting/counting-2_0.png,2,"The image appears to have two circular objects with different colors: one is red and the other is purple.
+
+The number of objects in the image is:
+2",2,False
+data/counting/counting-2_1.png,2,"The image contains two green dots against a plain background. 
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_2.png,2,"The image contains two round, green-colored objects.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_3.png,2,"In the image, I see two red dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_4.png,2,"The image contains two circular dots. There's one smaller teal dot and one larger blue dot.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_5.png,2,"The image shows two green dots on a plain background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_6.png,2,"The image consists of two red circular objects that appear to be dots or possibly graphical representations of some items.
+
+The number of objects in the image is: 2",2,False
+data/counting/counting-2_7.png,2,"The image contains two magenta-colored dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_8.png,2,"The image shows two small purple circles against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_9.png,2,"The image contains three green dots of the same size arranged diagonally from the top left to the bottom right.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-2_10.png,2,"The image contains two red dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_11.png,2,"The image contains two green circular objects of different sizes.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_12.png,2,"The image shows two colored circles: one is purple and the other is red.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_13.png,2,"The image contains three pink dots of varying sizes against a white background. 
+
+Number of objects: 3",3,False
+data/counting/counting-2_14.png,2,"The image displays two colored circles - one yellow and one red.
+
+The number of objects in the image is: 2.",2,False
+data/counting/counting-2_15.png,2,"The image contains two round, colored objects. They appear to be flat, circular shapes rather than three-dimensional spheres.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_16.png,2,"I'm unable to view images directly. However, based on the image's content as described in other contexts, if what you're seeing are two colored dots on a plain background and nothing more, then the number of objects in the image would be two. If there are additional objects in the image that I'm not aware of, please let me know, and we can reassess the count.",2,False
+data/counting/counting-2_17.png,2,"The image contains two objects that appear to be pink or magenta dots or circles. 
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_18.png,2,"The image contains two green dots or circles against a plain background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_19.png,2,"There are two colored circles in the image. One is orange and the other is yellow.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_20.png,2,"The image contains two pink dots against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_21.png,2,"The image contains two purple dots against a white background.
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_22.png,2,"The image contains three green dots arranged vertically.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-2_23.png,2,"The image contains two round, colored objects. One is orange, and the other is yellow. 
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_24.png,2,"In the image, there are two spherical objects or orbs with a colored appearance. One is red, and the other is yellow.
+
+The number of objects in the image: 2",2,False
+data/counting/counting-2_25.png,2,"The image contains two pink dots.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_26.png,2,"The image contains two purple dots of different sizes against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_27.png,2,"In the image, I can see three blue dots of varying sizes placed irregularly on a white background.
+
+Counting each dot as an object, there are a total of 3 objects in the image.",3,False
+data/counting/counting-2_28.png,2,"The image contains three purple dots of varying sizes.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-2_29.png,2,"The image shows two blue dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_30.png,2,"The image features two green dots against a light background.
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_31.png,2,"The image shows two red dots against a plain background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_32.png,2,"The image contains two purple dots of different sizes against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_33.png,2,"In the image, I can see two green circular objects of different sizes.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_34.png,2,"The image features two round, colored objects. There's a yellow circle on the left side and a red circle on the right side. 
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_35.png,2,"The image contains two red dots of different sizes against a plain background.
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_36.png,2,"The image shows two green dots against a white background. Counting each dot as an object, there are:
+
+2 objects in the image.",2,False
+data/counting/counting-2_37.png,2,"The image shows two colored circles: one green and one orange.
+
+The number of objects in the image is: 2.",2,False
+data/counting/counting-2_38.png,2,"The image contains two pink dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_39.png,2,"The image contains two greenish circles against a white background.
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_40.png,2,"The image depicts two round, solid-colored objects: one is orange and the other is green.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_41.png,2,"The image contains two blue dots of different sizes against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_42.png,2,"The image contains two small red dots against a plain background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_43.png,2,"I see a purple dot and a red dot against a plain background.
+
+The number of objects in the image: 2.",2,False
+data/counting/counting-2_44.png,2,"The image shows two colored circles: one orange and one green.
+
+There are 2 objects in the image.",2,False
+data/counting/counting-2_45.png,2,"The image contains two blue dots of differing sizes against a white background. There are no other discernible objects in the image.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_46.png,2,"The image shows two green dots against a plain background.
+
+Number of objects: 2",2,False
+data/counting/counting-2_47.png,2,"The image appears to contain two colored circles. One circle is yellow, and the other is orange.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_48.png,2,"The image contains two colored circles: one is orange and the other is green.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_49.png,2,"The image consists of two purple dots against a plain background.
+
+The number of objects in the image is:
+
+2",2,False
+data/counting/counting-2_50.png,2,"I see two green dots in the image.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_51.png,2,"The image contains two blue dots of different sizes.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_52.png,2,"There are two colored dots in the image. One is larger and red, and the other is smaller and pink.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_53.png,2,"In the image, there are two colored circles: one is red and the other is purple.
+
+The number of objects in the image is: 2.",2,False
+data/counting/counting-2_54.png,2,"The image shows two green circles on a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_55.png,2,"The image shows two round, colored objects: one is a lighter blue, and the other is a darker blue. 
+
+There are 2 objects in the image.",2,False
+data/counting/counting-2_56.png,2,"The image contains two green circles against a plain background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_57.png,2,"The image contains two blue dots.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_58.png,2,"The image displays two round, green objects, which appear to be dots or circles.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_59.png,2,"The image features two round colored objects: one is orange and the other is yellow.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_60.png,2,"In the image, I see two circular dots: one is purple and the other is blue.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_61.png,2,"The image displays two green dots against a plain, light background.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_62.png,2,"The image contains two simple objects, which are both colored circles.
+
+1. A green circle.
+2. A yellow circle.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_63.png,2,"The image shows two pink dots against a white background. 
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_64.png,2,"It looks like there is a white background with two colored dots in the image. One dot is purple, and the other is red. There are no other distinguishable objects in the picture.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_65.png,2,"The image contains two blue dots. The dots are the only visible objects if we are considering them as individual items.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_66.png,2,"The image shows two blue dots against a white background.
+
+Counting the objects in the image:
+- Blue dot (top left)
+- Blue dot (bottom right)
+
+There are 2 objects in the image.",2,False
+data/counting/counting-2_67.png,2,"The image contains two circular objects: one is yellow and one is green.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_68.png,2,"The image depicts two green dots or circles of the same size on a plain background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_69.png,2,"The image contains two colored circles: one green and one blue.
+
+The number of objects in the image is: 2.",2,False
+data/counting/counting-2_70.png,2,"The image contains two colored circles: one is larger and dark blue, and the other is smaller and light blue.
+
+The number of objects in the image is: 2.",2,False
+data/counting/counting-2_71.png,2,"The image displays two round objects, one larger blue dot above a smaller blue dot. There are no other objects visible in the image.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_72.png,2,"The image contains two blue dots against a plain background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_73.png,2,"The image you provided contains two colored circles:
+
+- One yellow circle at the top.
+- One orange circle at the bottom.
+
+Counting these objects, there are:
+
+2 objects in the image.",2,False
+data/counting/counting-2_74.png,2,"The image contains two pink dots of different sizes against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_75.png,2,"The image contains two circular objects: one is a darker green and the other is a lighter blue.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_76.png,2,"The image contains two orange dots against a plain background.
+
+The number of objects in the image is:
+
+2",2,False
+data/counting/counting-2_77.png,2,"The image contains two purple dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_78.png,2,"The image shows two colored circular shapes: one red and one green. 
+
+To count them: there are two objects in the image.",2,False
+data/counting/counting-2_79.png,2,"The image contains two green dots of different sizes on a plain white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_80.png,2,"The image contains two purple dots of similar size, isolated against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_81.png,2,"I see two blue circles.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_82.png,2,"The image contains two colored circles. One circle is orange, and the other circle is red.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_83.png,2,"The image shows two colored dots: one is pink and the other is purple.
+
+The number of objects in the image is 2.",2,False
+data/counting/counting-2_84.png,2,"The image contains two colored circles: one is magenta and the other is red.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_85.png,2,"The image contains:
+
+1. A larger purple dot.
+2. A smaller purple dot.
+
+Counting these: there are 2 objects in the image.",2,False
+data/counting/counting-2_86.png,2,"The image shows two small purple dots against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_87.png,2,"The image contains two circular objects: one is blue, and the other is turquoise.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_88.png,2,"The image contains two small green circles against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_89.png,2,"The image contains two red dots against a white background.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_90.png,2,"The image contains two colored circles: one is green and the other is yellow.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_91.png,2,"The image displays two round, filled-in shapes or dots. There is one small purple dot and one slightly larger blue dot.
+
+The number of objects in the image is:
+
+2",2,False
+data/counting/counting-2_92.png,2,"The image contains two green dots.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_93.png,2,"The image contains two green dots against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_94.png,2,"The image contains two green dots against a plain background. There are no other objects visible in this image.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_95.png,2,"The image is very minimal with two colored circles on a plain background:
+
+1. A green circle on the bottom left.
+2. A yellow circle on the bottom right.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_96.png,2,"In the image, there are three purple circles.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-2_97.png,2,"The image features two circular dots. One is pink and the other is purple.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-2_98.png,2,"The image displays two blue dots against a white background.
+
+Number of objects in the image: 2",2,False
+data/counting/counting-2_99.png,2,"The image shows two colored circles. One circle is orange and the other is yellow.
+
+Number of objects in the image: 2.",2,False
+data/counting/counting-3_0.png,3,"The image shows three purple dots against a plain background.
+
+The number of objects in the image: 3",3,False
+data/counting/counting-3_1.png,3,"The image shows three colored circles: one is larger and purple, the other two are smaller—one purple and one blue.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_2.png,3,"The image contains four blue circles of varying sizes scattered across the canvas.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-3_3.png,3,"The image contains three circles of varying sizes and colors. Two circles appear to be a lighter shade of blue or turquoise, and the third circle is a darker shade of blue.
+
+Count of the objects in the image: 3.",3,False
+data/counting/counting-3_4.png,3,"The image contains three purple dots of different sizes. There are no other objects visible in the image.
+
+Number of objects: 3",3,False
+data/counting/counting-3_5.png,3,"The image contains three circular colored dots. There are two orange dots and one red dot.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_6.png,3,"The image contains four colored circles: two are red, and two are orange.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-3_7.png,3,"The image contains red dots of various sizes against a white background.
+
+Now, I will count the dots:
+
+1, 2, 3.
+
+There are 3 objects (red dots) in the image.",3,False
+data/counting/counting-3_8.png,3,"The image contains three blue dots of different sizes.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_9.png,3,"The image contains three colored circles: one is yellow and two are green.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_10.png,3,"There are three colored dots in the image. Two dots are red, and one dot is purple.
+
+Number of objects: 3",3,False
+data/counting/counting-3_11.png,3,"The image contains three green dots placed in a triangular configuration against a white background. There are no other discernible objects.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_12.png,3,"The image contains three circular objects: one green circle at the top left, one larger blue circle in the middle left, and another smaller blue circle below the larger one.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_13.png,3,"The image contains three purple dots.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_14.png,3,"The image contains three green dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_15.png,3,"The image contains three circular dots. Two of the dots are a darker blue, and one dot is a lighter blue. Now I will count them:
+
+1. Dark blue dot
+2. Dark blue dot
+3. Light blue dot
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_16.png,3,"The image displays three circular objects with the following colors: one orange, one yellow, and one green.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_17.png,3,"The image features three circular objects: one blue circle at the top and two green circles below it.
+
+The number of objects in the image is: 3",3,False
+data/counting/counting-3_18.png,3,"The image contains three pink dots placed against a white background.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_19.png,3,"The image contains three colored circles: two are red and one is orange.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_20.png,3,"The image contains three identical purple dots against a white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_21.png,3,"The image contains four green dots of varying sizes against a white background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-3_22.png,3,"The image contains three objects:
+- One pink circle in the upper left
+- One red circle slightly to the right of the pink circle
+- One smaller red circle below the first two circles
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_23.png,3,"The image contains three circular objects. There are two orange dots and one yellow dot.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_24.png,3,"The image shows three colored circles: one is green, one is yellow, and one is orange.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_25.png,3,"The image contains three colored circles: one green, one yellow and one orange.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_26.png,3,"The image contains three yellow circles against a white background.
+
+The number of objects in the image: 3.",3,False
+data/counting/counting-3_27.png,3,"In the image, there are three green dots of various sizes.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_28.png,3,"The image contains three colored dots:
+
+1. One orange dot at the top left.
+2. One red dot at the top right.
+3. One yellow dot at the bottom.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_29.png,3,"The image contains three green circles of various sizes. One is significantly smaller than the other two.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_30.png,3,"The image contains three green dots or circles against a white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_31.png,3,"The image contains three colored circles: one red, one orange, and another that appears to be in a shade between orange and red.
+
+The number of objects in the image is:
+
+3",3,False
+data/counting/counting-3_32.png,3,"The image contains four circular dots. They all appear to be of similar shape but vary in size.
+
+Counting each dot as an object, there are:
+
+4 objects in the image.",4,False
+data/counting/counting-3_33.png,3,"The image contains four circular dots. Two are red and two are orange.
+
+The number of objects in the image is: 4.",4,False
+data/counting/counting-3_34.png,3,"The image contains three blue dots of varying sizes. Now, I will count them for you.
+
+1, 2, 3.
+
+There are 3 objects in the image.",3,False
+data/counting/counting-3_35.png,3,"The image contains three green dots.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_36.png,3,"The image contains three circular colored dots. Each dot is an object.
+
+The number of objects in the image: 3.",3,False
+data/counting/counting-3_37.png,3,"The image contains three small purple dots against a white background.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_38.png,3,"The image contains three green dots against a white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_39.png,3,"The image contains colored circles: two red circles and one orange circle.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_40.png,3,"The image contains three green dots of varying sizes.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_41.png,3,"In the image, there are three objects that appear to be circular dots. There is one dot at the top left, another dot below it to the right, and a third dot which is larger and is at the bottom center.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_42.png,3,"The image shows four circular dots. They appear to be identical in shape but have different colors, with some red and one that appears to be a slightly different shade, perhaps pink.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-3_43.png,3,"The image contains four pink dots placed against a white background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-3_44.png,3,"The image consists of four circular dots. There are two red dots and two orange dots.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-3_45.png,3,"The image contains three colored dots or circles: one orange and two red.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-3_46.png,3,"The image shows four green dots or circles against a white background. 
+
+Number of objects in the image: 4",4,False
+data/counting/counting-3_47.png,3,"The image contains three green circular objects of varying sizes.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_48.png,3,"The image displays three circular dots. There are two smaller dots of a lighter blue color and one larger dot of a darker blue color.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_49.png,3,"The image shows four green dots on a plain background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-3_50.png,3,"The image contains three circular objects. They seem to be purple in color, with slightly different shades and sizes.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_51.png,3,"The image contains three yellow circles of varying sizes against a plain background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_52.png,3,"The image contains three purple dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_53.png,3,"The image shows three circular colored dots: two are pink and one is orange.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_54.png,3,"The image contains three blue circular dots of various sizes against a white background.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_55.png,3,"The image shows three circular dots. Two are blue of different shades, and one is turquoise. 
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_56.png,3,"The image contains colored dots. There are two orange dots and one red dot.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_57.png,3,"The image shows four colored dots: two dots are red, and two dots are purple. There is a total of 4 objects in the image.",4,False
+data/counting/counting-3_58.png,3,"The image shows four circular dots. They vary in color; one appears to be red, and the others are orange.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-3_59.png,3,"The image contains four colored circles: three of them appear to be red, and one appears to be magenta or a shade of pink.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-3_60.png,3,"The image displays three pink dots against a white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_61.png,3,"The image displays three colored circles: one yellow at the top left, one orange at the bottom right, and one lime green at the bottom left.
+
+The number of objects in the image is:
+
+3",3,False
+data/counting/counting-3_62.png,3,"The image contains four circular objects:
+
+- Three smaller red circles, two of which are similar in size and one slightly smaller.
+- One larger red circle.
+
+The total number of objects in the image is: 4.",4,False
+data/counting/counting-3_63.png,3,"The image shows three green dots against a white background.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_64.png,3,"The image contains three purple dots of varying sizes scattered across a white background.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-3_65.png,3,"The image consists of three circular objects: two are of a darker orange color and one is of a lighter yellow color.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_66.png,3,"The image displays three blue dots against a white background.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_67.png,3,"The image contains three red dots. 
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_68.png,3,"The image contains three circular objects. They appear to be dots or circles of a purple or violet color, with different shades and sizes.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_69.png,3,"The image consists of four circular colored objects:
+
+1. A large green circle in the upper left.
+2. A smaller green circle near the top.
+3. Another small green circle near the center right.
+4. A small yellow circle in the lower center.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-3_70.png,3,"The image contains three colored dots or circles. There is one orange dot at the top and two pink dots, one on the left and one on the right side.
+
+The number of objects in the image: 3.",3,False
+data/counting/counting-3_71.png,3,"The image consists of three simple circular objects or dots. Two dots are of a darker blue color and are located closer to each other at the top part of the image, while one dot of a lighter blue color is positioned near the bottom.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_72.png,3,"The image contains three distinct purple dots.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_73.png,3,"The image consists of three purple dots placed against a white background. There do not appear to be any other objects in the image.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-3_74.png,3,"The image consists of three colored circles. Each circle is a distinct object.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_75.png,3,"The image shows three separate magenta dots or circles against a plain white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_76.png,3,"The image contains three colored circles: two are orange and one is yellow.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_77.png,3,"I'm sorry, but I cannot provide the requested service as the image is not displaying any objects for me to describe. If you provide a different image or specify the objects, I would be happy to help.",-1,False
+data/counting/counting-3_78.png,3,"The image shows three simple circular objects. They differ in color; two of them are yellow, and one is green.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_79.png,3,"The image contains three colored circles: two are larger and magenta, and one is smaller and red.
+
+The number of objects in the image is:
+
+3",3,False
+data/counting/counting-3_80.png,3,"The image contains three colored circles: one green, one yellow, and one orange.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_81.png,3,"The image contains three green dots or circles of varying sizes placed against a white background.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_82.png,3,"The image contains three green dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_83.png,3,"The image contains three colored dots: two are pink, and one is blue.
+
+The number of objects in the image is 3.",3,False
+data/counting/counting-3_84.png,3,"I see three green dots of various sizes scattered across the image.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-3_85.png,3,"The image contains green dots. Now, to count them:
+
+1, 2, 3.
+
+There are 3 objects in the image.",3,False
+data/counting/counting-3_86.png,3,"The image contains three colored dots: two are blue and one is purple.
+
+The number of objects in the image: 3.",3,False
+data/counting/counting-3_87.png,3,"The image contains three magenta colored dots of varying sizes against a white background. 
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_88.png,3,"The image contains three circular dots of varying sizes. Two are blue, and one is purple.
+
+There are 3 objects in the image.",3,False
+data/counting/counting-3_89.png,3,"In the image, I see three green dots or circles against a white background.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_90.png,3,"The image contains three colored dots: one blue dot on the left, one green dot in the middle, and one lighter blue (cyan) dot on the right.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_91.png,3,"The image contains three green dots of the same size and color, evenly spaced on a white background. 
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_92.png,3,"In the image, there are three purple dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_93.png,3,"The image contains colored circles. To count the objects, we need to identify each circle as an object based on its presence.
+
+Here is the description and count of the objects in the image:
+
+- 1 dark blue circle.
+- 1 light blue circle that is smaller.
+- 1 light blue circle that is larger.
+
+Now, counting all the circles as individual objects, we get:
+
+1 (dark blue circle) + 1 (small light blue circle) + 1 (large light blue circle) = 3 objects.
+
+Number of objects in the image: 3.",3,False
+data/counting/counting-3_94.png,3,"The image contains three pink dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_95.png,3,"The image contains three circular dots. There's one green dot and two blue dots.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-3_96.png,3,"The image contains three colored circles:
+- Two circles are larger and dark blue.
+- One circle is smaller and light blue.
+
+Number of objects: 3",3,False
+data/counting/counting-3_97.png,3,"The image shows three colored circles: one at the top, one in the middle, and one at the bottom.
+
+The number of objects in the image is: 3.",3,False
+data/counting/counting-3_98.png,3,"The image contains three green dots against a plain background.
+
+The number of objects in the image is: 3",3,False
+data/counting/counting-3_99.png,3,"The image shows three circular dots. One dot is blue and two dots are purple.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-4_0.png,4,"In the image, there are four pink dots distributed around the frame against a white background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_1.png,4,"The image contains five pink dots of varying sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_2.png,4,"There are four colored circles in the image:
+
+- Two orange circles
+- One magenta circle
+- One red circle
+
+The total number of objects in the image is 4.",4,False
+data/counting/counting-4_3.png,4,"The image contains five circular dots: three are red and two are magenta.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_4.png,4,"The image contains a cluster of colored dots. There are three purple dots and two blue dots.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_5.png,4,"The image contains five circular dots; there are two purple dots at the top and bottom left and a single blue dot at the top right. Additionally, there are two more blue dots stacked vertically in the center of the image.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_6.png,4,"The image contains four colored circles:
+
+1. A green circle at the top.
+2. An orange circle in the middle left.
+3. Another orange circle to the middle right.
+4. A yellow circle at the bottom.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_7.png,4,"In the image, there are four circular dots: one is red, and three are orange.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_8.png,4,"The image shows four circular dots: two are pink and two are blue.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_9.png,4,"The image contains five green dots of varying sizes against a white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_10.png,4,"The image displays five circular dots of various colors. There are two blue dots and three green dots.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_11.png,4,"The image contains five round objects in varying shades of blue.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_12.png,4,"The image contains five green dots or circles of varying sizes against a white background.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_13.png,4,"The image contains five colored dots: two red dots, two orange dots, and one yellow dot.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_14.png,4,"The image shows a total of three red dots and two purple dots. Counting all the dots together, there are:
+
+3 red dots + 2 purple dots = 5 dots
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_15.png,4,"The image contains five green dots of a similar size scattered across the image.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_16.png,4,"The image contains colored dots: one orange, one yellow, and two pink.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_17.png,4,"The image contains five dots or circles. These objects are various shades of green and blue.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_18.png,4,"The image shows five purple dots of various sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_19.png,4,"I see five green dots/circles of various sizes scattered across the image.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_20.png,4,"The image shows five circular dots: three of them are purple and two are blue.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_21.png,4,"The image contains colored dots. Here is the description:
+
+- 1 larger red dot on the upper left side.
+- 1 smaller red dot slightly right beneath the larger red dot.
+- 1 larger purple dot on the right side.
+- 1 smaller purple dot below the larger purple dot.
+
+Let's count them:
+
+1 larger red dot + 1 smaller red dot + 1 larger purple dot + 1 smaller purple dot = 4 dots in total.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_22.png,4,"The image contains five green dots of various sizes scattered across a white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_23.png,4,"The image contains five green dots of varying sizes placed against a white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_24.png,4,"The image shows five circular objects of varying shades of yellow and orange. 
+
+Upon counting these objects:
+
+There are 5 objects in the image.",5,False
+data/counting/counting-4_25.png,4,"I see five green dots of varying sizes scattered across the image.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_26.png,4,"The image shows a total of five colored circles: two red circles, two yellow circles, and one green circle.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_27.png,4,"The image contains five purple dots of varying sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_28.png,4,"The image contains five colored dots: two are blue, and three are purple.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_29.png,4,"The image shows a collection of colored circles of different sizes. Specifically, there are:
+
+- Two large purple circles
+- One medium-sized red circle
+- One small pink circle
+
+Counting each of these as individual objects, there are a total of 4 objects in the image.",4,False
+data/counting/counting-4_30.png,4,"The image contains four green dots or circles of varying sizes scattered across the frame.
+
+The number of objects in the image is: 4.",4,False
+data/counting/counting-4_31.png,4,"The image contains four colored circles.
+
+- One is green located on the top left side.
+- Another one is light green or lime, slightly below and to the right of the first green circle.
+- The third circle is orange, located to the right of the green circle and slightly above the lime circle.
+- The fourth circle is yellow, situated at the bottom right corner of the image.
+
+Considering each colored circle as an object, the total count is:
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_32.png,4,"The image contains four circular dots. Three are located toward the bottom left of the image, and they vary in color: one is light blue, one is dark blue, and one is purple. The fourth dot, which is turquoise, is located toward the top right of the image.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_33.png,4,"The image contains several blue dots of varying sizes against a plain background.
+
+Counting the dots:
+
+1. One large blue dot in the bottom right corner.
+2. One medium-sized blue dot in the middle left side.
+3. One small blue dot just above and to the right of the medium-sized dot.
+4. One small blue dot to the left and slightly below the small dot mentioned previously.
+
+Total number of objects (blue dots) in the image: 4",4,False
+data/counting/counting-4_34.png,4,"The image shows four colored circles on a plain background. There are two red circles, one orange circle, and one yellow circle.
+
+The number of objects in the image: 4.",4,False
+data/counting/counting-4_35.png,4,"The image contains four round dots – three are light blue and one is dark blue.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_36.png,4,"The image contains four purple dots.
+
+4",4,False
+data/counting/counting-4_37.png,4,"The image contains a total of four colored circles: two in a lighter shade of turquoise or cyan and two in a darker shade of green.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_38.png,4,"The image contains five identical green dots arranged in no particular pattern on a plain white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_39.png,4,"I see five pink dots of varying sizes scattered across the image.
+
+The number of objects in the image is: 5.",5,False
+data/counting/counting-4_40.png,4,"The image contains four circular dots. There are three green dots and one cyan dot.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_41.png,4,"I see four blue dots in the image.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_42.png,4,"The image contains five green dots of various sizes scattered against a white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_43.png,4,"The image contains five purple dots arranged vertically and seemingly at random distances from each other.
+
+The number of objects in the image: 5",5,False
+data/counting/counting-4_44.png,4,"I see five colored circles. There are two orange circles and three red circles.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_45.png,4,"The image contains four circular objects. Three of the objects are green, and one object is blue.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_46.png,4,"In the image, there are four circular spots of color:
+
+1. One yellow spot at the bottom.
+2. Three orange spots above the yellow one, arranged diagonally from top left to bottom right.
+
+The total number of objects in the image is:
+
+4",4,False
+data/counting/counting-4_47.png,4,"The image contains five colored circles: three of them are blue, and two are green.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_48.png,4,"The image contains a total of five circular objects. There are two light blue circles and three green circles.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_49.png,4,"In the image, I see three colored dots or circles. There's one orange dot, one yellow dot, and one red dot.
+
+Number of objects in the image: 3",3,False
+data/counting/counting-4_50.png,4,"The image contains four round, blue-colored objects. These four objects can be counted as four separate dots.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_51.png,4,"The image shows four circles of different colors: two are yellow, one is orange, and one is green.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_52.png,4,"The image contains four pink dots. 
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_53.png,4,"The image contains four circular dots. Two dots are pink, and two are purple.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_54.png,4,"The image contains five blue dots of various sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_55.png,4,"The image contains five circular dots. Four of the dots are orange, and one dot is yellow.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_56.png,4,"The image contains five colored dots/circles. Their colors do not matter for counting purposes. Therefore, based on the number of dots presented:
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_57.png,4,"The image contains four pink dots against a white background. 
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_58.png,4,"The image displays four purple dots against a white background.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_59.png,4,"In the image, there are five circular dots: four are red, and one is orange.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_60.png,4,"In the image, there are four circles, each a different color. Two appear orange, one red, and one pink.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_61.png,4,"The image shows five purple dots of various sizes against a white background.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_62.png,4,"The image contains colored dots/circles. There are three blue dots and one purple dot.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_63.png,4,"The image shows four blue dots against a white background.
+
+The number of objects in the image is: 4.",4,False
+data/counting/counting-4_64.png,4,"The image consists of five round blue objects or dots. They are scattered throughout the image without any specific pattern.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_65.png,4,"The image contains colored circular shapes: one blue circle and three green circles.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_66.png,4,"The image contains four colored circles: two larger orange circles, one smaller orange circle, and one smaller yellow circle.
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_67.png,4,"The image appears to have four circular dots of different colors.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_68.png,4,"The image contains four blue dots of varying sizes.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_69.png,4,"I see five circular objects in the image. Two objects are a lighter shade of green or teal, and three objects are a darker shade of green.
+
+The number of objects in the image is: 5.",5,False
+data/counting/counting-4_70.png,4,"The image contains a total of five circular dots. If we consider each dot as an object, then the count of objects in the image is:
+
+5",5,False
+data/counting/counting-4_71.png,4,"The image contains five colored circles: two are orange, two are red, and one is purple.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_72.png,4,"The image displays five colored circles: two green, two yellow, and one orange.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_73.png,4,"The image contains four colored dots:
+
+1. A yellow dot at the top left.
+2. An orange dot slightly below and to the right of the yellow dot.
+3. A green dot below and to the left of the orange dot.
+4. A red dot below the green dot.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_74.png,4,"The image contains five circular dots. There are two turquoise dots, two green dots, and one blue dot.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_75.png,4,"In the image provided, I can see four circular objects. There are three objects that are yellow and one object that is orange.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_76.png,4,"In the image, there are four colored circles. There is one red circle, two orange circles, and one yellow circle.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_77.png,4,"The image shows four circular dots. Three of the dots are red, and one dot is purple.
+
+The number of objects in the image: 4.",4,False
+data/counting/counting-4_78.png,4,"The image contains five green circles distributed across the canvas.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_79.png,4,"The image contains five colored dots: two orange dots, one red dot, one yellow dot, and one light orange or peach-colored dot.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_80.png,4,"The image contains four green dots of the same color and size, evenly distributed over the image area.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_81.png,4,"The image contains a total of 5 circular dots. One of them is dark blue, and the other four are light blue. 
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_82.png,4,"The image contains three dots: two green dots, one yellow dot, and one orange dot.
+
+There are 4 objects in the image.",4,False
+data/counting/counting-4_83.png,4,"In the image, there are four dots of varying colors and sizes. There is one purple dot and three blue dots. 
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_84.png,4,"The image contains four purple dots.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_85.png,4,"The image contains five circular dots: two are purple, and three are blue.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_86.png,4,"The image shows four blue dots against a white background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_87.png,4,"The image contains five green circles of various sizes against a plain background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_88.png,4,"The image contains five colored dots: one is magenta or pink, and the other four are blue.
+
+Number of objects (dots) in the image: 5",5,False
+data/counting/counting-4_89.png,4,"In the image, there are five circular dots of varying colors. From top to bottom and left to right, there is one orange dot, one yellow dot, one red dot, one yellow dot, and one orange dot.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-4_90.png,4,"The image contains a total of four colored circular objects, which appear to be dots or possibly simulated representations of larger objects seen from afar:
+- Two of the circles are larger; one is dark blue, and the other is light blue, or teal.
+- Two of the circles are smaller; one is dark blue, and the other is light blue, or teal.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_91.png,4,"The image shows a total of five circular dots. Two of them are in a lighter shade of blue or turquoise, and the remaining three are in a green color.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-4_92.png,4,"This image features a number of purple dots. To count them, I'll look at each dot and sum them up:
+
+1...
+2...
+3...
+4...
+5...
+
+There are 5 objects (purple dots) in the image.",5,False
+data/counting/counting-4_93.png,4,"The image contains four circular dots. They appear to be of different colors, but without distinct details on shades or specific color names, I'll just describe them by their relative positions:
+
+- There is one dot at the top.
+- One dot is placed below the top dot.
+- Another dot is seen further down, slightly to the left.
+- The fourth dot is positioned even lower and to the left of the third dot.
+
+Counting each dot as an object, there are:
+
+4 objects in the image.",4,False
+data/counting/counting-4_94.png,4,"The image contains four blue dots of various sizes. 
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_95.png,4,"The image contains four dots. Three of the dots are purple, and one of the dots is red.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-4_96.png,4,"The image contains four blue dots of varying sizes against a white background.
+
+Number of objects in the image: 4",4,False
+data/counting/counting-4_97.png,4,"The image contains four blue dots of varying sizes. 
+
+Number of objects in the image: 4.",4,False
+data/counting/counting-4_98.png,4,"The image contains five circular dots. The dots vary in color: there are two red dots, two pink dots, and one magenta dot.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-4_99.png,4,"The image displays four round, colored dots. There are two dots of a lighter turquoise color and two dots of a darker blue color.
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-5_0.png,5,"The image contains six circular objects of varying sizes. Three of the circles are dark blue and three of them are light blue.
+
+The number of objects in the image is: 6.",6,False
+data/counting/counting-5_1.png,5,"I see five circles in different shades of blue and purple.
+
+The number of objects in the image is: 5.",5,False
+data/counting/counting-5_2.png,5,"The image consists of five circular objects, each a different color. From top to bottom and left to right, there is a red circle, an orange circle, a dark orange circle, a yellow circle, and another orange circle at the bottom.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_3.png,5,"The image contains six circular dots. Three are blue and three are pink.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-5_4.png,5,"The image shows five circular dots of various colors. Here's a description of each:
+
+1. A medium-sized blue dot towards the top left.
+2. A small-sized blue dot slightly below and to the right of the first dot.
+3. A large-sized blue dot in the bottom right corner.
+4. Another medium-sized blue dot above and to the left of the third large dot.
+5. A small-sized pink dot to the right of the second small blue dot.
+
+Counting these, the total number of objects (dots) in the image is:
+
+5",5,False
+data/counting/counting-5_5.png,5,"The image contains five circular colored dots. Each dot is an object.
+
+There are:
+- 1 pink dot.
+- 1 yellow dot.
+- 1 red dot.
+- 2 orange dots.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_6.png,5,"The image contains six colored circles: three are green and three are blue. 
+
+Counting these, the number of objects in the image is 6.",6,False
+data/counting/counting-5_7.png,5,"The image contains six circular objects. They appear to be flat, colored dots: five are green and one is a lighter shade, possibly teal or cyan.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_8.png,5,"The image displays a collection of colored dots:
+
+1. One orange dot in the top left.
+2. One red dot in the top right.
+3. One orange dot in the center left.
+4. One pink dot in the center right.
+5. One orange dot in the bottom left.
+6. One yellow dot in the bottom right.
+
+Counting each dot as an object, there are a total of 6 objects in the image.",6,False
+data/counting/counting-5_9.png,5,"In the image, there are six colored circles. These circles are of different sizes and colors. Specifically, there are:
+
+- Two small yellow circles
+- Three medium-sized orange circles
+- One medium-sized green circle
+
+Counting each circle as one object, the total number of objects in the image is six.",6,False
+data/counting/counting-5_10.png,5,"The image contains a collection of purple dots against a white background.
+
+Counting these dots, we have:
+
+5 purple dots.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-5_11.png,5,"The image contains five colored circles:
+- Three circles are blue.
+- One circle is purple.
+- One circle is a lighter shade of blue, or cyan.
+
+The total number of objects (circles) in the image is: 5.",5,False
+data/counting/counting-5_12.png,5,"The image contains six colored dots: three red dots and three pink dots.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-5_13.png,5,"The image contains a collection of colored dots. There are both red and one pink dot, without any specific arrangement. Now, I'll count them.
+
+1. Red dot
+2. Red dot
+3. Red dot
+4. Red dot
+5. Pink dot
+
+There are 5 objects in the image.",5,False
+data/counting/counting-5_14.png,5,"The image contains a total of five circular dots. Two of the dots are light blue (or cyan), and three of the dots are green.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_15.png,5,"The image consists of five blue dots against a white background.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-5_16.png,5,"The image consists of five blue circular dots of similar size, spread out with no specific pattern.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-5_17.png,5,"The image contains a series of colored dots. There is one orange dot toward the center left, one orange dot toward the upper right, and three green dots with one slightly above the center and the other two below the center, spaced apart diagonally.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_18.png,5,"The image shows a total of six colored circles:
+
+1. A yellow circle in the top-left area.
+2. Another yellow circle a bit lower and to the right of the first one.
+3. A third yellow circle towards the bottom-right area.
+4. A green circle towards the top-right corner.
+5. An orange circle in the center.
+6. A smaller yellow circle just to the right of the orange circle.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-5_19.png,5,"The image contains five green dots of varying sizes against a white background.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_20.png,5,"The image contains colored dots. There are two blue dots and three green dots.
+
+The total number of objects (dots) in the image is 5.",5,False
+data/counting/counting-5_21.png,5,"The image contains colored dots. There are red dots and purple dots.
+
+Count of objects in the image:
+- 4 red dots
+- 2 purple dots
+
+Total number of objects (dots) in the image: 6.",6,False
+data/counting/counting-5_22.png,5,"The image contains several red dots. Now, I will count them.
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 red dots in the image.",6,False
+data/counting/counting-5_23.png,5,"The image contains six circular dots. Five of them are light blue, and one is dark blue.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-5_24.png,5,"The image contains colored dots. There are:
+
+- Two red dots
+- Two pink dots
+- One orange dot
+
+Counting each dot as an object, there are a total of 5 objects in the image.",5,False
+data/counting/counting-5_25.png,5,"The image consists of five circular dots. Four of the dots are blue, and one dot is purple. Counting each dot as an object, there are:
+
+5 objects in the image.",5,False
+data/counting/counting-5_26.png,5,"In the image, there are six round dots. Three of the dots are pink, while the other three dots are a darker color, possibly red or maroon, depending on the color calibration of the display. To count them:
+
+- 3 pink dots
+- 3 red/maroon dots
+
+Total number of dots (objects) in the image: 6",6,False
+data/counting/counting-5_27.png,5,"The image contains colored dots: two red dots and three orange dots.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_28.png,5,"The image contains green dots. To count them, here's the list:
+
+1. Top-left corner dot
+2. Upper-middle dot
+3. Upper-right corner dot
+4. Lower-middle left dot
+5. Bottom dot
+
+Adding these up gives us a total of:
+
+5 objects (green dots) in the image.",5,False
+data/counting/counting-5_29.png,5,"The image contains six colored circles: three are orange and three are red.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_30.png,5,"The image shows a collection of dots. There are five dots of a darker blue color and one dot of a lighter blue color.
+
+Number of objects (dots) in the image: 6.",6,False
+data/counting/counting-5_31.png,5,"The image contains five blue dots of various sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_32.png,5,"The image features six blue dots of similar size, scattered around against a white background.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-5_33.png,5,"The image you've provided contains different colored dots. There are five dots in total:
+
+- 3 red dots
+- 1 orange dot
+- 1 magenta dot
+
+So, the number of objects in the image is 5.",5,False
+data/counting/counting-5_34.png,5,"The image contains six colored circles: five are magenta, and one is red.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_35.png,5,"The image shows five blue circles of varying sizes randomly placed on a white background.
+
+The number of objects in the image is: 5",5,False
+data/counting/counting-5_36.png,5,"The image contains five circular colored dots. Here is the description of each dot by its color:
+
+1. One red dot
+2. One orange dot
+3. One yellow dot
+4. One light green dot
+5. One green dot
+
+The number of objects (colored dots) in the image is:
+
+5",5,False
+data/counting/counting-5_37.png,5,"The image contains a number of blue dots against a white background.
+
+Number of objects (blue dots) in the image: 5",5,False
+data/counting/counting-5_38.png,5,"The image contains five colored dots: one blue dot at the top, two purple dots diagonally towards the bottom right, and two pink dots, one on the left and one on the bottom.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_39.png,5,"The image displays a collection of dots. There are two colors of dots present: cyan (light blue) and green.
+
+Let's count them:
+
+- Cyan dots: 2
+- Green dots: 4
+
+Adding these together gives us a total number of 6 dots in the image. 
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_40.png,5,"The image contains several colored dots:
+
+1. One light blue dot near the center.
+2. One dark blue dot towards the upper right.
+3. Three purple dots, scattered in the image, two on the left and one on the right.
+
+Counting all dots:
+
+1 (light blue) + 1 (dark blue) + 3 (purple) = 5 dots in total.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_41.png,5,"The image contains five colored circles. Three of the circles are orange and two are red. Now I'll count them:
+
+- Orange circles: 3
+- Red circles: 2
+
+Total number of objects (circles) in the image: 5",5,False
+data/counting/counting-5_42.png,5,"The image contains:
+
+1 yellow circle at the top.
+4 green circles distributed below the yellow circle.
+
+Now I will count the total number of circles in the image.
+
+Number of objects (circles) in the image: 5",5,False
+data/counting/counting-5_43.png,5,"The image shows a total of five circular dots: three of them are orange, and two are a darker shade, possibly red.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_44.png,5,"The image contains six circles. 
+
+Five circles are blue, and one circle is a lighter shade, possibly cyan or light blue.
+
+The total number of objects in the image is 6.",6,False
+data/counting/counting-5_45.png,5,"The image contains several green dots of varying sizes.
+
+Number of objects (green dots) in the image: 5",5,False
+data/counting/counting-5_46.png,5,"In the image, there are five circular objects. Four of them are light blue, and one is dark blue. Counting each of these circles as an object, there are a total of 5 objects in the image.",5,False
+data/counting/counting-5_47.png,5,"The image consists of five green dots of various sizes scattered across the image.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_48.png,5,"The image displays five circular dots of varying shades of blue. Each dot is an individual object.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_49.png,5,"The image contains colored circles: four red circles and one yellow circle.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_50.png,5,"The image contains a series of colored dots. There are two colors: purple and blue. I will count each dot of any color as one object.
+
+After counting each dot, I conclude that there are:
+
+- 6 objects in total.
+
+(3 purple dots and 3 blue dots)",6,False
+data/counting/counting-5_51.png,5,"The image contains five round, purple objects of varying sizes that appear to be dots or circles.
+
+The number of objects in the image: 5.",5,False
+data/counting/counting-5_52.png,5,"The image contains five circles. Two circles are colored blue and three circles are colored green.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_53.png,5,"The image contains colored dots. There are a total of four pink dots and one red dot.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_54.png,5,"The image contains five green dots against a white background.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_55.png,5,"In the image, there are six colored circles. Two circles are yellow, and four circles are green.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_56.png,5,"The image contains five circular colored spots. There are two different colors present: magenta and a shade of red.
+
+Now, I'll count them:
+
+- There are three magenta spots.
+- There are two red spots.
+
+Adding them together, the total number of objects in the image is:
+
+3 (magenta spots) + 2 (red spots) = 5 objects",5,False
+data/counting/counting-5_57.png,5,"The image contains five pink dots of varying sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_58.png,5,"The image contains six circular dots scattered across the canvas. No other objects are present.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_59.png,5,"The image consists of five pink dots of various sizes scattered around the image.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_60.png,5,"In the image, there are six colored dots. Three of them are pink and three of them are purple.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-5_61.png,5,"The image contains colored circles. Here's the description and count:
+
+- 2 large purple circles.
+- 1 medium purple circle.
+- 2 small purple circles.
+- 1 small blue circle.
+
+Adding them up, there are a total of 6 objects in the image.",6,False
+data/counting/counting-5_62.png,5,"The image contains a series of colored dots. There are a total of six dots, some are pink and some are red.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_63.png,5,"The image shows a total of five colored circles on a plain background. They are dispersed on the canvas without any specific pattern. If we consider each circle as an object, then the count is:
+
+1. One light blue circle at the top left
+2. One light blue circle just below the previous one
+3. One slightly larger light blue circle to the right of the first two
+4. One green circle to the lower right of the third light blue circle
+5. One light blue circle at the very bottom of the image
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_64.png,5,"The image contains a total of 5 circular objects. There are 3 green circles and 2 blue circles.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_65.png,5,"The image shows a collection of green dots of various sizes arranged without any specific pattern on a white background.
+
+Number of objects (green dots) in the image: 5.",5,False
+data/counting/counting-5_66.png,5,"The image contains various colored dots. They are:
+
+- 1 purple dot
+- 1 smaller pink dot
+- 2 small red dots
+- 1 orange dot
+
+Counting all the dots together, there are:
+
+5 objects in the image.",5,False
+data/counting/counting-5_67.png,5,"The image contains a total of six colored dots: five are pink, and one is red.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_68.png,5,"The image contains a total of six colored circles: three are green, and three are yellow.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-5_69.png,5,"The image contains five blue dots of varying sizes scattered across a plain background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_70.png,5,"The image consists of five green dots of various sizes arranged in no specific pattern against a white background.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_71.png,5,"The image contains colored dots. There are five magenta dots and one blue dot.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-5_72.png,5,"The image contains five teal or blue-colored dots of various sizes distributed across the image.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_73.png,5,"The image shows a collection of colored dots. There are two purple dots and three pink dots.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_74.png,5,"The image contains five circular shapes: four are in lighter blue, and one is in a darker blue color.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_75.png,5,"The image contains five circular dots. They are of two different colors: three are magenta, and two are dark purple.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_76.png,5,"The image contains five blue dots of varying sizes scattered across the frame.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_77.png,5,"In the image, there are six colored circles: three red, two orange, and one purple.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_78.png,5,"The image contains colored dots. There are:
+
+- 3 red dots
+- 1 orange dot
+- 1 pink dot
+
+In total, there are 5 dots in the image.",5,False
+data/counting/counting-5_79.png,5,"The image shows a collection of green dots against a white background. To count them, I will simply enumerate each one:
+
+1. Top left dot
+2. Upper middle dot
+3. Upper right dot
+4. Lower left dot
+5. Lower middle dot
+6. Lower right dot
+
+There are 6 green dots in the image. 
+
+Number of objects in the image: **6**",6,False
+data/counting/counting-5_80.png,5,"The image contains six circular dots of various sizes. They are spread out with no particular pattern. Here's the count based on the visual:
+
+Number of objects (dots) in the image: 6.",6,False
+data/counting/counting-5_81.png,5,"The image contains five green dots of various sizes.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_82.png,5,"The image contains colored circles. There are two different colors: orange and green. 
+
+I see:
+- 2 orange circles
+- 3 green circles
+
+Adding them up, there are 5 circles in total.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-5_83.png,5,"In the image, there are five circular dots. Four of these dots are purple, and one dot is blue.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_84.png,5,"The image contains a total of 6 colored dots: 5 red dots and 1 pink dot.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_85.png,5,"The image contains colored dots. Here's a description of them:
+
+- 1 orange dot
+- 2 yellow dots
+- 1 red dot
+
+Now, I'll count the total number of dots:
+
+1 (orange) + 2 (yellow) + 1 (red) = 4 dots in total. 
+
+The number of objects in the image is 4.",4,False
+data/counting/counting-5_86.png,5,"The image contains five blue circular dots of varying sizes, each considered an object.
+
+The number of objects in the image is 5.",5,False
+data/counting/counting-5_87.png,5,"The image contains several orange dots of varying sizes. There are no other distinguishable objects present in the image
+
+Counting each dot as an object, there are:
+
+5 objects in the image.",5,False
+data/counting/counting-5_88.png,5,"The image shows a total of five colored dots: three are orange, and two are red.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-5_89.png,5,"The image contains five colored dots: two orange-red dots, one yellow dot, and two red-pink dots.
+
+The number of objects in the image is:
+
+5",5,False
+data/counting/counting-5_90.png,5,"In the image, there are a total of 5 circular objects. They vary in color with one being dark blue and the others being light blue or cyan.
+
+The number of objects in the image is: 5.",5,False
+data/counting/counting-5_91.png,5,"The image consists of dots of two different shades of blue. There are 3 lighter blue dots and 2 darker blue dots.
+
+Number of objects (dots) in the image: 5.",5,False
+data/counting/counting-5_92.png,5,"The image contains a total of seven dots; four of them are orange and three are magenta.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-5_93.png,5,"The image contains six colored dots. There appear to be two pink dots, two orange dots, and two yellow dots.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-5_94.png,5,"The image consists of five circular dots. Two of the dots are larger and dark blue, and three of the dots are smaller and light blue.
+
+The number of objects in the image is: 5.",5,False
+data/counting/counting-5_95.png,5,"The image appears to contain six colored circles. These circles are distributed across the image and have different colors. To count them:
+
+1 orange circle,
+2 yellow circles,
+3 green circles.
+
+Adding these up, there are a total of 6 objects in the image.",6,False
+data/counting/counting-5_96.png,5,"The image contains colored dots or circles. There are two yellow dots, one orange dot, and two green dots.
+
+The total number of objects (dots) in the image is 5.",5,False
+data/counting/counting-5_97.png,5,"The image contains colored dots or circles. There are two red dots and three orange dots.
+
+The total number of objects (dots/circles) in the image is 5.",5,False
+data/counting/counting-5_98.png,5,"The image contains five round dots. Three of them are purple, and two are blue.
+
+The number of objects in the image: 5.",5,False
+data/counting/counting-5_99.png,5,"The image contains several green dots on a white background. The dots vary slightly in color shades and sizes. After closely analyzing the image:
+
+There are 5 green dots in the image.",5,False
+data/counting/counting-6_0.png,6,"The image contains colored dots or circles. Here's the breakdown of the objects based on color:
+
+- Red dots: 2
+- Orange dots: 2
+- Yellow dots: 2
+
+Adding them up gives us a total of 6 objects in the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_1.png,6,"The image contains colored dots or circles. There are two different colors represented: yellow and green, with one orange dot in the upper right corner. To count them:
+
+- 4 yellow dots
+- 3 green dots
+- 1 orange dot
+
+The total number of objects (dots) in the image is 8.",8,False
+data/counting/counting-6_2.png,6,"The image contains six circular colored dots. There are two green dots, two yellow dots, and two orange dots.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_3.png,6,"The image contains colored dots.
+
+1 magenta dot
+5 blue dots
+
+The total number of dots (objects) in the image is 6.",6,False
+data/counting/counting-6_4.png,6,"The image contains a number of green dots against a plain, light background.
+
+After carefully reviewing the image, I have counted the green dots.
+
+Number of objects (green dots) in the image: 6",6,False
+data/counting/counting-6_5.png,6,"The image contains seven teal-colored dots of varying sizes.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_6.png,6,"The image contains a collection of colored dots. There are two colors present: red and purple. Each dot represents an object.
+
+Upon counting, there are a total of 6 dots or objects in the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_7.png,6,"The image shows a collection of green dots.
+
+Now, I'll count the number of green dots visible in the image.
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 green dots in the image.",6,False
+data/counting/counting-6_8.png,6,"The image depicts six colored circles. There are two blue circles and four purple circles.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_9.png,6,"The image shows a collection of colored circular dots. There are dots in at least two different colors, some in red and others that appear magenta or pinkish.
+
+Now I will count the dots:
+
+1. Large red dot
+2. Small red dot
+3. Small red dot
+4. Small magenta dot
+5. Small magenta dot
+6. Small magenta dot
+7. Small magenta dot
+
+The total number of objects (dots) in the image is 7.",7,False
+data/counting/counting-6_10.png,6,"The image contains circles of two different colors: pink and red. There are six pink circles and one red circle.
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-6_11.png,6,"The image contains several circular dots. There are dots in two different colors:
+
+- Blue dots
+- Purple dots
+
+Now, I will count each color group:
+
+- There are 2 blue dots.
+- There are 5 purple dots.
+
+Adding them together gives the total number of objects (dots) in the image: 7.",7,False
+data/counting/counting-6_12.png,6,"The image shows seven red dots or circles of varying sizes scattered across a plain background.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_13.png,6,"The image displays a collection of colored circles against a plain background. There are six circles in total, varying in shades of blue, and one circle appears in a lighter, teal-like color.
+
+Number of objects (circles) in the image: 6",6,False
+data/counting/counting-6_14.png,6,"The image contains colored dots or circles. There are two red dots, one orange dot, one yellow dot, and one smaller red dot. Counting all of them, there are:
+
+5 objects in total in the image.",5,False
+data/counting/counting-6_15.png,6,"The image contains multicolored dots. There are yellow dots and there is one green dot.
+
+The number of objects (dots) in the image is:
+
+6",6,False
+data/counting/counting-6_16.png,6,"In the image, there are colored dots of various sizes. There are:
+
+- 1 blue dot,
+- 1 red dot, and
+- 4 purple dots.
+
+Adding all the dots together, there are a total of 6 objects in the image.",6,False
+data/counting/counting-6_17.png,6,"The image contains several green dots of various sizes scattered across the image.
+
+To count the number of green dots:
+
+1, 2, 3, 4, 5, 6, 7.
+
+There are 7 green dots in the image.",7,False
+data/counting/counting-6_18.png,6,"In the image, there are six circular dots. Five of them are blue, and one is purple.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-6_19.png,6,"The image contains colored dots. There is one pink dot and six orange dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_20.png,6,"The image contains six green circles of various sizes. 
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_21.png,6,"The image contains several purple dots. Now I'll count them:
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 objects in the image.",6,False
+data/counting/counting-6_22.png,6,"The image contains several green circles against a white background. They are all the same shape but appear to be of different sizes.
+
+Now, I'll count them: 1, 2, 3, 4, 5, 6, 7.
+
+There are 7 objects in the image.",7,False
+data/counting/counting-6_23.png,6,"This image contains several colored dots. Specifically, there are dots in two different colors, which appear to be blue and green. Now I will count the dots:
+
+- There are 1 blue dot.
+- There are 7 green dots.
+
+Adding both counts together, there is a total of:
+
+8 objects in the image.",8,False
+data/counting/counting-6_24.png,6,"The image contains seven green dots of varying sizes scattered across a white background.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_25.png,6,"The image contains a series of blue dots scattered across a plain background. These dots are the objects to count.
+
+After counting, there are 7 dots in the image.",7,False
+data/counting/counting-6_26.png,6,"The image contains colored circles. There are three green circles and three yellow circles. Counting all of them gives us a total of:
+
+6 objects in the image.",6,False
+data/counting/counting-6_27.png,6,"The image contains six blue circles of varying shades and sizes scattered across the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_28.png,6,"The image contains colored dots. There are two different colors: purple and blue. 
+
+Upon counting, there are a total of 7 dots in the image.",7,False
+data/counting/counting-6_29.png,6,"The image displays a total of seven circular dots. There appear to be three different colors: red, pink (or magenta), and orange. To provide a precise count:
+
+- Red dots: 3
+- Pink/Magenta dots: 3
+- Orange dot: 1
+
+Adding them up gives a total number of objects:
+
+3 (red) + 3 (pink/magenta) + 1 (orange) = 7 objects in the image.",7,False
+data/counting/counting-6_30.png,6,"The image shows a series of colored dots. There are two colors: purple and pink.
+
+Now, I will count the total number of dots:
+
+There are six dots in the image.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-6_31.png,6,"The image consists of six green dots against a white background.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_32.png,6,"The image contains several colored circles. There are six light blue circles and one dark blue circle.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_33.png,6,"The image contains a collection of colored dots. There are two sizes of dots, larger ones, and smaller ones, and two colors, magenta and red.
+
+Counting them:
+
+- 5 small magenta dots,
+- 1 large magenta dot,
+- 1 small red dot,
+- 1 large red dot.
+
+Adding these together:
+
+5 (small magenta) + 1 (large magenta) + 1 (small red) + 1 (large red) = 8 dots in total. 
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-6_34.png,6,"The image contains six circular dots of various colors. To count them:
+
+1. One light pink dot at the top left.
+2. One dark pink dot just right of the first light pink dot.
+3. Another dark pink dot to the right of the second dark pink dot.
+4. One orange dot below the first light pink dot.
+5. One red dot below and to the left of the orange dot.
+6. One yellow dot below and to the right of the orange dot.
+
+The number of objects (dots) in the image is 6.",6,False
+data/counting/counting-6_35.png,6,"The image contains several green dots of various sizes. Now, let's count them:
+
+1. Large green dot in the upper left corner.
+2. Medium green dot located slightly to the right and below the first dot.
+3. Another medium green dot to the right and below the second dot.
+4. Small green dot located to the right and above the third dot.
+5. Another small green dot below the third dot.
+6. Another small green dot to the right of the fifth dot.
+
+There are a total of 6 green dots in the image.",6,False
+data/counting/counting-6_36.png,6,"The image contains six colored circles. To provide a count:
+
+1. Top-left corner: One small blue circle.
+2. Top-middle: One larger blue circle.
+3. Top-right corner: One small blue circle.
+4. Bottom-left corner: One small purple circle.
+5. Bottom-middle: One small purple circle.
+6. Bottom-right corner: One larger purple circle.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_37.png,6,"The image contains a total of six circular dots: three are green and three are cyan.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_38.png,6,"The image contains seven circular dots. Three dots are light blue, and four dots are dark blue.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_39.png,6,"The image contains a number of colored dots. There are two colors: yellow and green.
+
+Let's count them:
+
+- There are 3 yellow dots.
+- There are 4 green dots.
+
+Adding them together gives us a total number of objects:
+
+3 (yellow dots) + 4 (green dots) = 7 objects in the image.",7,False
+data/counting/counting-6_40.png,6,"The image contains several green dots arranged without any specific pattern on a plain background.
+
+Counting the dots: 1, 2, 3, 4, 5, 6.
+
+There are 6 objects (green dots) in the image.",6,False
+data/counting/counting-6_41.png,6,"The image contains colored dots or circles. There are dots of different colors – some are red, some are orange, and some are yellow.
+
+To count them:
+- There are 2 red dots.
+- There are 2 orange dots.
+- There are 2 yellow dots.
+
+Adding them up, there are a total of 6 objects (dots) in the image.",6,False
+data/counting/counting-6_42.png,6,"The image contains a total of 6 dots. There are 5 pink dots and 1 orange dot.
+
+Number of objects (dots) in the image: 6",6,False
+data/counting/counting-6_43.png,6,"The image contains a total of six green dots of varying sizes scattered throughout the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_44.png,6,"The image contains a series of colored dots. There are two different colors: red and pink (or magenta). Specifically, there are three red dots and three pink dots.
+
+The number of objects in the image is six.",6,False
+data/counting/counting-6_45.png,6,"The image contains dots of two different colors: purple and red. I see five purple dots and one red dot.
+
+To count the total number of objects (dots) in the image: 5 (purple dots) + 1 (red dot) = 6.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_46.png,6,"The image contains colored circles. There are:
+
+- 3 yellow circles
+- 2 green circles
+- 1 red circle
+
+In total, there are 6 objects in the image.",6,False
+data/counting/counting-6_47.png,6,"The image contains a total of seven dots. Three of these dots are blue, and four are pink.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_48.png,6,"The image shows a collection of colored dots. There appear to be:
+- 2 red dots.
+- 2 orange dots.
+- 2 yellow dots.
+
+In total, there are 6 dots in the image.",6,False
+data/counting/counting-6_49.png,6,"The image contains colored circles. There are two yellow circles at the top and four green circles at the bottom.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_50.png,6,"The image contains several colored dots. Here's a description based on their colors:
+
+- 1 red dot
+- 2 yellow dots
+- 3 orange dots
+
+Counting each dot as one object, there are a total of 6 objects in the image.",6,False
+data/counting/counting-6_51.png,6,"The image consists of colored dots: one blue dot and five purple dots.
+
+Counting the dots gives us a total of:
+
+1 blue dot + 5 purple dots = 6 dots
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_52.png,6,"The image contains several colored dots. Some dots are larger and magenta in color, whereas others are smaller and red. Counting each dot as an object, let me tally the total:
+
+Number of magenta dots: 3
+Number of red dots: 3
+
+Adding these together, the total number of objects (dots) in the image is:
+
+3 (magenta dots) + 3 (red dots) = 6 dots
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_53.png,6,"The image shows a collection of blue dots of various sizes scattered randomly.
+
+Upon counting, I see 6 blue dots in the image.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-6_54.png,6,"The image contains several colored circles:
+
+1. Large dark blue circle on the bottom left.
+2. Medium dark blue circle near the top left.
+3. Small dark blue circle near the top center.
+4. Very small dark blue circle close to the center.
+5. Medium dark blue circle near the bottom right.
+6. Small light blue circle near the center.
+
+Counting all of them, there are a total of 6 circles in the image.",6,False
+data/counting/counting-6_55.png,6,"The image consists of five green dots of varying sizes. 
+
+There are five objects in the image.",5,False
+data/counting/counting-6_56.png,6,"The image contains a collection of pink dots. To count them:
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 pink dots in the image.",6,False
+data/counting/counting-6_57.png,6,"The image contains a total of two different colored dots: blue and purple.
+
+Counting them separately:
+- There are two blue dots.
+- There are three purple dots.
+
+Adding them together gives us a total of:
+
+2 (blue) + 3 (purple) = 5 dots
+
+So, the number of objects in the image is 5.",5,False
+data/counting/counting-6_58.png,6,"The image contains a collection of colored circles: one blue circle and five green circles.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-6_59.png,6,"I see seven round colored objects, which seem to be computer-generated circles or dots. They vary in shades of green, with one dot being a different, lighter color that could be perceived as teal or light blue.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-6_60.png,6,"The image contains a series of dots. There are light blue dots and dark blue dots. To count them:
+
+- Light blue dots: 4
+- Dark blue dots: 2
+
+Now, to add them together:
+
+4 (light blue) + 2 (dark blue) = 6 dots in total.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_61.png,6,"The image consists of six pink dots of various sizes scattered across a white background.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_62.png,6,"The image shows a collection of dots. There are dots in two different colors: blue and purple.
+
+Number of blue dots: 4
+Number of purple dots: 3
+
+Total number of objects (dots) in the image: 7",7,False
+data/counting/counting-6_63.png,6,"The image contains several magenta colored dots against a white background. Each dot is identical in color.
+
+Number of objects (dots) in the image: 6",6,False
+data/counting/counting-6_64.png,6,"The image shows a collection of colored dots. There are both purple and pink dots, but the image is not clear enough to count them precisely. My image processing capabilities do not allow for an exact count in this instance. However, if I were to estimate, I would say there are around six purple dots and two pink dots, making it a total of eight dots. But please note this is an approximation and may not be the precise number.",8,False
+data/counting/counting-6_65.png,6,"The image contains circular colored dots. There are two red dots, two orange dots, and two yellow dots.
+
+Counting all the dots gives us a total of:
+
+2 (red) + 2 (orange) + 2 (yellow) = 6 objects in the image.",6,False
+data/counting/counting-6_66.png,6,"The image contains colored dots. To count them, let's describe their colors and locations:
+
+- Top left: 1 orange dot
+- Top right: 1 green dot
+- Center left: 1 yellow dot
+- Center right: 1 orange dot
+- Bottom left: 1 yellow dot
+- Bottom center: 1 red dot
+
+Now, counting the number of dots:
+
+1 (orange) + 1 (green) + 1 (yellow) + 1 (orange) + 1 (yellow) + 1 (red) = 6 dots
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-6_67.png,6,"The image contains colored dots or circles. There are three red dots, two orange dots, and one pink dot. 
+
+Adding them up, the total number of objects in the image is:
+
+3 (red) + 2 (orange) + 1 (pink) = 6 objects",6,False
+data/counting/counting-6_68.png,6,"The image contains seven circular dots. There are four pink or red dots and three orange dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_69.png,6,"The image contains seven circular objects. There are two yellow circles and five orange circles.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-6_70.png,6,"The image contains several circular colored dots:
+
+- There are three red dots.
+- There is one orange dot.
+- There is one pink dot.
+- There are no other objects in the image.
+
+Adding them together: 3 (red) + 1 (orange) + 1 (pink) = 5 objects in total.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-6_71.png,6,"The image shows a group of circles differentiated by color. There are five green circles and two yellow circles.
+
+The total number of objects (circles) in the image is 7.",7,False
+data/counting/counting-6_72.png,6,"The image contains seven green dots arranged in no particular pattern on a white background.
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-6_73.png,6,"The image displays a collection of blue dots or circles. There are two sizes: larger dots and smaller dots.
+
+- There are two larger blue dots, one at the top left and one at the bottom right.
+- There are three smaller blue dots in a horizontal line towards the bottom.
+
+Total number of blue dots/circles in the image: 5.",5,False
+data/counting/counting-6_74.png,6,"The image contains a number of purple dots scattered across the frame.
+
+Number of objects (purple dots) in the image: 6",6,False
+data/counting/counting-6_75.png,6,"The image contains colored circles: 4 green circles and 2 yellow circles. Let's count them:
+
+1 green circle
+2 green circles
+3 green circles
+4 green circles
+1 yellow circle
+2 yellow circles
+
+So there are 6 circles in total.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_76.png,6,"The image contains a collection of green dots of various sizes scattered around.
+
+Counting each dot as an object, there are six green dots in the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_77.png,6,"The image shows a collection of circles in different colors. There are two green circles at the top, two yellow circles in the middle, and one orange circle at the bottom.
+
+Number of objects in the image: 5.",5,False
+data/counting/counting-6_78.png,6,"In the image, there are several colored dots. I see:
+
+- Light blue dots
+- One dark blue dot
+- One green dot
+
+Counting each dot as an object, we will count the total number of dots present.
+
+Number of objects (dots) in the image: 6",6,False
+data/counting/counting-6_79.png,6,"The image contains six green dots or circles of various shades. Some are lighter green, while others are a darker shade of green.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_80.png,6,"The image contains colored dots. There are two different colors: aqua and blue. 
+
+Upon counting the dots:
+
+- There are three aqua-colored dots. 
+- There are three blue-colored dots.
+
+Therefore, the total number of objects (dots) in the image is six.",6,False
+data/counting/counting-6_81.png,6,"The image contains a series of green dots.
+
+Counting the dots:
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 green dots in the image.",6,False
+data/counting/counting-6_82.png,6,"The image displays five green dots of similar size and color, arranged asymmetrically against a white background.
+
+Number of objects in the image: 5",5,False
+data/counting/counting-6_83.png,6,"The image contains six circular dots. Three of them are purple, and three are blue.
+
+The number of objects in the image is: 6.",6,False
+data/counting/counting-6_84.png,6,"The image contains a collection of colored dots. There are dots of two different colors. Most of the dots are pink, with one dot being orange.
+
+Now, to count them: There are six pink dots and one orange dot.
+
+So the total number of dots in the image is 7.",7,False
+data/counting/counting-6_85.png,6,"The image shows a collection of simple circular dots. There are five dots in total: four of them are blue, and one is green. 
+
+Number of objects in the image: 5",5,False
+data/counting/counting-6_86.png,6,"The image contains a total of six green dots of varying sizes scattered across the image.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-6_87.png,6,"The image shows seven circles of various shades of green distributed across the frame.
+
+The number of objects (circles) in the image is: 7.",7,False
+data/counting/counting-6_88.png,6,"The image contains a collection of dots in two different colors. There are pink dots and purple dots.
+
+Counting each dot as an object:
+
+Pink dots: 3
+Purple dots: 4
+
+Total number of objects (dots) in the image: 7",7,False
+data/counting/counting-6_89.png,6,"The image contains a collection of purple and pink dots against a white background. 
+
+After counting, the number of dots in the image is:
+
+Six (6) purple and pink dots.",6,False
+data/counting/counting-6_90.png,6,"The image shows a collection of colored circles. There are circles of at least two distinct colors—orange and yellow.
+
+Counting each circle as one object, let's count them:
+- 3 yellow circles
+- 4 orange circles
+
+Adding these together, the total number of objects (circles) in the image is:
+3 (yellow) + 4 (orange) = 7 circles
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-6_91.png,6,"The image contains a total of 6 colored dots: 3 orange dots and 3 yellow dots.
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-6_92.png,6,"The image contains a collection of green dots of various sizes against a plain background.
+
+Now I will count them:
+
+1, 2, 3, 4, 5, 6.
+
+There are 6 green dots in the image.",6,False
+data/counting/counting-6_93.png,6,"The image contains several dots of two different shades of green—a lighter and a darker shade. They appear to be randomly distributed across the image. Now I will count the number of dots.
+
+Number of objects (dots) in the image: 6",6,False
+data/counting/counting-6_94.png,6,"The image shows six colored circles:
+
+- 1 green circle
+- 1 yellow circle
+- 4 orange circles
+
+Counting each circle as one object, there are a total of 6 objects in the image.",6,False
+data/counting/counting-6_95.png,6,"The image contains several circular dots. There are dots of two different colors: red and orange. I will count each colored dot separately and then provide the total number of dots.
+
+Number of red dots: 4
+Number of orange dots: 3
+
+Total number of objects (dots) in the image: 7",7,False
+data/counting/counting-6_96.png,6,"The image contains a number of colored dots/circles. Here is the breakdown by color:
+
+- There are 2 red dots.
+- There are 5 pink dots.
+
+Counting all the dots together, there are a total of 7 objects in the image.",7,False
+data/counting/counting-6_97.png,6,"The image consists of seven colored dots. Some dots are red, while others are a shade of pink or magenta. 
+
+Counting each dot as one object, the total number of objects in the image is:
+
+7",7,False
+data/counting/counting-6_98.png,6,"The image contains seven green circles scattered around the image against a white background.
+
+7",7,False
+data/counting/counting-6_99.png,6,"The image contains a total of seven circular dots: four are blue, and three are green.
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-7_0.png,7,"The image contains several colored circles. There are light blue circles and dark blue circles.
+
+Counting each circle as one object, I see:
+
+3 light blue circles
+4 dark blue circles
+
+Adding them together, the total number of objects (circles) in the image is:
+
+3 (light blue circles) + 4 (dark blue circles) = 7 circles
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_1.png,7,"The image displays a collection of green dots scattered across a plain background.
+
+Now, I will count the dots:
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 green dots in the image.",8,False
+data/counting/counting-7_2.png,7,"The image contains six colored dots. There is one pink dot, two orange dots, and three yellow dots.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-7_3.png,7,"The image contains several green dots scattered across it. These dots appear identical in color and are the only objects present in the image.
+
+Number of green dots in the image: 6.",6,False
+data/counting/counting-7_4.png,7,"The image contains several colored dots: five green dots, two blue dots, and one lighter blue or cyan dot.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-7_5.png,7,"The image contains several green dots.
+
+Now, I'll count them: 1, 2, 3, 4, 5, 6, 7.
+
+There are 7 objects in the image.",7,False
+data/counting/counting-7_6.png,7,"The image shows a collection of green dots of varying shades. Without distinct shapes or sizes that could clarify if different objects are intended, just counting the visible dots would be the way to go about this.
+
+Counting each dot as a single object, there are:
+
+7 objects (dots) in total.",7,False
+data/counting/counting-7_7.png,7,"I see several colored dots in the image. They appear to be magenta and one is red. Now, I will count them:
+
+- Magenta dots: 1, 2, 3, 4, 5, 6.
+- Red dot: 1.
+
+Adding them together, there are a total of 7 dots in the image.",7,False
+data/counting/counting-7_8.png,7,"The image contains colored circles of various shades of blue and green. Here is a description of each object:
+
+- Three light blue circles of the same size.
+- Two teal circles of the same size.
+- One slightly larger green circle.
+
+Now, I will count them.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-7_9.png,7,"The image contains a number of colored dots or circles. It appears there are some blue dots and some green dots of varying sizes.
+
+Now, let's count each of the dots:
+
+1. Large blue dot: 1
+2. Medium blue dots: 3
+3. Small blue dot: 1
+4. Large green dots: 2
+
+If we sum these up, 1 (large blue dot) + 3 (medium blue dots) + 1 (small blue dot) + 2 (large green dots) gives us a total of:
+
+7 objects in the image.",7,False
+data/counting/counting-7_10.png,7,"The image contains several colored circles. There are two colors in this set of circles: purple and blue. The image features three purple circles and four blue circles.
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-7_11.png,7,"The image shows a collection of dots. There are two colors of dots: teal and green. To count them, I'll look at each color:
+
+- Teal dots: 1, 2, 3, 4, 5.
+- Green dots: 1, 2.
+
+Adding them together, there are a total of:
+
+5 (teal) + 2 (green) = 7 dots. 
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-7_12.png,7,"The image contains seven green dots of various sizes scattered around.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_13.png,7,"The image contains several round colored dots. I will describe them by their apparent color:
+
+- Yellow dots
+- Orange dots
+- Green dots
+
+Now I will count them:
+
+- Yellow dots: 3
+- Orange dots: 2
+- Green dots: 3
+
+Adding these together gives the total number of objects in the image.
+
+3 (yellow) + 2 (orange) + 3 (green) = 8
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-7_14.png,7,"The image consists of dots of two different colors – purple and red. The dots appear to be uniformly colored and circular in shape.
+
+Counting the dots: 
+- There are 5 purple dots.
+- There is 1 red dot.
+
+Adding them together gives a total of 6 dots.
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-7_15.png,7,"The image contains a collection of purple and pink dots of various sizes against a white background.
+
+Counting each dot as one object, here is the total number of objects:
+
+7 objects (dots) in the image.",7,False
+data/counting/counting-7_16.png,7,"The image contains colored dots: most are orange, and a couple appear to be pink or a similar shade. Now I will count them.
+
+There are 8 objects in the image.",8,False
+data/counting/counting-7_17.png,7,"The image contains colored dots. There are dots in three distinct colors: purple, red, and orange. I will count each dot as one object regardless of its color.
+
+Now, let's count:
+
+- Purple dots: 3
+- Red dots: 3
+- Orange dot: 1
+
+Adding them together gives us the total number of objects:
+
+3 (purple) + 3 (red) + 1 (orange) = 7 objects in the image.",7,False
+data/counting/counting-7_18.png,7,"The image consists of seven purple dots of varying sizes scattered across the image.
+
+The number of objects in the image: 7",7,False
+data/counting/counting-7_19.png,7,"The image contains a collection of colored circles. There are two colors: turquoise and green.
+
+Now, I will count each color group:
+
+Turquoise circles: 3
+Green circles: 4
+
+Adding both groups together:
+
+3 (turquoise) + 4 (green) = 7 circles
+
+The total number of objects in the image is 7.",7,False
+data/counting/counting-7_20.png,7,"The image contains a collection of red and pink dots. 
+
+Upon counting, I see:
+
+7 objects (dots) in total.",7,False
+data/counting/counting-7_21.png,7,"The image contains colored dots. There are two different colors present: red (including variations of red, like the single orange dot, assuming it may represent a different shade of red in this context) and magenta. Counting each dot as an object, there are a total of 7 dots: 5 magenta dots and 2 red dots, with one of the red dots having an orange hue.
+
+Number of objects (dots) in the image: 7",7,False
+data/counting/counting-7_22.png,7,"The image contains a collection of green dots of various shades. Some dots are lighter green, while others are a darker shade of green.
+
+Upon counting the dots, I can confirm that there are a total of 7 objects (dots) in this image.",7,False
+data/counting/counting-7_23.png,7,"The image contains seven colored dots. There are two blue dots and five purple dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_24.png,7,"The image contains colored circles. There are several circles in different shades of green and yellow, along with one circle in orange.
+
+To precisely count the number of objects (circles), I will enumerate them:
+
+1. Top left: light green circle
+2. Left middle: yellow circle
+3. Left bottom: light green circle
+4. Center top: light green circle
+5. Right middle up: yellow circle
+6. Right middle down: light green circle
+7. Right bottom: light green circle
+8. Bottom left: orange circle
+
+Total number of objects (circles) in the image: 8.",8,False
+data/counting/counting-7_25.png,7,"The image shows a collection of colored dots: some are red, and some are pink. Now, I will count them.
+
+Red dots: 1, 2, 3
+Pink dots: 1, 2, 3
+
+Total dots: 6
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-7_26.png,7,"The image displays a collection of colored dots/circles. There are some orange dots, a yellow dot, and a pink dot.
+
+Let me count them:
+
+- Orange dots: 5
+- Yellow dot: 1
+- Pink dot: 1
+
+Total number of objects (dots) in the image: 7",7,False
+data/counting/counting-7_27.png,7,"The image contains a number of colored dots. There are magenta dots and one blue dot. Now I will count them:
+
+There are 6 magenta dots and 1 blue dot.
+
+Total number of objects (dots) in the image: 7.",7,False
+data/counting/counting-7_28.png,7,"The image contains a collection of colored dots. Some dots are green, and there is one dot that is a different shade, possibly teal or light blue.
+
+Counting the dots, I see:
+- 5 green dots
+- 1 teal/light blue dot
+
+Therefore, there are a total of 6 dots in the image.",6,False
+data/counting/counting-7_29.png,7,"The image contains a collection of colored circles. There are several blue circles and one circle that is a different color (light green or turquoise).
+
+Now to count them:
+
+- 1 light green/turquoise circle
+- 5 blue circles
+
+Adding them together:
+
+1 (light green/turquoise) + 5 (blue) = 6 circles in total
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-7_30.png,7,"The image contains colored circles. Let me count them for you:
+
+- 2 large dark blue circles
+- 2 medium light blue circles
+- 2 small turquoise circles
+
+Adding them up gives a total of 6 objects in the image.",6,False
+data/counting/counting-7_31.png,7,"The image contains a collection of colored dots. There appear to be two different colors—red and a color that could be considered pink or light red—and there's one dot that is orange. Now, I'll count each of the dots.
+
+Red dots: 1, 2, 3, 4.
+Pink/light red dots: 1, 2.
+Orange dot: 1.
+
+Adding all of these together gives a total count of:
+
+4 (red) + 2 (pink/light red) + 1 (orange) = 7 dots in total.",7,False
+data/counting/counting-7_32.png,7,"The image contains circular dots of different colors. Here's the breakdown by color:
+
+- Pink dots: There are five pink dots.
+- Purple dots: There is one purple dot.
+
+Adding them up gives a total of:
+
+5 (pink) + 1 (purple) = 6 dots
+
+Number of objects in the image: 6.",6,False
+data/counting/counting-7_33.png,7,"The image contains colored dots. To count the objects, which are the dots in this case:
+
+There are:
+- Three light blue dots.
+- Two darker blue dots.
+- One purple dot.
+
+Adding them up gives us a total of:
+
+3 (light blue dots) + 2 (darker blue dots) + 1 (purple dot) = 6 objects in the image.",6,False
+data/counting/counting-7_34.png,7,"The image contains several circular shapes scattered around. These circles appear to be in two different shades of color, which look like green and yellow.
+
+Now, I will count the circles:
+
+1. Green circle
+2. Green circle
+3. Green circle
+4. Green circle
+5. Yellow circle
+6. Yellow circle
+7. Yellow circle
+8. Yellow circle
+
+There are 8 objects in the image.",8,False
+data/counting/counting-7_35.png,7,"The image contains a number of green dots.
+
+Number of green dots in the image: 7",7,False
+data/counting/counting-7_36.png,7,"The image contains several blue dots of varying sizes spread out against a white background.
+
+After examining the image, I count a total of 7 blue dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_37.png,7,"The image contains a series of purple dots of various sizes scattered across a white background.
+
+Counting each dot as an object, there are:
+
+7 objects (dots) in total.",7,False
+data/counting/counting-7_38.png,7,"In the image, there are several colored dots. Based on their colors, these dots can be grouped into two sets:
+
+- Blue colored dots
+- Purple colored dots
+
+Counting each dot as one object, we have:
+
+- 4 blue colored dots
+- 3 purple colored dots
+
+The total number of objects (dots) in the image is therefore 7. 
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_39.png,7,"The image contains a collection of colored dots. There are two shades of blue represented among the dots: a lighter blue and a darker blue or perhaps purple shade.
+
+Counting each dot as an individual object, there are a total of 7 objects (dots) in the image.",7,False
+data/counting/counting-7_40.png,7,"The image consists of seven circular dots. Of these dots, six are in a shade of blue, while one is in a shade of turquoise or light green.
+
+The number of objects in the image is: 7.",7,False
+data/counting/counting-7_41.png,7,"The image consists of colored circles. There is one yellow circle, two orange circles, and four red circles.
+
+Adding them up, the total number of circles (objects) in the image is:
+
+1 (yellow) + 2 (orange) + 4 (red) = 7 objects. 
+
+Therefore, there are 7 objects in the image.",7,False
+data/counting/counting-7_42.png,7,"In the image, you provided there are colored dots. There is 1 red dot, 2 orange dots, and 2 yellow dots.
+
+Counting all the dots, the total number of objects in the image is:
+
+1 (red) + 2 (orange) + 2 (yellow) = 5 objects.",5,False
+data/counting/counting-7_43.png,7,"The image shows a collection of colored dots. Let's describe their colors first:
+
+1. There are several red dots.
+2. There are a few orange dots.
+
+Now, I'll count each color group:
+
+- Red dots: 1, 2, 3, 4, 5.
+- Orange dots: 1, 2.
+
+Adding these together gives the total number of objects (dots) in the image:
+
+5 (red) + 2 (orange) = 7 objects in the image. 
+
+So, the number of objects in the image is 7.",7,False
+data/counting/counting-7_44.png,7,"The image contains several colored dots. There are two different colors: pink and purple.
+
+Now, I'll count them:
+
+- Pink dots: 4
+- Purple dots: 3
+
+Adding both counts together, there are a total of 7 dots in the image.",7,False
+data/counting/counting-7_45.png,7,"The image contains a collection of colored dots or circles. There are different colors visible, likely representing orange, yellow, and a light green or lime color.
+
+Now, let's count them:
+- Orange dots: 3
+- Yellow dots: 2
+- Light green or lime dots: 1
+
+Adding these up gives us a total of:
+
+3 (orange) + 2 (yellow) + 1 (light green/lime) = 6 objects in the image.",6,False
+data/counting/counting-7_46.png,7,"The image contains colored dots. Some are pink, and others are purple.
+
+Total number of dots in the image: 7.",7,False
+data/counting/counting-7_47.png,7,"The image contains seven colored circles. There are:
+
+- 2 green circles
+- 2 red circles
+- 2 orange circles
+- 1 yellow circle
+
+Adding them up, there is a total of 7 objects in this image.",7,False
+data/counting/counting-7_48.png,7,"The image contains colored dots. Specifically, there are:
+
+- Four orange dots
+- One pink dot
+- One yellow dot
+
+In total, that is six dots.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-7_49.png,7,"The image contains several small, circular shapes scattered around, which are purple in color. Let's count them:
+
+1. Top-left corner
+2. Slightly below the first object, to the right
+3. Below the second object, slightly to the left
+4. To the right of the third object
+5. Further right of the fourth object, slightly up
+6. Below the fifth object
+7. Farther below the sixth object
+
+There are 7 objects in the image.",7,False
+data/counting/counting-7_50.png,7,"The image contains a collection of colored dots. There are two different colors present: blue and pink. To count them, I will differentiate them by color and then give a total count:
+
+- Blue dots: 1
+- Pink dots: 6
+
+Total number of dots in the image: 7",7,False
+data/counting/counting-7_51.png,7,"The image shows seven circular dots of different colors. Two of the dots are a lighter blue (or cyan), while the other five are a darker blue.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_52.png,7,"The image contains a series of colored dots. There are two shades of colors visible: a lighter blue (cyan) and a green. I will count each dot as an object regardless of its color.
+
+Now, I will count them:
+
+1. Cyan dot at the top.
+2. Cyan dot below the first one.
+3. Green dot to the left side.
+4. Cyan dot below the second one.
+5. Cyan dot to the right side of the third dot.
+6. Green dot at the bottom left.
+7. Cyan dot at the bottom center.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_53.png,7,"The image contains colored circles. There are:
+
+- 2 orange circles
+- 3 green circles
+- 3 yellow circles
+
+Adding them together gives us a total of 8 circles.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-7_54.png,7,"In the image, there are seven green dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_55.png,7,"In the image, there are colored dots/circles. Upon inspection, it appears there are:
+
+- 5 blue dots
+- 2 purple dots
+
+Counting each dot as one object, this gives us a total number of objects:
+
+5 (blue dots) + 2 (purple dots) = 7 objects
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_56.png,7,"The image consists of multiple colored dots or circles. There appear to be two shades of color: pink and purple. I will now count them.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-7_57.png,7,"The image contains a total of eight circular objects: five are green and three are yellow.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-7_58.png,7,"The image appears to have a collection of colored dots. There are dots of different colors, possibly representing a variety of objects if seen in a specific context, but within the given image, they are simply colored dots. Without any further context, I will count each dot as one individual object.
+
+Number of objects (dots) in the image: 7.",7,False
+data/counting/counting-7_59.png,7,"The image contains seven circular objects or dots of various colors.
+
+Now, I will count them: 1, 2, 3, 4, 5, 6, 7.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_60.png,7,"The image contains a collection of simple circular shapes, possibly dots or circles. There are two different colors:
+
+- Green circles
+- Blue circles
+
+Now I will count the circles:
+
+- There are seven green circles.
+- There is one blue circle.
+
+Adding them together, the total number of circles is:
+
+7 (green circles) + 1 (blue circle) = 8 circles in the image.",8,False
+data/counting/counting-7_61.png,7,"The image contains a total of seven circular dots. From what I can see, five dots are colored dark blue, and two are a lighter shade of blue, possibly cyan.
+
+Number of objects (dots) in the image: 7.",7,False
+data/counting/counting-7_62.png,7,"The image contains a collection of colored circles. Specifically, there are:
+
+- Green circles
+- One yellow circle
+
+Now, I'll count each of them:
+
+- There are six green circles.
+- There is one yellow circle.
+
+Adding them up gives a total of:
+
+6 (green) + 1 (yellow) = 7 circles
+
+Therefore, there are 7 objects in the image.",7,False
+data/counting/counting-7_63.png,7,"The image contains several blue circular dots of varying sizes. To count them accurately, I will list them by their size:
+
+- Two large blue dots.
+- Three medium blue dots.
+- Two small blue dots.
+
+Adding them all together:
+
+2 (large) + 3 (medium) + 2 (small) = 7 blue dots in total.
+
+The number of objects in this image is 7.",7,False
+data/counting/counting-7_64.png,7,"The image shows a collection of dots. Some are orange and some are red (or pink depending on color perception). Now, I'll count the number of dots.
+
+1, 2, 3, 4, 5, 6, 7.
+
+There are 7 dots in the image.",7,False
+data/counting/counting-7_65.png,7,"The image contains several green dots of various sizes scattered across a white background.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_66.png,7,"The image contains a total of six colored circles: some in a lighter shade of yellow or green, and some in a darker shade. Now I will count the number of each:
+1. Light yellow circles: 2
+2. Dark green circles: 4
+
+Adding these together, the total number of objects in the image is 6.",6,False
+data/counting/counting-7_67.png,7,"The image contains several circular dots. There is one blue dot in the center, surrounded by seven lighter blue or turquoise dots.
+
+Counting all the dots, there are:
+
+1 blue dot + 7 turquoise dots = 8 dots in total.",8,False
+data/counting/counting-7_68.png,7,"The image shows a collection of circles, some colored blue and others colored purple.
+
+Number of blue circles: 4
+Number of purple circles: 2
+
+Total number of objects (circles) in the image: 6",6,False
+data/counting/counting-7_69.png,7,"In the image, there are dots of two different colors—red and purple. Counting each dot as an object, let's tally them:
+
+Red dots: 2
+Purple dots: 5
+
+Adding them together gives us a total of:
+
+2 (red) + 5 (purple) = 7 objects
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_70.png,7,"In the image, there are several colored dots. Some are red, and others are pink or purple. I'll now count each one.
+
+There are five red dots, two pink dots, and one purple dot.
+
+Adding them together, there are a total of 8 dots in the image.",8,False
+data/counting/counting-7_71.png,7,"The image contains a series of teal or blue circular dots against a white background. I will now count them:
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 dots in the image.",8,False
+data/counting/counting-7_72.png,7,"The image consists of seven green dots of varying sizes scattered across the image.
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-7_73.png,7,"The image shows a series of colored dots: three cyan dots and six green dots.
+
+Counting each dot as an object, there are a total of 9 objects in the image.",9,False
+data/counting/counting-7_74.png,7,"The image contains colored dots or circles. There are different colors present, including blue and what appears to be a purple or magenta dot. Now I'll count them:
+
+1. Large blue dot (top left corner)
+2. Medium blue dot (above center to the left)
+3. Medium blue dot (center)
+4. Large blue dot (below center to the right)
+5. Small blue dot (bottom)
+6. Small blue dot (near the left edge, below center)
+7. Medium teal or light blue dot (center left)
+8. Medium purple or magenta dot.
+
+Totaling these up, there are 8 dots in the image.
+
+Number of objects: 8",8,False
+data/counting/counting-7_75.png,7,"The image contains several circular dots. There are red dots and there are purple dots. 
+
+Let's count them:
+
+Red dots: 2
+Purple dots: 5
+
+In total, there are 7 dots in the image.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_76.png,7,"The image consists of simple, colored circles. There are two colors: blue and green. Counting each circle as a separate object, I'll proceed to count them.
+
+Blue circles: 4
+Green circles: 3
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_77.png,7,"The image contains blue and light blue dots.
+
+1. Top left corner: One blue dot.
+2. Top center: Two light blue dots side by side.
+3. Top right corner: One blue dot.
+4. Middle left: One light blue dot.
+5. Middle right: One blue dot.
+6. Bottom left: One light blue dot.
+7. Bottom center: One blue dot.
+8. Bottom right: One blue dot.
+
+Now I will count them:
+
+- There are four blue dots.
+- There are three light blue dots.
+
+The total number of dots in the image is 7.",7,False
+data/counting/counting-7_78.png,7,"The image contains a total of six colored circles: five of them are orange and one is yellow.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-7_79.png,7,"The image contains several green dots of various sizes scattered on a white background.
+
+Number of objects (green dots) in the image: 7",7,False
+data/counting/counting-7_80.png,7,"The image contains colored circles. There are two orange circles, two yellow circles, and three green circles.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_81.png,7,"In the image, I see seven circular dots. There are:
+
+- Four purple dots,
+- Two pink dots,
+- One blue dot.
+
+Counting all the dots gives a total of: 7 objects.",7,False
+data/counting/counting-7_82.png,7,"The image displays a total of seven colored dots: some are red, one is pink, and one is orange. Each dot is considered one object.
+
+There are 7 objects in the image.",7,False
+data/counting/counting-7_83.png,7,"The image contains several colored dots. Specifically, there are:
+
+- 6 red dots
+- 1 purple dot
+
+Adding them together gives us a total of 7 objects in the image.
+
+7",7,False
+data/counting/counting-7_84.png,7,"The image contains a collection of round colored dots. There are different colors, but the primary concern here seems to be the count rather than the color differentiation.
+
+Upon counting the dots, there are:
+
+8 dots in total.
+
+Therefore, the number of objects in the image is: 8.",8,False
+data/counting/counting-7_85.png,7,"The image contains a number of green circular dots. Some are lighter in color, while others are darker. To count them, I'll enumerate each dot.
+
+1. Top left, dark green dot.
+2. Top center, light green dot.
+3. Top right, light green dot.
+4. Center left, dark green dot.
+5. Center, light green dot.
+6. Center right, light green dot.
+7. Bottom left, dark green dot.
+8. Bottom center, dark green dot.
+9. Bottom right, light green dot.
+
+In total, there are 9 objects in the image.",9,False
+data/counting/counting-7_86.png,7,"The image contains a collection of green and yellow dots.
+
+Upon counting, I can see a total of seven dots: four green dots and three yellow dots. 
+
+Number of objects in the image: 7.",7,False
+data/counting/counting-7_87.png,7,"The image contains seven pink dots of various sizes scattered across a white background.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-7_88.png,7,"The image features a collection of teal-colored dots. I will count them.
+
+1, 2, 3, 4, 5, 6, 7.
+
+There are 7 objects (dots) in the image.",7,False
+data/counting/counting-7_89.png,7,"The image contains a collection of dots. Five dots are blue, and one dot is pink.
+
+The total number of objects (dots) in the image is six.",6,False
+data/counting/counting-7_90.png,7,"The image contains colored circles. There are yellow circles and green circles of various sizes. I will now count them.
+
+After counting, there are:
+
+8 green circles
+2 yellow circles
+
+Adding those together, the number of objects in the image is 10.",10,False
+data/counting/counting-7_91.png,7,"The image appears to contain seven circles, each a different shade of blue. 
+
+Counting each of these circles as individual objects, we have:
+
+7 objects in total.",7,False
+data/counting/counting-7_92.png,7,"The image contains a total of seven green dots of varying sizes.
+
+Number of objects: 7",7,False
+data/counting/counting-7_93.png,7,"The image displays a collection of colored dots. There is a mix of purple dots and blue dots.
+
+Now, I'll count them:
+
+- Purple dots: 4
+- Blue dots: 3
+
+Adding them together gives us a total of 7 objects in the image.",7,False
+data/counting/counting-7_94.png,7,"The image contains several circles. Most of the circles are red, but there is one that is pink. Now, I will count them.
+
+There are 7 objects in the image.",7,False
+data/counting/counting-7_95.png,7,"The image appears to contain a series of colored dots. There are dots in two different colors:
+
+- Magenta dots
+- Purple dots
+
+Counting the dots of each color:
+
+Magenta dots: 3
+Purple dots: 3
+
+Now, adding up both types:
+
+Total number of objects (dots) in the image: 3 (magenta) + 3 (purple) = 6
+
+There are 6 objects in the image.",6,False
+data/counting/counting-7_96.png,7,"The image contains circular colored objects. There are:
+
+- 2 larger orange circles
+- 2 smaller orange circles
+- 2 yellow circles, one slightly larger than the other
+- 1 smaller green circle
+
+Now, adding all of the circles together: 2 + 2 + 2 + 1 = 7 circles in total.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_97.png,7,"The image consists of colored dots. There are two dark blue dots, three light blue dots, and one green dot.
+
+Counting each dot as an object, the total number of objects in the image is 6.",6,False
+data/counting/counting-7_98.png,7,"The image contains several dots of two different shades of blue. I will count them:
+
+There are 4 dark blue dots and 3 light blue dots.
+
+Adding them together: 4 (dark blue) + 3 (light blue) = 7
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-7_99.png,7,"The image contains dots of two different colors:
+
+- Red dots
+- Pink dots
+
+Now, let's count each color separately:
+
+There are 4 red dots and 3 pink dots.
+
+Adding these together gives us the total number of dots in the image:
+
+4 red dots + 3 pink dots = 7 dots
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-8_0.png,8,"The image contains colored dots:
+
+- Yellow dots
+- Light green dots
+
+Now I will count each type:
+
+Yellow dots:
+1. Bottom center
+2. Center left
+3. Top right near the corner
+
+Light green dots:
+1. Top left
+2. Above the top yellow dot
+3. Slightly to the right middle
+4. Right middle
+5. Bottom right
+
+In total, there are 3 yellow dots and 5 light green dots.
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_1.png,8,"The image contains a total of 9 objects. They appear to be dots or circles, with the following color distribution:
+
+- 5 orange dots
+- 3 red dots
+- 1 pink dot
+
+9",9,False
+data/counting/counting-8_2.png,8,The image contains a collection of dots. There are a total of 8 dots in the image.,8,False
+data/counting/counting-8_3.png,8,"The image contains several colored dots. Upon examination, there are:
+
+- A number of red dots
+- One orange dot
+
+Now, I'll count them:
+
+- There are six red dots.
+- One orange dot.
+
+The total number of dots in the image is seven.",7,False
+data/counting/counting-8_4.png,8,"The image contains a number of colored dots. Some dots are green and some are yellow. Now I will count them:
+
+There are 5 green dots and 4 yellow dots.
+
+The total number of dots (objects) in the image is: 9.",9,False
+data/counting/counting-8_5.png,8,"The image contains colored dots:
+
+- 1 red dot
+- 2 green dots
+- 4 yellow dots
+
+Counting each dot as an object, there are a total of 7 objects in the image.",7,False
+data/counting/counting-8_6.png,8,"The image shows a series of colored dots. Each dot is an object. There are lighter blue dots and darker blue dots. 
+
+Now let me count them:
+
+There are 5 lighter blue dots and 2 darker blue dots. 
+
+Adding them up gives us a total number of 7 dots (or objects) in the image. 
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-8_7.png,8,"The image contains colored dots. There are 6 dots in total, with one orange dot and five pink dots.
+
+Number of objects in the image: 6",6,False
+data/counting/counting-8_8.png,8,"The image shows a collection of colored circles. Some are red, and others are orange. Now, I'll count them.
+
+Number of objects in the image: 7
+
+If you need a breakdown by color, there are 3 red circles and 4 orange circles.",7,False
+data/counting/counting-8_9.png,8,"The image contains a collection of colored circles: most of them are green and there is one yellow circle. Counting them, there are:
+
+8 green circles
+1 yellow circle
+
+Adding these together, the total number of objects (circles) in the image is:
+
+9",9,False
+data/counting/counting-8_10.png,8,"The image shows a collection of pink and purple dots.
+
+Counting each dot as an object, there are a total of 9 objects in the image.",9,False
+data/counting/counting-8_11.png,8,"The image contains multiple pink dots of uniform color but varying size. To count them, I’ll enumerate each distinct dot visible:
+
+1. Top left corner
+2. Top center, slightly to the right
+3. Top right corner
+4. Center left
+5. Directly in the center
+6. Center right
+7. Bottom left
+8. Bottom center
+9. Bottom right
+
+The total number of pink dots in the image is 9.",9,False
+data/counting/counting-8_12.png,8,"The image shows a collection of dots. There are dots of different colors, which seem to be light blue and dark blue.
+
+Now, I will count the dots:
+
+1. Light blue dot at the top-left.
+2. Light blue dot just below the first one.
+3. Light blue dot to the right of the second one.
+4. Light blue dot further right of the third one.
+5. Light blue dot below the second and to the left of the third.
+6. Dark blue dot below the first one on the left side.
+7. Dark blue dot to the left of the fifth one.
+8. Dark blue dot below the fifth one and to the right of the seventh one.
+9. Dark blue dot at the bottom-right, below the fourth light blue dot.
+
+Counting all the dots gives a total of 9 objects in the image.",9,False
+data/counting/counting-8_13.png,8,"The image contains a group of colored circles:
+
+- 1 green circle
+- 1 orange circle
+- 1 red circle
+- 4 yellow circles
+
+Let's count them: 1 (green) + 1 (orange) + 1 (red) + 4 (yellow) = 7 circles in total.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-8_14.png,8,"The image contains a number of colored dots or circles. Some are teal, and others are green. Now, I'll count them:
+
+Total number of objects in the image: 9.",9,False
+data/counting/counting-8_15.png,8,"The image contains several colored dots. Before counting, I'll categorize them by color for clarity:
+
+- There are dark purple dots.
+- There are light purple dots.
+
+Now, I’ll count each group:
+
+- Dark purple dots: 5
+- Light purple dots: 4
+
+Adding them together gives a total number of objects:
+
+5 (dark purple) + 4 (light purple) = 9 objects
+
+The number of objects in the image is 9.",9,False
+data/counting/counting-8_16.png,8,"The image contains a group of colored circles. There are circles of two different colors: purple and a darker shade that could be considered blue or dark purple. There are no other objects in the image. Now, I'll count them:
+
+1. Large purple circle (top left)
+2. Medium purple circle (top middle)
+3. Small purple circle (top right)
+4. Medium purple circle (center left)
+5. Large purple circle (center)
+6. Small purple circle (center right)
+7. Medium dark purple/blue circle (bottom left)
+8. Large purple circle (bottom middle)
+9. Small purple circle (bottom right)
+
+In total, there are 9 objects in the image.",9,False
+data/counting/counting-8_17.png,8,"The image consists of colored dots: some are purple and others are blue.
+
+To count the number of objects (dots), I will count each dot once:
+
+1. Purple dot
+2. Purple dot
+3. Purple dot
+4. Purple dot
+5. Purple dot
+6. Blue dot
+7. Blue dot
+8. Blue dot
+
+There are 8 dots in total in the image. 
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_18.png,8,"The image contains a number of colored circles. More specifically, there are:
+
+- Orange circles
+- Yellow circles
+- Green circles
+
+I will count each circle as one individual object.
+
+After counting each circle, I see there are:
+
+- 2 orange circles
+- 2 yellow circles
+- 4 green circles
+
+Adding them up gives a total of:
+
+2 (orange) + 2 (yellow) + 4 (green) = 8 circles
+
+So, the number of objects in the image is 8.",8,False
+data/counting/counting-8_19.png,8,"The image contains a set of dots. There are two colors of dots: blue and purple.
+
+Let's count the dots of each color separately:
+
+- There are 5 blue dots.
+- There are 3 purple dots.
+
+To find the total number of dots, we add the blue dots and the purple dots together: 
+
+5 blue dots + 3 purple dots = 8 dots in total. 
+
+There are 8 objects in the image.",8,False
+data/counting/counting-8_20.png,8,"The image contains colored dots: 6 are blue, and 2 are pink.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_21.png,8,"The image contains a number of pink and purple dots scattered across the frame. Each dot is considered an object.
+
+After counting each dot, I can identify the total number:
+
+Number of objects (dots) in the image: 9
+
+Please note that due to the resolution and the limits of the image displayed, I am providing the count based on the visible dots in the image provided.",9,False
+data/counting/counting-8_22.png,8,"In the image, there are circles of different colors: green, light blue, and one blue.
+
+Counting each circle as an object, there are:
+
+- 3 green circles.
+- 3 light blue circles.
+- 1 blue circle.
+
+Adding them up, the total number of objects in the image is:
+
+3 (green) + 3 (light blue) + 1 (blue) = 7 objects.",7,False
+data/counting/counting-8_23.png,8,"The image contains a collection of green dots that are uniformly colored and distributed across a white background.
+
+Number of objects (green dots) in the image: 7",7,False
+data/counting/counting-8_24.png,8,"The image contains several circles of different colors. There are circles in shades of yellow, orange, and one red circle. To count the number of objects, which in this case are the colored circles, I will count each one.
+
+1. Yellow circle (top left)
+2. Yellow circle (top center)
+3. Yellow circle (top right)
+4. Orange circle (center left)
+5. Orange circle (center right)
+6. Yellow circle (bottom left)
+7. Red circle (bottom center)
+8. Orange circle (bottom right)
+
+The total number of circles (objects) in the image is 8.",8,False
+data/counting/counting-8_25.png,8,"The image contains a collection of green dots. There are no other distinct objects. Let's count each dot as an object.
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 dots in total. 
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_26.png,8,"The image contains colored dots. There are some red dots and some orange dots. After describing them, I will count each type of dot.
+
+Red dots: 3
+Orange dots: 3
+Total number of dots: 6
+
+The number of objects in the image is 6.",6,False
+data/counting/counting-8_27.png,8,"In the image, there are several colored circles. Here's a description of those objects:
+
+- 1 green circle
+- 5 light blue circles
+- 2 dark blue circles
+
+Now I'll count the total number of circles:
+
+1 (green) + 5 (light blue) + 2 (dark blue) = 8 circles
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_28.png,8,"The image shows multiple colored dots. There are two different colors of dots: red and magenta.
+
+Now, I'll count the dots of each color:
+
+- Red dots: There are 3 red dots.
+- Magenta dots: There are 5 magenta dots.
+
+Adding these up gives us a total number of objects (dots) in the image:
+
+3 red dots + 5 magenta dots = 8 dots
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_29.png,8,"The image contains colored dots. There are two colors: green and cyan. Now, I will count each color.
+
+Green Dots: 6
+Cyan Dots: 2
+
+Total number of objects (dots) in the image: 8",8,False
+data/counting/counting-8_30.png,8,"The image shows a collection of colored dots. There are dots in at least three different colors. I will count each dot as one object.
+
+After counting each dot, I find there are:
+
+9 objects in the image.",9,False
+data/counting/counting-8_31.png,8,"The image contains a collection of dots. They are all circular in shape, and there are two different colors visible: purple and red.
+
+Now I'll count the dots:
+- There are 6 purple dots.
+- There are 3 red dots.
+
+Adding them together, we get a total of 9 dots in the image. 
+
+Number of objects in the image: 9",9,False
+data/counting/counting-8_32.png,8,"The image contains dots: some are pink and some are purple.
+
+Now, I will count each color group:
+
+- There are 4 pink dots.
+- There are 3 purple dots.
+
+Adding them together gives the total number of dots:
+
+4 pink dots + 3 purple dots = 7 dots.
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-8_33.png,8,"The image contains several blue dots of varying sizes scattered across a white background. 
+
+After counting, the number of blue dots in the image is:
+
+7",7,False
+data/counting/counting-8_34.png,8,"The image contains blue dots of varying shades. To count them:
+
+1. There are three light blue dots.
+2. There are five darker blue dots.
+
+Adding these together: 3 (light blue) + 5 (dark blue) = 8 dots in total.
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_35.png,8,"The image contains several circular dots. There are dots of two different colors: red and yellow. 
+
+Now I will count them: 
+
+Red dots: 4
+Yellow dots: 4
+
+Total number of dots (objects) in the image: 8",8,False
+data/counting/counting-8_36.png,8,"The image contains a number of blue dots of various sizes.
+
+Now I will count them: there are 1, 2, 3, 4, 5, 6, 7 blue dots in the image.
+
+7",7,False
+data/counting/counting-8_37.png,8,"The image contains a number of colored dots. From what I can see, there appears to be a mix of purple and blue dots of varying sizes.
+
+Counting each dot as a single object, here is the count:
+
+Number of purple dots: 5
+Number of blue dots: 3
+
+Adding them together gives the total number of objects:
+
+5 purple dots + 3 blue dots = 8 dots
+
+There are 8 objects in the image.",8,False
+data/counting/counting-8_38.png,8,"The image consists of several small colored circles. There are both pink and purple circles. Now, I will count them:
+
+1. Pink circles: 4
+2. Purple circles: 5
+
+Total number of objects (circles) in the image: 9",9,False
+data/counting/counting-8_39.png,8,"The image consists of nine dots: eight are magenta, and one is red.
+
+Number of objects in the image: 9",9,False
+data/counting/counting-8_40.png,8,"The image contains colored dots. Specifically, there are red dots, yellow dots, and one pink dot.
+
+Now, I'll count each colored dot:
+
+- Red dots: 5
+- Yellow dots: 2
+- Pink dot: 1
+
+Total number of objects (dots) in the image: 8",8,False
+data/counting/counting-8_41.png,8,"The image has a collection of colored dots, with most of them being a light turquoise color and one dot in a darker blue color. Now, I'll count them.
+
+There are a total of 9 objects in the image.",9,False
+data/counting/counting-8_42.png,8,"The image contains a number of purple dots scattered across a white background.
+
+After counting the dots, I can confirm that there are:
+
+9 objects in the image.",9,False
+data/counting/counting-8_43.png,8,"The image contains a number of green dots distributed across the image.
+
+Counting the number of green dots:
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 green dots in the image.",8,False
+data/counting/counting-8_44.png,8,"The image consists of colored dots. There are dots in three different colors:
+
+- Red dots
+- Orange dots
+- Yellow dots
+
+To count them, I'll go by color:
+- There are three red dots.
+- There are three orange dots.
+- There are two yellow dots.
+
+Now, summing those counts gives us the total number of dots in the image.
+
+3 (red) + 3 (orange) + 2 (yellow) = 8 dots in total.
+
+The number of objects in the image: 8.",8,False
+data/counting/counting-8_45.png,8,"The image contains colored dots. There are two blue dots and five green dots.
+
+Number of objects in the image: 7",7,False
+data/counting/counting-8_46.png,8,"The image contains colored dots against a white background. There are dots of two different colors:
+
+1. Red dots
+2. Purple dots
+
+Now, I will count each of these:
+
+Red dots: 6
+Purple dots: 3
+
+The total number of objects (dots) in the image is 9.",9,False
+data/counting/counting-8_47.png,8,"The image contains a collection of colored dots. Some are blue, and some are purple. There are no other objects or details in the image.
+
+Counting each dot as an individual object, here's the count of the dots:
+
+Blue dots: 4
+Purple dots: 3
+
+Total number of dots (objects) in the image: 7",7,False
+data/counting/counting-8_48.png,8,"The image depicts a collection of colored dots. There are dots of at least two different colors – light green and light blue.
+
+Upon counting the dots:
+
+There are a total of 8 objects in the image.",8,False
+data/counting/counting-8_49.png,8,"The image contains colored dots. There are dots in various colors: yellow, orange, red, and green.
+
+Let's count the number of dots by each color:
+
+- Yellow dots: 3
+- Orange dots: 2
+- Red dots: 2
+- Green dot: 1
+
+Now, to find the total number of objects (dots):
+
+Total number of dots = Number of yellow dots + Number of orange dots + Number of red dots + Number of green dots
+Total number of dots = 3 + 2 + 2 + 1
+Total number of dots = 8
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_50.png,8,"The image contains several circles in two different shades of blue. There are:
+
+- 6 circles in a darker shade of blue.
+- 1 circle in a lighter, aqua-like shade of blue.
+
+Total number of objects (circles) in the image: 7.",7,False
+data/counting/counting-8_51.png,8,"The image shows a set of colored circles. To count them accurately, I'll list them by color:
+
+1. Yellow circles
+2. Orange circles
+3. Light green circle
+4. Red circle
+
+Counting each circle individually, we have:
+
+- 2 yellow circles
+- 4 orange circles
+- 1 light green circle
+- 1 red circle
+
+Adding these up gives us a total of:
+
+2 (yellow) + 4 (orange) + 1 (light green) + 1 (red) = 8 circles
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_52.png,8,"In the image, there are multiple colored dots. There are dots in yellow, orange, and red.
+
+Now, I'll count them:
+
+- Yellow dots: 3
+- Orange dots: 3
+- Red dots: 2
+
+Adding these counts together, there are a total of 8 dots in the image.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-8_53.png,8,"The image contains colored dots or circles. There are dots of different colors, I see red, orange, and pink (or magenta) dots.
+
+Now, I will count each color group separately:
+
+There are:
+- Five red dots.
+- Two orange dots.
+- Three pink (or magenta) dots.
+
+Adding them together gives the total number of objects (dots) in the image:
+5 (red) + 2 (orange) + 3 (pink/magenta) = 10
+
+The number of objects in the image is 10.",10,False
+data/counting/counting-8_54.png,8,"The image contains eight circular colored dots. There is a variety of colors present, with no specific pattern or arrangement.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_55.png,8,"The image contains colored dots. Most of the dots are pink, with one dot being orange. Now, I'll count them.
+
+Number of objects (dots) in the image: 8
+
+Pink dots: 7
+Orange dot: 1",8,False
+data/counting/counting-8_56.png,8,"The image displays a collection of colored dots/circles. There are a total of 9 dots. One dot is red, and the other 8 dots are various shades of purple and pink.
+
+Number of objects in the image: 9",9,False
+data/counting/counting-8_57.png,8,"The image contains several colored dots. There appear to be dots in at least three distinct colors.
+
+Now, I'll count them: There are a total of 9 dots.
+
+9",9,False
+data/counting/counting-8_58.png,8,"The image contains a collection of colored circles:
+
+- There are three green circles of different shades.
+- There are three yellow circles, also in different shades.
+- There is one orange circle.
+
+Counting each of these circles as an object, there are a total of 7 objects in the image.",7,False
+data/counting/counting-8_59.png,8,"The image contains a collection of blue dots scattered across a white background.
+
+Number of blue dots: 7
+
+There are seven objects in the image.",7,False
+data/counting/counting-8_60.png,8,"The image contains a number of colored dots. There are two different colors present: blue and a lighter blue or turquoise.
+
+Now I will count each colored dot:
+
+1. Two dark blue dots.
+2. Six light blue/turquoise dots.
+
+In total, there are 8 dots in the image.",8,False
+data/counting/counting-8_61.png,8,"This image contains a collection of colored dots. The colors I can see are red, yellow, and pink.
+
+Counting each dot as a separate object, let's count them:
+
+- Red dots: 4
+- Yellow dots: 3
+- Pink dot: 1
+
+Adding them up gives a total of:
+
+4 (red) + 3 (yellow) + 1 (pink) = 8 objects
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_62.png,8,"The image contains simple colored circles, with two distinct colors: blue and light blue (or cyan). Each circle is an individual object.
+
+Counting them, there are:
+
+- Five light blue circles.
+- Three blue circles.
+
+Adding them together, there are a total of 8 circles or objects in this image.",8,False
+data/counting/counting-8_63.png,8,"The image shows several blue circles against a white background. There are no other discernible objects besides these blue circles. 
+
+Now, counting the circles: There are eight of them.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-8_64.png,8,"The image contains a group of colored circles scattered around. There are circles of different colors – some are orange, some are yellow, some are red, and some are green. To count the objects, I'll tally each circle individually:
+
+1 red circle at the top right
+1 yellow circle to the left of the top red circle
+1 yellow circle to the left of the first yellow circle
+1 orange circle below the first yellow circle
+1 yellow circle to the left of the second yellow circle
+1 orange circle below the second yellow circle
+1 green circle to the right of the bottom orange circle
+1 orange circle to the bottom left corner
+
+Now, I'll count these circles:
+
+- 1 red circle
+- 3 yellow circles
+- 3 orange circles
+- 1 green circle
+
+In total, there are 1 + 3 + 3 + 1 = 8 circles in the image.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_65.png,8,"The image contains a collection of blue and purple dots. There are different shades of blue, which could represent different objects.
+
+Now, counting the dots by their color:
+
+- Light blue dots: 1
+- Regular blue dots: 5
+- Purple dots: 3
+
+Adding them all together, we have a total of:
+
+1(light blue) + 5(regular blue) + 3(purple) = 9 objects
+
+So there are 9 dots in the image.",9,False
+data/counting/counting-8_66.png,8,"The image consists of colored circular shapes. There are dots of two different colors, orange and red. Now, I will count them separately and then give a total count:
+
+- Red dots: 4
+- Orange dots: 4
+
+Adding them together gives a total of:
+
+4 (red) + 4 (orange) = 8 dots
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_67.png,8,"The image shows a collection of purple dots against a white background.
+
+To count the objects, which are the dots in this case, I will count each visible dot:
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_68.png,8,"The image contains a collection of green circular shapes, which appear to be dots or circles.
+
+Counting each green circle as one object, let's count them:
+
+1. Top left
+2. Top center left
+3. Top center right
+4. Center left
+5. Center
+6. Center right
+7. Bottom center left
+8. Bottom center right
+
+There are 8 green circular objects in the image.",8,False
+data/counting/counting-8_69.png,8,"The image shows a collection of colored dots. There are dots in three different colors:
+
+- Red dots
+- Orange dots
+- Yellow dots
+
+Now, let's count each color:
+
+Red dots: 5
+Orange dots: 2
+Yellow dots: 2
+
+Adding them together:
+
+5 (red) + 2 (orange) + 2 (yellow) = 9
+
+The total number of objects (dots) in the image is 9.",9,False
+data/counting/counting-8_70.png,8,"The image contains several green dots of varying sizes. 
+
+To count them: 1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 green dots in the image.",8,False
+data/counting/counting-8_71.png,8,"The image contains a collection of colored dots. Upon inspection, some dots are purple, and some are pink. Counting each dot as a single object, I will now count them.
+
+Number of purple dots: 4
+Number of pink dots: 3
+
+Adding them together gives:
+
+Total number of objects (dots) in the image: 7",7,False
+data/counting/counting-8_72.png,8,"The image contains colored circles. There are 8 circles in total: 2 green, 3 orange, and 3 yellow.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_73.png,8,"The image shows a collection of colored dots. There are two colors of dots: dark blue and light blue (or cyan). Each dot is considered an object.
+
+Counting each dot as a single object, here's the total number of objects:
+
+Dark blue dots: 4
+Light blue (cyan) dots: 4
+
+Adding them together: 4 (dark blue) + 4 (light blue) = 8
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_74.png,8,"The image shows several colored dots. Here's the breakdown:
+
+- 3 red dots
+- 2 orange dots
+- 1 yellow dot
+- 1 light yellow or lime dot
+
+Adding them together gives a total of:
+
+3 (red) + 2 (orange) + 1 (yellow) + 1 (light yellow/lime) = 7 dots in total. 
+
+Therefore, the number of objects in the image is 7.",7,False
+data/counting/counting-8_75.png,8,"The image features a collection of colored dots. There are two colors: purple and pink. Each dot is considered one object.
+
+Now, I'll count the dots by color:
+- Purple dots: 4
+- Pink dots: 3
+
+Adding these together gives us the total number of objects:
+4 purple dots + 3 pink dots = 7 objects
+
+Therefore, the number of objects in the image is 7.",7,False
+data/counting/counting-8_76.png,8,"The image consists of circular dots. There are six green dots and one orange dot.
+
+Total number of objects (dots) in the image: 7.",7,False
+data/counting/counting-8_77.png,8,"The image contains several dots of various sizes and two different shades of blue. There are lighter blue dots and one dot that is a darker shade of blue.
+
+Counting all the dots, regardless of their color or size, gives us the total number of objects in the image.
+
+Number of objects (dots) in the image: 9",9,False
+data/counting/counting-8_78.png,8,"In the image, there are multiple colored dots. There are dots that appear to be blue and others that are purple, and there's at least one dot with a different shade, possibly light blue or cyan.
+
+Counting each dot as an object:
+- 6 blue dots
+- 3 purple dots
+- 1 light blue or cyan dot
+
+The total number of objects (dots) in the image is 10.",10,False
+data/counting/counting-8_79.png,8,"The image contains a number of blue dots of various sizes scattered against a white background.
+
+Counting each dot as one object, there are a total of:
+
+8 objects in the image.",8,False
+data/counting/counting-8_80.png,8,"The image shows a collection of colored dots. There are dots in two different colors: red and orange. To count them, I will list them by color:
+
+Red dots: 4
+Orange dots: 3
+
+Now, adding them together:
+
+4 (red) + 3 (orange) = 7 dots in total
+
+The number of objects in the image: 7",7,False
+data/counting/counting-8_81.png,8,"The image contains colored circles. There are circles of different colors: orange, yellow, and green. Now, I will count them:
+
+- Orange circles: 5
+- Yellow circles: 2
+- Green circle: 1
+
+Adding these up gives a total of:
+
+5 (orange) + 2 (yellow) + 1 (green) = 8 circles
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_82.png,8,"I see a group of colored dots. Some are pink, and some are a darker shade, possibly red or purplish. Now I will count them.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_83.png,8,"The image shows a total of eight circular dots: four are blue, and four are purple.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-8_84.png,8,"The image contains colored dots. There are red dots and there are purple dots.
+
+Now, I will count the number of dots:
+
+- There are 3 red dots.
+- There are 5 purple dots.
+
+Adding those together gives us a total count of 8 objects in the image.",8,False
+data/counting/counting-8_85.png,8,"The image contains colored dots. There are blue dots and one pink dot.
+
+Counting the objects (dots):
+
+- Blue dots: 8
+- Pink dot: 1
+
+Total number of objects (dots) in the image: 9.",9,False
+data/counting/counting-8_86.png,8,"The image contains several colored dots; some are purple, and others are pink. To count them, I will list them by color:
+
+- Purple dots
+- Pink dots
+
+Now, I will count each:
+
+- There are four purple dots.
+- There are three pink dots.
+
+Adding these together gives a total number of objects:
+
+4 (purple dots) + 3 (pink dots) = 7 objects
+
+The number of objects in the image is 7.",7,False
+data/counting/counting-8_87.png,8,"The image contains a number of pink dots against a white background.
+
+Counting the dots: 1, 2, 3, 4, 5, 6, 7.
+
+There are 7 dots in the image.",7,False
+data/counting/counting-8_88.png,8,"The image features a collection of colored circles. There are circles in three distinct colors: orange, yellow, and green. Now I will count them:
+
+- There are four orange circles.
+- There are three yellow circles.
+- There are two green circles.
+
+Adding those up gives us a total count of objects in the image.
+
+Number of objects in the image: 9",9,False
+data/counting/counting-8_89.png,8,"The image shows a collection of pink dots of various sizes scattered across the image.
+
+Now, I will count the pink dots:
+
+1, 2, 3, 4, 5, 6, 7, 8.
+
+There are 8 pink dots in the image.",8,False
+data/counting/counting-8_90.png,8,"In the image, I see a collection of circular dots. Some dots are larger and some are smaller, but they all appear to be the same shape, which is a circle. There are two different colors of dots: magenta and red.
+
+Now I will count the dots:
+
+1. There are eight magenta dots.
+2. There is one red dot.
+
+Adding them together, there are nine dots in total in the image.
+
+Number of objects in the image: 9",9,False
+data/counting/counting-8_91.png,8,"The image contains a collection of colored dots. Some dots are purple, while others are red.
+
+Number of objects in the image: 9.",9,False
+data/counting/counting-8_92.png,8,"The image contains several colored dots. There are dots in three different colors: red, orange, and pink. 
+
+Now, let us count each one:
+
+- Red dots: 5
+- Orange dots: 2
+- Pink dots: 2
+
+Adding them together gives us a total of:
+
+5 (red) + 2 (orange) + 2 (pink) = 9 dots in total. 
+
+The number of objects in the image is 9.",9,False
+data/counting/counting-8_93.png,8,"The image contains colored dots. There are dots of varying colors - it appears there are yellow, orange, red, and one pink dot. I will now count each dot:
+
+1. Yellow dots
+2. Orange dots
+3. Red dots
+4. One pink dot
+
+Now, let's count the total number of dots:
+
+1. There are three yellow dots.
+2. There are two orange dots.
+3. There are two red dots.
+4. There is one pink dot.
+
+Adding these together: 3 (yellow) + 2 (orange) + 2 (red) + 1 (pink) equals a total of 8 dots in the image. 
+
+The number of objects in the image is 8.",8,False
+data/counting/counting-8_94.png,8,"The image contains a series of blue dots; they vary slightly in hue and size. Specifically, there are eight dots in the image.
+
+Number of objects in the image: 8",8,False
+data/counting/counting-8_95.png,8,"The image shows a collection of dots. There are blue dots and one dot that appears to be a slightly different shade, possibly cyan. Now, I'll count them:
+
+1. Large blue dot in the upper left corner.
+2. Medium blue dot just below the first one.
+3. Small blue dot to the right of the second one.
+4. Another small blue dot farther right from the third one.
+5. Medium blue dot below the second one.
+6. Small blue dot to the right of the fifth one.
+7. Small blue dot below the sixth one.
+8. Cyan dot to the right of the seventh one.
+9. Large blue dot in the bottom right corner.
+
+There are a total of 9 dots in the image.",9,False
+data/counting/counting-8_96.png,8,"I see a collection of colored circles. In particular:
+
+- 7 blue circles
+- 1 light blue or cyan circle
+
+Counting all the circles together, there are 8 objects in the image.
+
+8",8,False
+data/counting/counting-8_97.png,8,"The image contains several colored circular objects. There are two colors present: green and yellow.
+
+Counting the objects by color:
+
+- There are four green circles.
+- There are three yellow circles.
+
+Adding these counts together gives us a total number of objects:
+
+4 (green circles) + 3 (yellow circles) = 7 objects in the image.",7,False
+data/counting/counting-8_98.png,8,"The image contains a number of colored circles: most are green, and one is orange.
+
+Now, I will count them:
+
+There are 7 green circles and 1 orange circle, adding up to a total of 8 circles in the image.
+
+Number of objects in the image: 8.",8,False
+data/counting/counting-8_99.png,8,"In the image, there are several blue dots of the same color arranged randomly.
+
+Counting the number of blue dots gives us:
+
+7
+
+There are 7 objects in the image.",7,False
+data/counting/counting-9_0.png,9,"The image consists of several green dots of various sizes. There are no other distinguishable objects except for these dots.
+
+After counting, the number of green dots in the image is:
+
+9",9,False
+data/counting/counting-9_1.png,9,"The image contains several green circles scattered across a plain background. To count them, I'll look at each one:
+
+1. Top-most circle
+2. Circle slightly to the right and below the first
+3. Circle further to the right and slightly down from the second
+4. Circle below the third and to the left
+5. Circle to the left of the fourth and slightly up
+6. Circle further to the left and up from the fifth
+7. Circle below the sixth and to the left
+8. Circle further down and to the right from the seventh
+9. Circle to the right of the eighth
+
+So the total number of green circles or objects in the image is:
+
+9",9,False
+data/counting/counting-9_2.png,9,"The image shows a collection of green circles. To count them accurately, I will enumerate each one:
+
+1. Top left green circle
+2. Top center green circle
+3. Top right green circle
+4. Middle left green circle
+5. Middle center green circle
+6. Middle right green circle
+7. Bottom left green circle
+8. Bottom center green circle
+9. Bottom right green circle
+
+The total number of objects (green circles) in the image is 9.",9,False
+data/counting/counting-9_3.png,9,"The image displays a collection of colored dots/circles. There are dots of three different colors: orange, yellow, and green.
+
+Now I will count them:
+
+There are 4 orange dots.
+There are 3 yellow dots.
+There are 3 green dots.
+
+Adding them together, there are a total of 10 dots in the image.",10,False
+data/counting/counting-9_4.png,9,"The image contains several colored dots or circles. There appear to be two distinct colors: orange and yellow.
+
+Counting each dot as one object, the total number of objects in the image is:
+
+Number of orange dots: 3
+Number of yellow dots: 6
+
+Adding them up gives a total of 9 objects in the image.",9,False
+data/counting/counting-9_5.png,9,"The image has a collection of pink and purple dots.
+
+Counting each dot as one object, I can count the number of dots for you:
+
+There are a total of 9 dots in the image.",9,False
+data/counting/counting-9_6.png,9,"The image contains several colored dots. There are dots of at least three different colors: orange, red, and one that appears to be pink or magenta.
+
+Counting each dot as one object, there are:
+
+3 orange dots
+5 red dots
+1 pink/magenta dot
+
+Adding these together gives us a total number of objects:
+
+3 (orange) + 5 (red) + 1 (pink/magenta) = 9 objects in the image.",9,False
+data/counting/counting-9_7.png,9,"The image shows various colored dots. There are different colors, and I will describe each dot by its color before counting:
+
+- Yellow dots
+- Green dots
+- Orange dots
+- Red dots
+
+Now I will count the number of dots of each color:
+
+- Yellow: 2
+- Green: 3
+- Orange: 2
+- Red: 2
+
+The total number of colored dots in the image is 9.",9,False
+data/counting/counting-9_8.png,9,"The image contains colored circles. There are two different colors present: green and yellow.
+
+Count of each color:
+- Green circles: 7
+- Yellow circles: 1
+
+Adding the quantities gives us a total number of circles.
+
+Total number of objects in the image: 8",8,False
+data/counting/counting-9_9.png,9,"The image features a collection of two-tone circles: some circles are light green while others are a darker green. To count the number of objects, I'll look at each of the circles in the image.
+
+After counting each circle individually, I can confirm that there are:
+
+9 objects in the image.",9,False
+data/counting/counting-9_10.png,9,"The image contains a number of colored dots. They appear to be of two different colors: most are a darker shade of blue, and a few are a lighter shade of blue or cyan. It's important to count each dot as an individual object.
+
+After counting the dots, there are:
+
+- 7 dark blue dots.
+- 3 light blue or cyan dots.
+
+So, there are a total of 10 dots in the image.
+
+Number of objects in the image: 10",10,False
+data/counting/counting-9_11.png,9,"This image contains a collection of colored dots. There are two colors visible: blue and green. Now, I will count each dot of both colors.
+
+- Blue dots: 2
+- Green dots: 7
+
+Adding them together gives us a total count of objects which is:
+
+2 (blue dots) + 7 (green dots) = 9
+
+There are 9 objects in the image.",9,False
+data/counting/counting-9_12.png,9,"The image contains several colored circles. They are as follows:
+
+- Yellow circles
+- Green circles
+- One orange circle
+
+Now, I will count each of them.
+
+Number of objects in the image: 9.",9,False
+data/counting/counting-9_13.png,9,"The image contains a collection of colored dots. There are three colors: blue, purple, and one lighter blue or cyan dot.
+
+Now, I will count the dots by color:
+
+- Blue dots: 4
+- Purple dots: 3
+- Lighter blue (cyan) dot: 1
+
+Adding them together, there's a total of 8 objects in the image.",8,False
+data/counting/counting-9_14.png,9,"The image contains a collection of colored dots: some are red and some are purple. To provide an accurate count, I will tally each group of colored dots.
+
+Number of red dots: 4
+Number of purple dots: 5
+
+Total number of objects (dots) in the image: 9",9,False
+data/counting/counting-9_15.png,9,"The image shows several green dots scattered across a plain background.
+
+Number of objects (green dots) in the image: 9.",9,False
+data/counting/counting-9_16.png,9,"The image shows a collection of colored dots. There are two different shades of blue: a lighter one and a darker one. The dots are scattered randomly across the image.
+
+Now, I'll count them:
+
+- Light blue dots: 6
+- Dark blue dots: 3
+
+Adding them up gives us a total of:
+
+6 light blue dots + 3 dark blue dots = 9 dots
+
+Number of objects in the image: 9.",9,False
+data/counting/counting-9_17.png,9,"The image shows a collection of dots. There are two colors of dots: yellow and green.
+
+Let's count them:
+
+- There are 4 yellow dots.
+- There are 5 green dots.
+
+Adding them together gives us a total of 9 dots in the image.
+
+Number of objects in the image: 9.",9,False
+data/counting/counting-9_18.png,9,,,False
+data/counting/counting-9_19.png,9,,,False
+data/counting/counting-9_20.png,9,,,False
+data/counting/counting-9_21.png,9,,,False
+data/counting/counting-9_22.png,9,,,False
+data/counting/counting-9_23.png,9,,,False
+data/counting/counting-9_24.png,9,,,False
+data/counting/counting-9_25.png,9,,,False
+data/counting/counting-9_26.png,9,,,False
+data/counting/counting-9_27.png,9,,,False
+data/counting/counting-9_28.png,9,,,False
+data/counting/counting-9_29.png,9,,,False
+data/counting/counting-9_30.png,9,,,False
+data/counting/counting-9_31.png,9,,,False
+data/counting/counting-9_32.png,9,,,False
+data/counting/counting-9_33.png,9,,,False
+data/counting/counting-9_34.png,9,,,False
+data/counting/counting-9_35.png,9,,,False
+data/counting/counting-9_36.png,9,,,False
+data/counting/counting-9_37.png,9,,,False
+data/counting/counting-9_38.png,9,,,False
+data/counting/counting-9_39.png,9,,,False
+data/counting/counting-9_40.png,9,,,False
+data/counting/counting-9_41.png,9,,,False
+data/counting/counting-9_42.png,9,,,False
+data/counting/counting-9_43.png,9,,,False
+data/counting/counting-9_44.png,9,,,False
+data/counting/counting-9_45.png,9,,,False
+data/counting/counting-9_46.png,9,,,False
+data/counting/counting-9_47.png,9,,,False
+data/counting/counting-9_48.png,9,,,False
+data/counting/counting-9_49.png,9,,,False
+data/counting/counting-9_50.png,9,,,False
+data/counting/counting-9_51.png,9,,,False
+data/counting/counting-9_52.png,9,,,False
+data/counting/counting-9_53.png,9,,,False
+data/counting/counting-9_54.png,9,,,False
+data/counting/counting-9_55.png,9,,,False
+data/counting/counting-9_56.png,9,,,False
+data/counting/counting-9_57.png,9,,,False
+data/counting/counting-9_58.png,9,,,False
+data/counting/counting-9_59.png,9,,,False
+data/counting/counting-9_60.png,9,,,False
+data/counting/counting-9_61.png,9,,,False
+data/counting/counting-9_62.png,9,,,False
+data/counting/counting-9_63.png,9,,,False
+data/counting/counting-9_64.png,9,,,False
+data/counting/counting-9_65.png,9,,,False
+data/counting/counting-9_66.png,9,,,False
+data/counting/counting-9_67.png,9,,,False
+data/counting/counting-9_68.png,9,,,False
+data/counting/counting-9_69.png,9,,,False
+data/counting/counting-9_70.png,9,,,False
+data/counting/counting-9_71.png,9,,,False
+data/counting/counting-9_72.png,9,,,False
+data/counting/counting-9_73.png,9,,,False
+data/counting/counting-9_74.png,9,,,False
+data/counting/counting-9_75.png,9,,,False
+data/counting/counting-9_76.png,9,,,False
+data/counting/counting-9_77.png,9,,,False
+data/counting/counting-9_78.png,9,,,False
+data/counting/counting-9_79.png,9,,,False
+data/counting/counting-9_80.png,9,,,False
+data/counting/counting-9_81.png,9,,,False
+data/counting/counting-9_82.png,9,,,False
+data/counting/counting-9_83.png,9,,,False
+data/counting/counting-9_84.png,9,,,False
+data/counting/counting-9_85.png,9,,,False
+data/counting/counting-9_86.png,9,,,False
+data/counting/counting-9_87.png,9,,,False
+data/counting/counting-9_88.png,9,,,False
+data/counting/counting-9_89.png,9,,,False
+data/counting/counting-9_90.png,9,,,False
+data/counting/counting-9_91.png,9,,,False
+data/counting/counting-9_92.png,9,,,False
+data/counting/counting-9_93.png,9,,,False
+data/counting/counting-9_94.png,9,,,False
+data/counting/counting-9_95.png,9,,,False
+data/counting/counting-9_96.png,9,,,False
+data/counting/counting-9_97.png,9,,,False
+data/counting/counting-9_98.png,9,,,False
+data/counting/counting-9_99.png,9,,,False
+data/counting/counting-10_0.png,10,,,False
+data/counting/counting-10_1.png,10,,,False
+data/counting/counting-10_2.png,10,,,False
+data/counting/counting-10_3.png,10,,,False
+data/counting/counting-10_4.png,10,,,False
+data/counting/counting-10_5.png,10,,,False
+data/counting/counting-10_6.png,10,,,False
+data/counting/counting-10_7.png,10,,,False
+data/counting/counting-10_8.png,10,,,False
+data/counting/counting-10_9.png,10,,,False
+data/counting/counting-10_10.png,10,,,False
+data/counting/counting-10_11.png,10,,,False
+data/counting/counting-10_12.png,10,,,False
+data/counting/counting-10_13.png,10,,,False
+data/counting/counting-10_14.png,10,,,False
+data/counting/counting-10_15.png,10,,,False
+data/counting/counting-10_16.png,10,,,False
+data/counting/counting-10_17.png,10,,,False
+data/counting/counting-10_18.png,10,,,False
+data/counting/counting-10_19.png,10,,,False
+data/counting/counting-10_20.png,10,,,False
+data/counting/counting-10_21.png,10,,,False
+data/counting/counting-10_22.png,10,,,False
+data/counting/counting-10_23.png,10,,,False
+data/counting/counting-10_24.png,10,,,False
+data/counting/counting-10_25.png,10,,,False
+data/counting/counting-10_26.png,10,,,False
+data/counting/counting-10_27.png,10,,,False
+data/counting/counting-10_28.png,10,,,False
+data/counting/counting-10_29.png,10,,,False
+data/counting/counting-10_30.png,10,,,False
+data/counting/counting-10_31.png,10,,,False
+data/counting/counting-10_32.png,10,,,False
+data/counting/counting-10_33.png,10,,,False
+data/counting/counting-10_34.png,10,,,False
+data/counting/counting-10_35.png,10,,,False
+data/counting/counting-10_36.png,10,,,False
+data/counting/counting-10_37.png,10,,,False
+data/counting/counting-10_38.png,10,,,False
+data/counting/counting-10_39.png,10,,,False
+data/counting/counting-10_40.png,10,,,False
+data/counting/counting-10_41.png,10,,,False
+data/counting/counting-10_42.png,10,,,False
+data/counting/counting-10_43.png,10,,,False
+data/counting/counting-10_44.png,10,,,False
+data/counting/counting-10_45.png,10,,,False
+data/counting/counting-10_46.png,10,,,False
+data/counting/counting-10_47.png,10,,,False
+data/counting/counting-10_48.png,10,,,False
+data/counting/counting-10_49.png,10,,,False
+data/counting/counting-10_50.png,10,,,False
+data/counting/counting-10_51.png,10,,,False
+data/counting/counting-10_52.png,10,,,False
+data/counting/counting-10_53.png,10,,,False
+data/counting/counting-10_54.png,10,,,False
+data/counting/counting-10_55.png,10,,,False
+data/counting/counting-10_56.png,10,,,False
+data/counting/counting-10_57.png,10,,,False
+data/counting/counting-10_58.png,10,,,False
+data/counting/counting-10_59.png,10,,,False
+data/counting/counting-10_60.png,10,,,False
+data/counting/counting-10_61.png,10,,,False
+data/counting/counting-10_62.png,10,,,False
+data/counting/counting-10_63.png,10,,,False
+data/counting/counting-10_64.png,10,,,False
+data/counting/counting-10_65.png,10,,,False
+data/counting/counting-10_66.png,10,,,False
+data/counting/counting-10_67.png,10,,,False
+data/counting/counting-10_68.png,10,,,False
+data/counting/counting-10_69.png,10,,,False
+data/counting/counting-10_70.png,10,,,False
+data/counting/counting-10_71.png,10,,,False
+data/counting/counting-10_72.png,10,,,False
+data/counting/counting-10_73.png,10,,,False
+data/counting/counting-10_74.png,10,,,False
+data/counting/counting-10_75.png,10,,,False
+data/counting/counting-10_76.png,10,,,False
+data/counting/counting-10_77.png,10,,,False
+data/counting/counting-10_78.png,10,,,False
+data/counting/counting-10_79.png,10,,,False
+data/counting/counting-10_80.png,10,,,False
+data/counting/counting-10_81.png,10,,,False
+data/counting/counting-10_82.png,10,,,False
+data/counting/counting-10_83.png,10,,,False
+data/counting/counting-10_84.png,10,,,False
+data/counting/counting-10_85.png,10,,,False
+data/counting/counting-10_86.png,10,,,False
+data/counting/counting-10_87.png,10,,,False
+data/counting/counting-10_88.png,10,,,False
+data/counting/counting-10_89.png,10,,,False
+data/counting/counting-10_90.png,10,,,False
+data/counting/counting-10_91.png,10,,,False
+data/counting/counting-10_92.png,10,,,False
+data/counting/counting-10_93.png,10,,,False
+data/counting/counting-10_94.png,10,,,False
+data/counting/counting-10_95.png,10,,,False
+data/counting/counting-10_96.png,10,,,False
+data/counting/counting-10_97.png,10,,,False
+data/counting/counting-10_98.png,10,,,False
+data/counting/counting-10_99.png,10,,,False

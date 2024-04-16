@@ -32,7 +32,7 @@ def make_popout_trials(target_img: np.array,
 	"""
 	rgb_target = color_shape(target_img.astype(np.float32), rgb)
 	small_target = resize(rgb_target, size=size)
-	opposite_rgb = 255 - rgb  # Calculate the opposite color
+	opposite_rgb = 1 - rgb  # Calculate the opposite color
 	rgb_distractor = color_shape(distractor_img.astype(np.float32), opposite_rgb)
 	small_distractor = resize(rgb_distractor, size=size)
 	popout_trial = place_shapes(small_target, small_distractor, n_shapes=n_shapes, img_size=size)
@@ -65,6 +65,7 @@ def place_shapes(source_shape: np.array,
 			continue
 		positions = paste_shape(source_shape, positions, canvas_img, i, img_size=img_size)
 	return canvas_img
+
 
 def parse_args() -> argparse.Namespace:
 	"""
@@ -125,7 +126,7 @@ def main():
 			popout_trial.save(popout_trial_path)
 			results_df = results_df._append({
 				'path': popout_trial_path,
-				'incongruent': True,
+				'popout': True,
 				'n_shapes': n,
 				'response': None,
 				'answer': None
