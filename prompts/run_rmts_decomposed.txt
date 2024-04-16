@@ -1,0 +1,6 @@
+The following set of three images depict a trial of the relational match to sample task with three features: shape, color, and size. Only one target pair will share the same relations with the source pair.
+Now, given the source pair and the two target pairs, identify the matching target pair. To accomplish this task, you can use the following steps:
+1. Identify the features of the objects in each pair (i.e. shape, color, and size).
+2. Identify the relations over the features represented in each pair.
+3. Determine which target pair shares the same relations with the source pair.
+4. Return the number of the target pair that matches the relations of the source pair and explain your reasoning.

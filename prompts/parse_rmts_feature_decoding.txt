@@ -1,0 +1,4 @@
+Return the feature that is observed in the given prompt. For instance, if the prompt is "The color of the source image is red", then return a single string saying "red".
+If the response only contains the feature, then return the feature as a string. For instance, if the prompt is "red", then return "red".
+Also, if the response contains a string with something like "heart-shaped", then just return "heart" since that is the shape (the same holds for "red-colored", return "red").
+Your response should be a single, lowercase word with no punctuation.
