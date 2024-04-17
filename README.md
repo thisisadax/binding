@@ -32,8 +32,7 @@ python gen_counting_trials.py --object_inds=37 \
 
 
 ```
---n_objects 2 3 4 5 6 7 8 9 10 
-
+# Generate binding trials with 8 objects.
 python gen_binding_trials.py \
 --n_objects 8 \
 --n_trials=100 \
