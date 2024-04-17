@@ -30,7 +30,7 @@ python gen_counting_trials.py --object_inds=37 \
 #### Fill in here ####
 ```
 
-
+#### Binding task.
 ```
 # Generate binding trials with 8 objects.
 python gen_binding_trials.py \
@@ -41,4 +41,31 @@ python gen_binding_trials.py \
 --shape_names triangle cloud cross down arrow umbrella pentagon heart star \
 --shape_inds 9 21 24 28 34 59 96 98 \
 --output_dir=data/binding
+
+# Run model on binding trials.
+#### Fill in here ####
+```
+
+
+#### Popout task.
+```
+# Generate popout trials with only green and (one) red circles.
+python gen_popout_trials.py \
+--n_objects 5 10 15 20 25 30 35 40 45 50 \
+--n_trials=100 \
+--size=24 \
+--colors green red \
+--shape_inds 37 \
+--output_dir=data/popout_simple
+
+# Generate popout trials with circles of any colors.
+python gen_popout_trials.py \
+--n_objects 5 10 15 20 25 30 35 40 45 50 \
+--n_trials=100 \
+--size=24 \
+--shape_inds 37 \
+--output_dir=data/popout_complex
+
+# Run models on popout trials.
+#### Fill in here ####
 ```

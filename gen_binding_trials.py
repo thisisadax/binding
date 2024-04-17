@@ -8,22 +8,10 @@ import numpy as np
 from PIL import Image
 import pandas as pd
 
-from utils import paste_shape, color_shape, resize
+from utils import paste_shape, color_shape, resize, place_shapes
 
 
-def place_shapes(shape_imgs, img_size=32):
-	# Define the canvas to draw images on, font, and drawing tool.
-	canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
-	canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
-	canvas_img = Image.fromarray(canvas)
-	# Add the shapes to the canvas.
-	n_shapes = len(shape_imgs)
-	positions = np.zeros([n_shapes, 2])
-	for i, img in enumerate(shape_imgs):
-		positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
-	return canvas_img
-
-def make_binding_trial(objects: np.ndarray, 
+def make_binding_trial(shapes: np.ndarray, 
 					   colors: np.ndarray,
 					   shape_names: List[str], 
 					   n_objects: int = 5, 
@@ -31,11 +19,11 @@ def make_binding_trial(objects: np.ndarray,
 					   n_colors: int = 5, 
 					   img_size: int = 28):
 	# sample the shapes and colors of objects to include in the trial.
-	unique_shape_inds = np.random.choice(len(objects), n_shapes, replace=False) # sample the unique shapes for the current trial.
+	unique_shape_inds = np.random.choice(len(shapes), n_shapes, replace=False) # sample the unique shapes for the current trial.
 	shape_inds = np.concatenate([unique_shape_inds, np.random.choice(unique_shape_inds, n_objects-n_shapes, replace=True)])
 	unique_color_inds = np.random.choice(len(colors), n_colors, replace=False)  # sample the unique colors for the current trial.
 	color_inds = np.concatenate([unique_color_inds, np.random.choice(unique_color_inds, n_objects-n_colors, replace=True)])
-	shape_imgs = objects[shape_inds]
+	shape_imgs = shapes[shape_inds]
 	colors = colors[color_inds]
 	object_features = [{'shape': shape_names[shape], 'color': color} for shape, color in zip(shape_inds, colors)]
 	# recolor and resize the shapes
@@ -70,7 +58,7 @@ def main():
 	assert len(args.shape_names) == len(args.shape_inds) 
 	assert len(args.color_names) == len(args.shape_names) 
 
-	# Create directory for serial search exists.
+	# Create directory for binding task.
 	os.makedirs(os.path.join(args.output_dir, 'images'), exist_ok=True)
 
 	# Initialize DataFrame for storing task metadata_df later.

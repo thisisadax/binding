@@ -19,18 +19,6 @@ def make_counting_trial(imgs, n_shapes=10, n_unique=5, size=32, uniform=False, s
 	counting_trial = place_shapes(resized_imgs, img_size=size)
 	return counting_trial
 
-def place_shapes(shape_imgs, img_size=32):
-	# Define the canvas to draw images on, font, and drawing tool.
-	canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255 
-	canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
-	canvas_img = Image.fromarray(canvas)
-	# Add the shapes to the canvas.
-	n_shapes = len(shape_imgs)
-	positions = np.zeros([n_shapes, 2])
-	for i, img in enumerate(shape_imgs):
-		positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
-	return canvas_img
-
 def generate_isoluminant_colors(num_colors, saturation=1, lightness=0.8, mu=0.5, sigma=0.1, uniform=False):
 	if uniform:
 		hues = np.linspace(0, 1, num_colors, endpoint=False)
@@ -69,7 +57,7 @@ def main():
 	# Create directory for serial search exists.
 	os.makedirs(os.path.join(args.output_dir, 'images'), exist_ok=True)
 
-	# Initialize DataFrame for storing task metadata_df later.
+	# Initialize DataFrame for storing task metadata_df.
 	metadata_df = pd.DataFrame(columns=['path', 'n_shapes'])
 
 	# Generate the trials.

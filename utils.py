@@ -96,3 +96,16 @@ def encode_image(image_path):
     """
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
+    
+
+def place_shapes(shape_imgs, img_size=32):
+    # Define the canvas to draw images on, font, and drawing tool.
+    canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
+    canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
+    canvas_img = Image.fromarray(canvas)
+    # Add the shapes to the canvas.
+    n_shapes = len(shape_imgs)
+    positions = np.zeros([n_shapes, 2])
+    for i, img in enumerate(shape_imgs):
+        positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
+    return canvas_img

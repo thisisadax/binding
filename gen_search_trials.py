@@ -95,6 +95,7 @@ def parse_args() -> argparse.Namespace:
 	parser.add_argument('--shape_inds', type=int, nargs='+', default=None, help='Indices of the shapes to use when generating the shape trials (e.g. [1,37] for diamond and circle).')
 	parser.add_argument('--size', type=int, default=28, help='Size to reshape the shapes to.')
 	parser.add_argument('--use_letters', type=bool, default=False, help='Whether or not to use letters as stimuli.')
+	parser.add_argument('--output_dir', type=str, default='data/binding', help='Directory to save the generated trials.')
 	return parser.parse_args()
 
 
@@ -106,7 +107,7 @@ def main():
 	if args.shape_inds:
 		assert args.use_letters=='False'
 		imgs = np.load('data/imgs.npy')
-		shape_inds = np.array(args.shape_inds) #np.arange(imgs.shape[0])
+		shape_inds = np.array(args.shape_inds) 
 	elif args.use_letters:
 		img1 = letter_img('L')
 		img2 = letter_img('T')
