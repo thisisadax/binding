@@ -105,13 +105,13 @@ def main():
 	# Load the shapes to generate trials with. 
 	if args.shape_inds:
 		assert args.use_letters=='False'
-		imgs = np.load('imgs.npy')
+		imgs = np.load('data/imgs.npy')
 		shape_inds = np.array(args.shape_inds) #np.arange(imgs.shape[0])
 	elif args.use_letters:
 		img1 = letter_img('L')
 		img2 = letter_img('T')
 		imgs = np.stack([img1, img2])
-		shape_inds = np.array([0,1])
+		shape_inds = np.array([0, 1])
 
 	# Set up the colors to use when generating the stimuli.
 	if args.colors is None:
@@ -140,11 +140,9 @@ def main():
 			shape2_img = imgs[shape2_ind]
 			# Randomly select an index for the first color
 			rgb1_ind = np.random.choice(rgb_values.shape[0], size=1)[0]
-			# Randomly select an index for the second color, making sure it's not the same as the first color
-			# rgb2_ind = np.random.choice(rgb_inds[rgb_inds!=rgb1_ind], size=1)[0]
 			# Get the RGB values for the selected colors
 			rgb1 = rgb_values[rgb1_ind]
-			rgb2 = 1-rgb1 #rgb_values[rgb2_ind]
+			rgb2 = 1-rgb1 
 			# Generate the congruent and incongruent trials
 			congruent_trial, incongruent_trial = make_search_trials(shape1_img, shape2_img, rgb1, rgb2, n_shapes=n, size=24)
 			# Save the trials and their metadata.

@@ -7,9 +7,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from PIL import Image, ImageDraw, ImageFont
-
 import matplotlib.colors as mcolors
-
 import torch
 from torchvision.transforms import functional as F
 
@@ -75,8 +73,7 @@ def get_pair_inds(stim1, features, relations):
     same_relation: whether the relation is same or different.
     """
     feature_names = features.columns[1:]
-    feature_inds = [(features.loc[:, feat] == stim1[feat]) if feat_match else (features.loc[:, feat] != stim1[feat]) for
-                    feat, feat_match in zip(feature_names, relations)]
+    feature_inds = [(features.loc[:, feat] == stim1[feat]) if feat_match else (features.loc[:, feat] != stim1[feat]) for feat, feat_match in zip(feature_names, relations)]
     inds = reduce(lambda x, y: x & y, feature_inds)  # reduce to a single set of indices.
     return inds
 
@@ -99,24 +96,17 @@ def make_shape_trial(source1, features, source_relations, target_relations):
 
     # If the task is bigger_than/smaller_than, make sure the correct target1 has the same size as source1.
     if not source_relations[-1]:
-        target_features1 = target_features[
-            target_features['size'] == source1['size']]  # make sure the correct target1 has the same size as source1.
-        target_features1 = target_features1[(target_features1['shape'] != source1['shape']) & (
-                    target_features1['color'] != source1['color'])]  # make sure the correct target1 has a different color/shape than source1.
+        target_features1 = target_features[target_features['size'] == source1['size']]  # make sure the correct target1 has the same size as source1.
+        target_features1 = target_features1[(target_features1['shape'] != source1['shape']) & (target_features1['color'] != source1['color'])]  # make sure the correct target1 has a different color/shape than source1.
     else:
-        target_features1 = target_features[(target_features['shape'] != source1['shape']) & (
-                    target_features['color'] != source1[
-                'color'])]  # make sure the correct target1 has a different color/shape than source1.
-
+        target_features1 = target_features[(target_features['shape'] != source1['shape']) & (target_features['color'] != source1['color'])]  # make sure the correct target1 has a different color/shape than source1.
     correct1 = target_features1.sample(1).iloc[0]
-    correct2_inds = get_pair_inds(correct1, target_features,
-                                  source_relations)  # must match all relations of source pair
+    correct2_inds = get_pair_inds(correct1, target_features, source_relations)  # must match all relations of source pair
     correct2 = target_features[correct2_inds].sample(1).iloc[0]
 
     # sample the incorrect target pair by randomly sampling a stimulus and ensuring
     # that the second one doesn't match the first along the trial relation.
-    target_features = target_features[
-        ~target_features.ind.isin([correct1.values[0], correct2.values[0]])]  # exclude the target pair
+    target_features = target_features[~target_features.ind.isin([correct1.values[0], correct2.values[0]])]  # exclude the target pair
     incorrect1 = target_features.sample(1).iloc[0]
 
     # if incorrect1 has the same size as the first source and the relation is a
@@ -137,17 +127,14 @@ def make_shape_trial(source1, features, source_relations, target_relations):
     else:
         return source1, source2, incorrect2, incorrect1, correct2, correct1, 2
 
-
 def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect1, incorrect2):
     # Get the images for the source and target pairs
-    inds = np.array([source1.values[0], source2.values[0], correct1.values[0], correct2.values[0], incorrect1.values[0],
-                     incorrect2.values[0]])
+    inds = np.array([source1.values[0], source2.values[0], correct1.values[0], correct2.values[0], incorrect1.values[0], incorrect2.values[0]])
     trial_imgs = [F.to_pil_image(torch.tensor(img)) for img in shape_imgs[inds]]
     source_imgs, correct_target_imgs, incorrect_target_imgs = trial_imgs[:2], trial_imgs[2:4], trial_imgs[4:]
 
     # Make the trial randomly assigning the correct pair to either the left or right side.
-    trial_img, source_pair, t1_pair, t2_pair = make_trial(
-        source_imgs, correct_target_imgs, incorrect_target_imgs)
+    trial_img, source_pair, t1_pair, t2_pair = make_trial(source_imgs, correct_target_imgs, incorrect_target_imgs)
     target1_imgs, target2_imgs = correct_target_imgs, incorrect_target_imgs
     return trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs
 
@@ -157,7 +144,7 @@ def generate_rmts_trial_data():
     imgs = np.load('imgs.npy')
 
     # Plot only some test characters.
-    simple_inds = [9, 98, 96, 24, 100, 101]  #, 59, 51] #, 59, 55]
+    simple_inds = [9, 98, 96, 24, 100, 101]
     simple_imgs = imgs[simple_inds]
     simple_imgs = [cv2.resize(i, (96, 96)) for i in simple_imgs]
 
@@ -189,9 +176,7 @@ def generate_rmts_trial_data():
     target1_2_cols = ['t1_2_ind', 't1_2_shape', 't1_2_color', 't1_2_size', 't1_2_path']
     target2_1_cols = ['t2_1_ind', 't2_1_shape', 't2_1_color', 't2_1_size', 't2_1_path']
     target2_2_cols = ['t2_2_ind', 't2_2_shape', 't2_2_color', 't2_2_size', 't2_2_path']
-    col_names = (
-            trial_cols + source1_cols + source2_cols + target1_1_cols
-            + target1_2_cols + target2_1_cols + target2_2_cols)
+    col_names = (trial_cols + source1_cols + source2_cols + target1_1_cols + target1_2_cols + target2_1_cols + target2_2_cols)
 
     # Set up a dataframe to store all the paths for the trials that we want to save.
     same_shape_relations = [np.array([True, True, True]), np.array([False, True, True])]
