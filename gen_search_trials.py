@@ -1,44 +1,12 @@
 import argparse
-from typing import Optional, Tuple
+import matplotlib.colors as mcolors
 import numpy as np
+import os
+import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
+from tqdm import tqdm
 
 from utils import *
-
-
-def place_shapes(shape1: np.ndarray, 
-				 shape2: np.ndarray, 
-				 shape3: Optional[np.ndarray], 
-				 n_shapes: int = 10, 
-				 size: int = 12) -> Image.Image:
-	"""
-	Place shapes on a canvas to generate a serial search trial.
-
-	Parameters:
-	shape1 (np.ndarray): The first shape image (e.g. red circle).
-	shape2 (np.ndarray): The second shape image (e.g. blue triangle).
-	shape3 (np.ndarray): The third (oddball) shape image. If None, it is a congruent trial. Default is None.
-	n_shapes (int): The number of shapes to be placed on the canvas. Default is 10.
-	size (int): The size of the shapes. Default is 12.
-
-	Returns:
-	Image.Image: The canvas with the shapes placed on it.
-	"""
-	# Define the canvas to draw images on, font, and drawing tool.
-	canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
-	canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
-	canvas_img = Image.fromarray(canvas)
-	# Add the shapes to the canvas.
-	positions = np.zeros([n_shapes, 2])
-	for i in range(n_shapes//2):
-		# If it's an oddball trial and we're on the first shape, paste the oddball shape.
-		if i==0 and shape3 is not None:
-			#positions = paste_shape(shape1, positions, canvas_img, 2*i, img_size=size)
-			positions = paste_shape(shape3, positions, canvas_img, 2*i+1, img_size=size)
-			continue
-		positions = paste_shape(shape1, positions, canvas_img, 2*i, img_size=size)
-		positions = paste_shape(shape2, positions, canvas_img, 2*i+1, img_size=size)
-	return canvas_img
 
 
 def letter_img(letter: str):
@@ -51,34 +19,26 @@ def letter_img(letter: str):
 	return img_array
 
 
-def make_search_trials(shape1_img: np.ndarray, 
-					   shape2_img: np.ndarray, 
-					   rgb1: Tuple[int, int, int], 
-					   rgb2: Tuple[int, int, int], 
-					   n_shapes: int = 50, size: int = 12) -> Tuple[Image.Image, Image.Image]:
-	"""
-	Create two trials: an congruent trial and an incongruent trial.
-
-	Parameters:
-	shape1_img (np.ndarray): The first shape image.
-	shape2_img (np.ndarray): The second shape image.
-	rgb1 (Tuple[int, int, int]): The RGB values for the first color.
-	rgb2 (Tuple[int, int, int]): The RGB values for the second color.
-	n_shapes (int): The number of shapes to be placed in each trial. Default is 50.
-	size (int): The size of the shapes. Default is 12.
-
-	Returns:
-	Tuple[Image.Image, Image.Image]: A tuple containing the congruent and incongruent trials.
-	"""
-	s1c1 = color_shape(shape1_img.astype(np.float32), rgb1)
-	s2c2 = color_shape(shape2_img.astype(np.float32), rgb2)
-	s2c1 = color_shape(shape2_img.astype(np.float32), rgb1)
-	s1c1 = resize(s1c1, size=size)
-	s2c2 = resize(s2c2, size=size)
-	s2c1 = resize(s2c1, size=size)
-	congruent_trial = place_shapes(s1c1, s2c2, None, n_shapes=n_shapes, size=size)
-	incongruent_trial = place_shapes(s1c1, s2c2, s2c1, n_shapes=n_shapes, size=size)
-	return congruent_trial, incongruent_trial
+def make_search_trial(shape1: np.ndarray, shape2: np.ndarray, rgb1: np.ndarray, rgb2: np.ndarray, n_objects: int = 10, oddball: bool = True, img_size: int = 28) -> Image:
+	objects = [(shape1, rgb1), (shape2, rgb2)]
+	# Add the oddball object first.
+	if oddball:
+		all_shapes = [shape1]
+		all_colors = [rgb2]
+		n_objects -= 1
+	else:
+		all_shapes = []
+		all_colors = []
+	for i in range(n_objects): #int(np.ceil(n_objects/2))
+		random_index = np.random.choice(len(objects))
+		all_shapes.append(objects[random_index][0])
+		all_colors.append(objects[random_index][1])
+	# recolor and resize the shapes
+	colored_imgs = [color_shape(img.astype(np.float32), rgb) for img, rgb in zip(all_shapes, all_colors)]
+	resized_imgs = np.stack([resize(img, img_size=img_size) for img in colored_imgs])
+	np.random.shuffle(resized_imgs) # shuffle the order of the images list
+	counting_trial = place_shapes(resized_imgs, img_size=img_size+5) # make shapes a little further apart
+	return counting_trial
 
 
 def parse_args() -> argparse.Namespace:
@@ -89,7 +49,7 @@ def parse_args() -> argparse.Namespace:
 	argparse.Namespace: The parsed command line arguments.
 	"""
 	parser = argparse.ArgumentParser(description='Generate serial search trials.')
-	parser.add_argument('--n_shapes', type=int, nargs='+', default=[4, 6, 8, 10, 16, 32], help='Number of stimuli to present.')
+	parser.add_argument('--n_objects', type=int, nargs='+', default=[4, 6, 8, 10, 16, 32], help='Number of stimuli to present.')
 	parser.add_argument('--n_trials', type=int, default=100, help='Number of trials to generate per n_shapes condition.')
 	parser.add_argument('--colors', type=str, nargs='+', default=None, help='Colors to use for the shapes.')
 	parser.add_argument('--shape_inds', type=int, nargs='+', default=None, help='Indices of the shapes to use when generating the shape trials (e.g. [1,37] for diamond and circle).')
@@ -113,6 +73,8 @@ def main():
 		img2 = letter_img('T')
 		imgs = np.stack([img1, img2])
 		shape_inds = np.array([0, 1])
+	else:
+		raise ValueError('Either shape_inds or use_letters must be specified.')
 
 	# Set up the colors to use when generating the stimuli.
 	if args.colors is None:
@@ -121,55 +83,56 @@ def main():
 		rgb_values = np.array([rgba[:3] for rgba in colors])
 	else:
 		rgb_values = np.array([mcolors.to_rgb(color) for color in args.colors])
-		rgb_inds = np.arange(rgb_values.shape[0])
 
 	# Create directory for serial search exists.
-	os.makedirs('./data/serial_search', exist_ok=True)
+	os.makedirs(os.path.join(args.output_dir, 'images'), exist_ok=True)
 
 	# Initialize results DataFrame for storing task performance later.
-	results_df = pd.DataFrame(columns=['path', 'incongruent', 'n_shapes', 'response', 'answer'])
+	metadata_df = pd.DataFrame(columns=['path', 'incongruent', 'n_shapes'])
 
 	# Generate the trials.
-	for n in tqdm(args.n_shapes):
+	for n in tqdm(args.n_objects):
 		for i in range(args.n_trials):
-			# Randomly select an index for the first shape
-			shape1_ind = np.random.choice(shape_inds, size=1)[0]
-			# Randomly select an index for the second shape, making sure it's not the same as the first shape
-			shape2_ind = np.random.choice(shape_inds[shape_inds!=shape1_ind], size=1)[0]
-			# Get the images for the selected shapes
-			shape1_img = imgs[shape1_ind]
-			shape2_img = imgs[shape2_ind]
-			# Randomly select an index for the first color
-			rgb1_ind = np.random.choice(rgb_values.shape[0], size=1)[0]
-			# Get the RGB values for the selected colors
-			rgb1 = rgb_values[rgb1_ind]
-			rgb2 = 1-rgb1 
+			# Only randomly select the shapes if we're not using letters.
+			if args.use_letters:
+				shape1 = imgs[0]
+				shape2 = imgs[1]
+			else:
+				# Randomly select the two shapes.
+				shape1_ind = np.random.choice(shape_inds, size=1)[0]
+				shape2_ind = np.random.choice(shape_inds[shape_inds!=shape1_ind], size=1)[0]
+				shape1 = imgs[shape1_ind]
+				shape2 = imgs[shape2_ind]
+
+			# Only randomly select the colors if we have more than two colors.
+			if rgb_values.shape[0]==2:
+				rgb1 = rgb_values[0]
+				rgb2 = rgb_values[1]
+			elif args.colors:
+				# Randomly select the two colors is a list of colors is provided.
+				rgb1_ind = np.random.choice(rgb_values.shape[0], size=1)[0]
+				rgb2_options = rgb_values[rgb_values!=rgb_values[rgb1_ind]]
+				rgb2_ind = np.random.choice(rgb2_options, size=1)[0]
+				rgb1 = rgb_values[rgb1_ind]
+				rgb2 = rgb_values[rgb2_ind]
+			else:
+				# Select the colors to be opposites if we're using the rainbow colormap.
+				rgb1_ind = np.random.choice(rgb_values.shape[0], size=1)[0]
+				rgb1 = rgb_values[rgb1_ind]
+				rgb2 = 1-rgb1
 			# Generate the congruent and incongruent trials
-			congruent_trial, incongruent_trial = make_search_trials(shape1_img, shape2_img, rgb1, rgb2, n_shapes=n, size=24)
+			congruent_trial = make_search_trial(shape1, shape2, rgb1, rgb2, n_objects=n, oddball=False, img_size=args.size)
+			incongruent_trial = make_search_trial(shape1, shape2, rgb1, rgb2, n_objects=n, oddball=True, img_size=args.size)
 			# Save the trials and their metadata.
-			congruent_trial_path = f'./data/serial_search/congruent-{n}_{i}.png'
-			congruent_trial.save(congruent_trial_path)
-			results_df = results_df._append({
-				'path': congruent_trial_path,
-				'incongruent': False,
-				'n_shapes': n,
-				'response': None,
-				'answer': None
-			}, ignore_index=True)
-	
-			# Add the incongruent trial as a row to the DataFrame
-			incongruent_trial_path = f'./data/serial_search/incongruent-{n}_{i}.png'
-			incongruent_trial.save(incongruent_trial_path)
-			results_df = results_df._append({
-				'path': incongruent_trial_path,
-				'incongruent': True,
-				'n_shapes': n,
-				'response': None,
-				'answer': None
-			}, ignore_index=True)
+			congruent_path = os.path.join(args.output_dir, 'images', f'congruent-{n}_{i}.png')
+			incongruent_path = os.path.join(args.output_dir, 'images', f'incongruent-{n}_{i}.png')
+			congruent_trial.save(congruent_path)
+			incongruent_trial.save(incongruent_path)
+			metadata_df = metadata_df._append({'path': congruent_path, 'incongruent': False, 'n_shapes': n}, ignore_index=True)
+			metadata_df = metadata_df._append({'path': incongruent_path, 'incongruent': True, 'n_shapes': n}, ignore_index=True)
 
 	# Save results DataFrame to CSV
-	results_df.to_csv('./output/search_results.csv', index=False)
+	metadata_df.to_csv(os.path.join(args.output_dir, 'metadata.csv'), index=False)
 
 if __name__ == '__main__':
 	main()

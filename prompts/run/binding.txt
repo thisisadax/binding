@@ -1,0 +1,4 @@
+The following image contains multiple simple, colored objects. 
+The set of shapes that may be present in the image are: <triangle cloud cross down-arrow umbrella pentagon heart star>. 
+The set of colors that may be present in the image are: <red green blue gold purple saddlebrown gray black>.
+Describe each object in the following image in as much detail as possible while reporting their color and shape.

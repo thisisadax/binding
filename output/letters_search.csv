@@ -1,0 +1,94 @@
+path,incongruent,n_shapes,response,answer
+data/search_letters/images/congruent-40_12.png,False,40,False.,False
+data/search_letters/images/congruent-40_43.png,False,40,False.,False
+data/search_letters/images/incongruent-40_53.png,True,40,False,False
+data/search_letters/images/congruent-40_2.png,False,40,False,False
+data/search_letters/images/congruent-40_32.png,False,40,True,True
+data/search_letters/images/congruent-40_9.png,False,40,"There are multiple 'L' and 'T' letters in the image. The letters 'T' are in red and the letters 'L' are in green. There is no red 'L' in the image.
+
+False.",False
+data/search_letters/images/incongruent-40_21.png,True,40,True,True
+data/search_letters/images/congruent-40_17.png,False,40,False,False
+data/search_letters/images/congruent-40_72.png,False,40,"There are green and red colored 'L's and 'T's. None of the 'L's appear in red color.
+The response is ""False"".",False
+data/search_letters/images/incongruent-40_39.png,True,40,True,True
+data/search_letters/images/congruent-40_4.png,False,40,False,False
+data/search_letters/images/congruent-40_97.png,False,40,"1. The image contains multiple 'L' and 'T' letters. The 'L' letters are present in both red and green colors. The 'T' letters are also present in both red and green colors.
+2. Yes, the 'L' appears in red.
+3. True.",True
+data/search_letters/images/congruent-40_54.png,False,40,"1. The image contains multiple 'L' and 'T' letters in a grid-like arrangement. The 'L' letters are all in green, and the 'T' letters are all in red.
+2. None of the 'L' letters appear in red.
+3. False",False
+data/search_letters/images/incongruent-40_96.png,True,40,True,True
+data/search_letters/images/congruent-40_65.png,False,40,True,True
+data/search_letters/images/incongruent-40_46.png,True,40,True,True
+data/search_letters/images/incongruent-40_27.png,True,40,"1. The image contains several letters 'L' and 'T' in red and green colors. Specifically, there are four red 'T's and one green 'T'. There are five green 'L's and zero red 'L's.
+2. There are no red 'L's in the image.
+3. False",False
+data/search_letters/images/congruent-40_75.png,False,40,"False. There is no red 'L' in the image, all 'L's are green, and all red letters are 'T's.",False
+data/search_letters/images/congruent-40_57.png,False,40,False,False
+data/search_letters/images/congruent-40_16.png,False,40,"The image contains several 'T' and 'L' letters in red and green colors. The red letters include six 'T's and no 'L's. The green letters include seven 'L's and nine 'T's. There are no red 'L's present.
+
+False",False
+data/search_letters/images/incongruent-40_59.png,True,40,True,True
+data/search_letters/images/incongruent-40_28.png,True,40,False.,False
+data/search_letters/images/incongruent-40_61.png,True,40,"1. The image consists of multiple 'L' and 'T' letters:
+- The first row contains three green 'L's and two green 'T's.
+- The second row has a red 'T', two green 'L's, and two red 'T's.
+- The third row consists of a green 'T', three green 'L's, and a red 'T'.
+- The fourth row features a green 'L', four red 'T's, and a green 'T'.
+- The fifth row has a red 'T', two green 'T's, a green 'L', and a red 'T'.
+- The sixth row includes a green 'L', two red 'T's, a green 'L', and two red 'T's.
+- The seventh row contains two green 'L's, three green 'T's, and a red 'T'.
+- The final row has a green 'L', three red 'T's, a green 'L', and a green 'T'.
+2. After inspecting each letter, there is no 'L' that appears in red.
+3. False",False
+data/search_letters/images/incongruent-40_26.png,True,40,False,False
+data/search_letters/images/congruent-40_99.png,False,40,"1. The image contains multiple 'L' and 'T' letters, distributed randomly. The 'L' letters are all in green, and the 'T' letters are all in red. 
+2. There are no 'L' letters that appear in the color red.
+3. False.",False
+data/search_letters/images/incongruent-40_12.png,True,40,True,True
+data/search_letters/images/incongruent-40_37.png,True,40,True. There is an 'L' that appears in red in the image.,True
+data/search_letters/images/incongruent-40_9.png,True,40,True,True
+data/search_letters/images/incongruent-40_8.png,True,40,"1. The letters 'L' and 'T' are arranged in a grid pattern. Most 'L's are green, and most 'T's are red. There are a few 'T's colored green in the mix as well.
+2. Upon careful examination, there are no 'L's that appear in red.
+3. False",False
+data/search_letters/images/incongruent-40_78.png,True,40,True,True
+data/search_letters/images/incongruent-40_14.png,True,40,True,True
+data/search_letters/images/incongruent-40_3.png,True,40,"1. The image contains the following letters and colors:
+- Top row: Green 'L', Green 'L', Red 'L', Red 'T', Green 'L', Red 'T'
+- Second row: Red 'T', Green 'L', Red 'T', Red 'T', Green 'L', Red 'T'
+- Third row: Green 'L', Green 'L', Red 'T', Green 'L', Green 'L', Red 'T'
+- Fourth row: Green 'L', Green 'L', Green 'L', Red 'T', Green 'L', Green 'L'
+- Fifth row: Green 'L', Red 'T', Green 'L', Green 'L', Green 'L', Red 'T'
+- Bottom row: Green 'L', Green 'L', Green 'L', Green 'T', Green 'L', Green 'T'
+
+2. Upon examination, there is at least one 'L' that appears in red in the top row.
+3. True",True
+data/search_letters/images/incongruent-40_5.png,True,40,False,False
+data/search_letters/images/congruent-40_74.png,False,40,True,True
+data/search_letters/images/incongruent-40_68.png,True,40,True,True
+data/search_letters/images/congruent-40_60.png,False,40,"There are red 'T's and green 'L's and 'T's. There is no red 'L' present in the image.
+False",False
+data/search_letters/images/congruent-40_6.png,False,40,False,False
+data/search_letters/images/congruent-40_14.png,False,40,False.,False
+data/search_letters/images/incongruent-40_73.png,True,40,False,False
+data/search_letters/images/incongruent-40_18.png,True,40,True,True
+data/search_letters/images/congruent-40_67.png,False,40,"There are several 'L' and 'T' letters scattered throughout the image. 
+
+The 'L' letters are all in green. 
+
+The 'T' letters are all in red.
+
+There are no 'L' letters in red.
+
+False.",False
+data/search_letters/images/congruent-40_25.png,False,40,True,True
+data/search_letters/images/incongruent-40_93.png,True,40,True,True
+data/search_letters/images/incongruent-40_19.png,True,40,False,False
+data/search_letters/images/congruent-40_79.png,False,40,False,False
+data/search_letters/images/incongruent-40_16.png,True,40,False,False
+data/search_letters/images/incongruent-40_10.png,True,40,False.,False
+data/search_letters/images/incongruent-40_6.png,True,40,False,False
+data/search_letters/images/congruent-40_19.png,False,40,True,True
+data/search_letters/images/congruent-40_3.png,False,40,True,True

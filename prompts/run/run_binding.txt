@@ -1,4 +1,0 @@
-The following image contains multiple simple, colored symbols. 
-Your task is to identify each object in the image, and report their shape and color JSON format. 
-The set of possible shapes is: <>. The set of possible colors is: <>. 
-{Provide in-context examples for how to perform the task}.

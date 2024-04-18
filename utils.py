@@ -1,19 +1,9 @@
 import base64
 from glob import glob
-import os
-import re
-from typing import Optional, Tuple
+from typing import Dict
 
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.colors as mcolors
 import numpy as np
-from openai import OpenAI
-import pandas as pd
 from PIL import Image
-from tqdm import tqdm
-import time
 
 
 def paste_shape(shape: np.ndarray, 
@@ -109,3 +99,20 @@ def place_shapes(shape_imgs, img_size=32):
     for i, img in enumerate(shape_imgs):
         positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
     return canvas_img
+
+
+def get_header(api_info, model='azure') -> Dict[str, str]:
+    api_key = api_info[model]['api_key']
+    if model == 'azure':
+        return {
+            'Content-Type': 'application/json',
+            'api-key': f'{api_key}'
+        }
+    if model == 'openai':
+        return {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {api_key}'
+        }
+    # TODO: Add Claude Opus and Google Gemeni endpoints as well.
+    else: 
+        raise ValueError(f'Model {model} not recognized.')

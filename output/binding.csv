@@ -1,0 +1,449 @@
+path,n_objects,n_shapes,n_colors,features,shapes_names,color_names,response,answer
+data/binding/images/nObjects=8_nShapes=1_nColors=1_96.png,8,1,1,"[{'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""}
+]","[
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+  {""shape"": ""pentagon"", ""color"": ""purple""},
+ "
+data/binding/images/nObjects=8_nShapes=4_nColors=4_27.png,8,4,4,"[{'shape': 'cross', 'color': 'red'}, {'shape': 'pentagon', 'color': 'saddlebrown'}, {'shape': 'heart', 'color': 'gold'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'cross', 'color': 'green'}, {'shape': 'heart', 'color': 'green'}, {'shape': 'heart', 'color': 'green'}, {'shape': 'triangle', 'color': 'saddlebrown'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+    {
+        ""shape"": ""cross"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": ""cross"",
+        ""color"": ""red""
+    }
+]","[
+    {
+        ""shape"": ""cross"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": """
+data/binding/images/nObjects=8_nShapes=8_nColors=1_70.png,8,8,1,"[{'shape': 'pentagon', 'color': 'gold'}, {'shape': 'down-arrow', 'color': 'gold'}, {'shape': 'star', 'color': 'gold'}, {'shape': 'umbrella', 'color': 'gold'}, {'shape': 'cloud', 'color': 'gold'}, {'shape': 'triangle', 'color': 'gold'}, {'shape': 'cross', 'color': 'gold'}, {'shape': 'heart', 'color': 'gold'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+    {""shape"": ""star"", ""color"": ""gold""},
+    {""shape"": ""pentagon"", ""color"": ""gold""},
+    {""shape"": ""cloud"", ""color"": ""gold""},
+    {""shape"": ""triangle"", ""color"": ""gold""},
+    {""shape"": ""heart"", ""color"": ""gold""},
+    {""shape"": ""down arrow"", ""color"": ""gold""},
+    {""shape"": ""umbrella"", ""color"": ""gold""},
+    {""shape"": ""cross"", ""color"": ""gold""}
+]","[
+    {
+        ""shape"": ""star"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""gold""
+    },
+    {
+        ""shape"": ""down"
+data/binding/images/nObjects=8_nShapes=1_nColors=8_0.png,8,1,8,"[{'shape': 'star', 'color': 'purple'}, {'shape': 'star', 'color': 'blue'}, {'shape': 'star', 'color': 'red'}, {'shape': 'star', 'color': 'green'}, {'shape': 'star', 'color': 'gray'}, {'shape': 'star', 'color': 'gold'}, {'shape': 'star', 'color': 'saddlebrown'}, {'shape': 'star', 'color': 'black'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","{
+  ""object1"": {
+    ""shape"": ""star"",
+    ""color"": ""saddlebrown""
+  },
+  ""object2"": {
+    ""shape"": ""star"",
+    ""color"": ""red""
+  },
+  ""object3"": {
+    ""shape"": ""star"",
+    ""color"": ""purple""
+  },
+  ""object4"": {
+    ""shape"": ""star"",
+    ""color"": ""green""
+  },
+  ""object5"": {
+    ""shape"": ""star"",
+    ""color"": ""blue""
+  },
+  ""object6"": {
+    ""shape"": ""star"",
+    ""color"": ""gold""
+  },
+  ""object7"": {
+    ""shape"": ""star"",
+    ""color"": ""gray""
+  },
+  ""object8"": {
+    ""shape"": ""star"",
+    ""color"": ""black""
+  }
+}","[
+    {
+        ""shape"": ""star"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": ""star"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""star"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""star"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""star"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": """
+data/binding/images/nObjects=8_nShapes=4_nColors=4_50.png,8,4,4,"[{'shape': 'down-arrow', 'color': 'saddlebrown'}, {'shape': 'cloud', 'color': 'gold'}, {'shape': 'star', 'color': 'blue'}, {'shape': 'triangle', 'color': 'gray'}, {'shape': 'down-arrow', 'color': 'gold'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'star', 'color': 'saddlebrown'}, {'shape': 'down-arrow', 'color': 'gold'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","{
+  ""object1"": {
+    ""shape"": ""down arrow"",
+    ""color"": ""gold""
+  },
+  ""object2"": {
+    ""shape"": ""triangle"",
+    ""color"": ""gray""
+  },
+  ""object3"": {
+    ""shape"": ""triangle"",
+    ""color"": ""blue""
+  },
+  ""object4"": {
+    ""shape"": ""down arrow"",
+    ""color"": ""saddlebrown""
+  },
+  ""object5"": {
+    ""shape"": ""cloud"",
+    ""color"": ""gold""
+  },
+  ""object6"": {
+    ""shape"": ""star"",
+    ""color"": ""blue""
+  },
+  ""object7"": {
+    ""shape"": ""star"",
+    ""color"": ""saddlebrown""
+  },
+  ""object8"": {
+    ""shape"": ""down arrow"",
+    ""color"": ""gold""
+  }
+}","[
+    {
+      ""shape"": ""down arrow"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""down arrow"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"
+data/binding/images/nObjects=8_nShapes=8_nColors=8_14.png,8,8,8,"[{'shape': 'heart', 'color': 'blue'}, {'shape': 'pentagon', 'color': 'green'}, {'shape': 'cloud', 'color': 'gold'}, {'shape': 'umbrella', 'color': 'gray'}, {'shape': 'cross', 'color': 'purple'}, {'shape': 'star', 'color': 'black'}, {'shape': 'down-arrow', 'color': 'saddlebrown'}, {'shape': 'triangle', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","{
+  ""object1"": {
+    ""shape"": ""umbrella"",
+    ""color"": ""gray""
+  },
+  ""object2"": {
+    ""shape"": ""heart"",
+    ""color"": ""blue""
+  },
+  ""object3"": {
+    ""shape"": ""pentagon"",
+    ""color"": ""green""
+  },
+  ""object4"": {
+    ""shape"": ""down arrow"",
+    ""color"": ""brown""
+  },
+  ""object5"": {
+    ""shape"": ""triangle"",
+    ""color"": ""red""
+  },
+  ""object6"": {
+    ""shape"": ""star"",
+    ""color"": ""black""
+  },
+  ""object7"": {
+    ""shape"": ""cloud"",
+    ""color"": ""gold""
+  },
+  ""object8"": {
+    ""shape"": ""cross"",
+    ""color"": ""purple""
+  }
+}","[
+  {
+    ""shape"": ""umbrella"",
+    ""color"": ""gray""
+  },
+  {
+    ""shape"": ""heart"",
+    ""color"": ""blue""
+  },
+  {
+    ""shape"": ""pentagon"",
+    ""color"": ""green""
+  },
+  {
+    ""shape"": ""down arrow"",
+    ""color"": ""saddlebrown""
+  },
+  {
+    ""shape"": ""triangle"",
+    ""color"": ""red""
+  },
+  {
+    """
+data/binding/images/nObjects=8_nShapes=4_nColors=4_73.png,8,4,4,"[{'shape': 'cloud', 'color': 'blue'}, {'shape': 'pentagon', 'color': 'red'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'cross', 'color': 'green'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'cloud', 'color': 'black'}, {'shape': 'pentagon', 'color': 'blue'}, {'shape': 'cross', 'color': 'green'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""gray""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""black""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": ""cross"",
+        ""color"": ""green""
+    },
+    {
+        ""shape"": ""cross"",
+        ""color"": ""green""
+    }
+]","[
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""gray""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""black""
+    },
+    {
+        ""shape"": """
+data/binding/images/nObjects=8_nShapes=1_nColors=8_87.png,8,1,8,"[{'shape': 'cloud', 'color': 'purple'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'cloud', 'color': 'green'}, {'shape': 'cloud', 'color': 'red'}, {'shape': 'cloud', 'color': 'blue'}, {'shape': 'cloud', 'color': 'black'}, {'shape': 'cloud', 'color': 'gold'}, {'shape': 'cloud', 'color': 'gray'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+    {""shape"": ""cloud"", ""color"": ""purple""},
+    {""shape"": ""cloud"", ""color"": ""gold""},
+    {""shape"": ""cloud"", ""color"": ""gray""},
+    {""shape"": ""cloud"", ""color"": ""blue""},
+    {""shape"": ""cloud"", ""color"": ""saddlebrown""},
+    {""shape"": ""cloud"", ""color"": ""green""},
+    {""shape"": ""cloud"", ""color"": ""black""},
+    {""shape"": ""cloud"", ""color"": ""red""}
+]","[
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": """
+data/binding/images/nObjects=8_nShapes=1_nColors=1_32.png,8,1,1,"[{'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""},
+    {""shape"": ""umbrella"", ""color"": ""red""}
+]","[
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      """
+data/binding/images/nObjects=8_nShapes=8_nColors=8_74.png,8,8,8,"[{'shape': 'cross', 'color': 'red'}, {'shape': 'heart', 'color': 'green'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'umbrella', 'color': 'gray'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'down-arrow', 'color': 'gold'}, {'shape': 'star', 'color': 'black'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","[
+  {
+    ""shape"": ""heart"",
+    ""color"": ""green""
+  },
+  {
+    ""shape"": ""pentagon"",
+    ""color"": ""purple""
+  },
+  {
+    ""shape"": ""umbrella"",
+    ""color"": ""gray""
+  },
+  {
+    ""shape"": ""cross"",
+    ""color"": ""red""
+  },
+  {
+    ""shape"": ""down arrow"",
+    ""color"": ""gold""
+  },
+  {
+    ""shape"": ""star"",
+    ""color"": ""black""
+  },
+  {
+    ""shape"": ""triangle"",
+    ""color"": ""blue""
+  },
+  {
+    ""shape"": ""cloud"",
+    ""color"": ""saddlebrown""
+  }
+]","[
+  {
+    ""shape"": ""heart"",
+    ""color"": ""green""
+  },
+  {
+    ""shape"": ""pentagon"",
+    ""color"": ""purple""
+  },
+  {
+    ""shape"": ""umbrella"",
+    ""color"": ""gray""
+  },
+  {
+    ""shape"": ""cross"",
+    ""color"": ""red""
+  },
+  {
+    ""shape"": ""down arrow"",
+    ""color"": ""gold""
+  },
+  {
+    ""shape"":"

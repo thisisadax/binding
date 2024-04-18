@@ -17,7 +17,7 @@ def make_popout_trial(shape: np.ndarray, rgb1: np.ndarray, rgb2: np.ndarray, n_o
 	shape_imgs = shape[np.newaxis].repeat(n_objects, axis=0)
 	all_colors = rgb1.reshape(1, -1).repeat(n_objects, axis=0)
 	if rgb2 is not None:
-		all_colors[np.random.choice(n_objects, size=1)] = rgb2
+		all_colors[0] = rgb2
 	# recolor and resize the shapes
 	colored_imgs = [color_shape(img.astype(np.float32), rgb) for img, rgb in zip(shape_imgs, all_colors)]
 	resized_imgs = [resize(img, img_size=img_size) for img in colored_imgs]

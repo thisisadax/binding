@@ -1,0 +1,34 @@
+Your job is to parse a partipants description of an image containing colored shapes.
+The set of possible shapes is: <triangle cloud cross down-arrow umbrella pentagon heart star>. 
+The set of possible colors is: <red green blue gold purple saddlebrown gray black>.
+
+Your response should take the form of a json describing the color and shape of each object referred to in the description. 
+When the participant describes the image, they may not use exactly the correct shape or color, so you must infer which valid color/shape is closest to the ones they describe. 
+Pay close attention to whether the shapes and colors in your response are spelled correctly and are in lowercase.
+
+For example, if the participants description were: 
+"There are four objects in the image, a brown triangle, a blue cloud, and two green crosses"
+
+The JSON output would be:
+[
+    {
+      "shape": "triangle",
+      "color": "saddlebrown"
+    },
+    {
+      "shape": "cloud",
+      "color": "blue"
+    },
+    {
+      "shape": "cross",
+      "color": "green"
+    },
+    {
+      "shape": "cross",
+      "color": "green"
+    }
+]
+Even if the participant already describes the image in json format, you should still parse it and return the correct json. 
+Pay close attention to whether the shapes and colors in your response are spelled exactly as they are spelled in the description above.
+Return only the json object with abolutely no other text or delimiting characters.
+Parse the following description: 

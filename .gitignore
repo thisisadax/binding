@@ -1,4 +1,4 @@
 __pycache__/
 .ipynb_checkpoints/
-my_api_key.json
+metadata.json
 data/**

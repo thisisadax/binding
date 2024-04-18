@@ -26,7 +26,7 @@ def make_binding_trial(shapes: np.ndarray,
 	shape_imgs = shapes[shape_inds]
 	colors = colors[color_inds]
 	object_features = [{'shape': shape_names[shape], 'color': color} for shape, color in zip(shape_inds, colors)]
-	# recolor and resize the shapes
+	# recolor and resize the shapes.
 	rgb_codes = np.array([mcolors.to_rgba(color)[:-1] for color in colors]) # convert the colors to RGB format.
 	colored_imgs = [color_shape(img.astype(np.float32), rgb) for img, rgb in zip(shape_imgs, rgb_codes)]
 	resized_imgs = [resize(img, img_size=img_size) for img in colored_imgs]

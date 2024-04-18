@@ -43,7 +43,14 @@ python gen_binding_trials.py \
 --output_dir=data/binding
 
 # Run model on binding trials.
-#### Fill in here ####
+python run_requests.py \
+--task_dir='data/binding' \
+--task_prompt_path='prompts/run/binding.txt' \
+--parse_prompt_path='prompts/parse/binding.txt' \
+--results_file='output/binding.csv' \
+--max_tokens=500 \
+--n_trials=20 \
+--api='azure'
 ```
 
 
@@ -68,4 +75,34 @@ python gen_popout_trials.py \
 
 # Run models on popout trials.
 #### Fill in here ####
+```
+
+#### Serial search task.
+```
+# Generate serial search trials with only green and red letters (T's and L's).
+python gen_search_trials.py \
+--n_objects 4 6 8 10 16 32 \
+--n_trials=100 \
+--size=24 \
+--use_letters=True \
+--colors green red \
+--output_dir=data/search_letters
+
+# Generate search trials with circles of any colors.
+python gen_search_trials.py \
+--n_objects 4 6 8 10 16 32 \
+--n_trials=100 \
+--size=24 \
+--shape_inds 1 37 \
+--output_dir=data/search_shapes
+
+# Run models on serial search trials.
+python run_requests.py \
+--task_dir='data/search_letters' \
+--task_prompt_path='prompts/run/search.txt' \
+--parse_prompt_path='prompts/parse/search.txt' \
+--results_file='output/letters_search.csv' \
+--max_tokens=500 \
+--n_trials=10 \
+--api='azure'
 ```

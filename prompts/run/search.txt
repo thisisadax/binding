@@ -1,0 +1,9 @@
+You will be presented with an image that is part of a classic serial search task used in cognitive psychology studies. The image contains a set of letters, specifically the shapes 'L' and 'T'. These letters will appear in either red or green.
+
+Your task is to identify whether the letter 'L' appears in the color red. Please follow the instructions below carefully:
+
+1. Describe each letter in the image in detail, taking note of their colors.
+2. Determine if either the 'L' appears in red.
+3. Respond with "True" if 'L' appears in red. Respond with "False" if there is no red 'L'. 
+
+Make sure to check each letter before making your determination.
