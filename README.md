@@ -69,7 +69,7 @@ python gen_popout_trials.py \
 python gen_popout_trials.py \
 --n_objects 5 10 15 20 25 30 35 40 45 50 \
 --n_trials=100 \
---size=24 \
+--size=22 \
 --shape_inds 37 \
 --output_dir=data/popout_complex
 
@@ -81,7 +81,7 @@ python gen_popout_trials.py \
 ```
 # Generate serial search trials with only green and red letters (T's and L's).
 python gen_search_trials.py \
---n_objects 4 6 8 10 16 32 \
+--n_objects 5 10 15 20 25 30 35 40 45 50 \
 --n_trials=100 \
 --size=24 \
 --use_letters=True \
@@ -103,6 +103,5 @@ python run_requests.py \
 --parse_prompt_path='prompts/parse/search.txt' \
 --results_file='output/letters_search.csv' \
 --max_tokens=500 \
---n_trials=10 \
 --api='azure'
 ```
