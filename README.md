@@ -34,13 +34,13 @@ python gen_counting_trials.py --object_inds=37 \
 ```
 # Generate binding trials with 8 objects.
 python gen_binding_trials.py \
---n_objects 8 \
+--n_objects 2 3 4 5 6 7 8 \      
 --n_trials=100 \
 --size=45 \
 --color_names red green blue gold purple saddlebrown gray black \
---shape_names triangle cloud cross down arrow umbrella pentagon heart star \
+--shape_names triangle cloud cross down-arrow umbrella pentagon heart star \
 --shape_inds 9 21 24 28 34 59 96 98 \
---output_dir=data/binding
+--output_dir=data/binding_balanced
 
 # Run model on binding trials.
 python run_requests.py \

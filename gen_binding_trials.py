@@ -1,14 +1,14 @@
 import argparse
 import os
-import json
-from typing import List, Tuple
+from itertools import product
+from typing import List
+from tqdm import tqdm
 
 import matplotlib.colors as mcolors
 import numpy as np
-from PIL import Image
 import pandas as pd
 
-from utils import paste_shape, color_shape, resize, place_shapes
+from utils import color_shape, resize, place_shapes
 
 
 def make_binding_trial(shapes: np.ndarray, 
@@ -65,17 +65,23 @@ def main():
 	metadata_df = pd.DataFrame(columns=['path', 'n_objects', 'n_shapes', 'n_colors', 'features', 'shapes_names', 'color_names'], dtype=object)
 
 	# Generate the trials.
-	for n in args.n_objects:
+	for n in tqdm(args.n_objects):
 
 		# Task conditions that we want to generate trials for.
-		n2 = int(np.ceil(n/2))
-		task_conditions = [(1,1), (1,n), (n,1), (n,n), (n2,n2)]
+		#n2 = int(np.ceil(n/2))
+		#task_conditions = [(1,1), (1,n), (n,1), (n,n), (n2,n2)]
+		task_conditions = list(product(range(1,n+1), range(1,n+1)))
+		condition_feature_counts = np.vstack(task_conditions).sum(axis=1)
+		counts, count_freq = np.unique(condition_feature_counts, return_counts=True)
 
-		# Generate n_trials for each task condition.
-		for i in range(args.n_trials):
+		# Generate trials for each task condition.
+		for n_features, (n_shapes, n_colors) in zip(condition_feature_counts, task_conditions):
+			
+			# Find how many trials to generate for each task condition to ensure nTrials per nFeatures condition.
+			n_trials = int(np.ceil(args.n_trials / count_freq[counts==n_features][0]))
 
-			# Generate trials for each task condition.
-			for n_shapes, n_colors in task_conditions:
+			# Generate n_trials for each task condition.
+			for i in range(n_trials): # args.n_trials
 
 				# Save the trials and their metadata.
 				trial, features = make_binding_trial(imgs, np.array(args.color_names), n_objects=n, n_shapes=n_shapes, n_colors=n_colors, img_size=args.size, shape_names=args.shape_names)
@@ -90,7 +96,7 @@ def main():
 					   'shapes_names': args.shape_names,
 					   'color_names': args.color_names}
 				metadata_df = metadata_df._append(row, ignore_index=True)
-
+				
 	# Save results DataFrame to CSV.
 	metadata_df.to_csv(os.path.join(args.output_dir, 'metadata.csv'), index=False)
 

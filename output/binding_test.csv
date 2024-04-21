@@ -1,0 +1,765 @@
+path,n_objects,n_shapes,n_colors,features,shapes_names,color_names,response,answer
+data/binding/images/nObjects=8_nShapes=8_nColors=1_79.png,8,8,1,"[{'shape': 'cross', 'color': 'red'}, {'shape': 'down-arrow', 'color': 'red'}, {'shape': 'triangle', 'color': 'red'}, {'shape': 'heart', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'star', 'color': 'red'}, {'shape': 'cloud', 'color': 'red'}, {'shape': 'pentagon', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are eight red objects in the image. 
+Starting from the top left corner and moving clockwise, the objects are:
+1. A cloud shape 
+2. A cross shape
+3. A triangle pointing upwards
+4. A down arrow
+5. An umbrella shape, oriented upside down with the handle pointing upwards
+6. A five-pointed star
+7. A heart shape
+8. A pentagon pointing upwards","[
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""red""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=3_nColors=2_76.png,8,3,2,"[{'shape': 'star', 'color': 'saddlebrown'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'cloud', 'color': 'blue'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'star', 'color': 'blue'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'cloud', 'color': 'blue'}, {'shape': 'star', 'color': 'saddlebrown'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image contains 8 simple colored objects. From top to bottom, left to right:
+- Two identical blue triangles
+- One blue star and one gold star
+- Two identical blue clouds
+- One gold star and one brown cloud","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""saddlebrown""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=3_nColors=2_72.png,8,3,2,"[{'shape': 'triangle', 'color': 'saddlebrown'}, {'shape': 'umbrella', 'color': 'purple'}, {'shape': 'cloud', 'color': 'purple'}, {'shape': 'cloud', 'color': 'purple'}, {'shape': 'triangle', 'color': 'saddlebrown'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'cloud', 'color': 'purple'}, {'shape': 'triangle', 'color': 'saddlebrown'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image contains seven objects. Starting from the top left corner and moving clockwise, the first object is a purple heart, the second object is a purple star, the third object is a gray star, the fourth object is a gray heart, the fifth object is a gray cloud, the sixth object is a gray star, and the seventh object is a gray cloud.","[
+    {
+      ""shape"": ""heart"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=8_nColors=1_9.png,8,8,1,"[{'shape': 'cross', 'color': 'purple'}, {'shape': 'cloud', 'color': 'purple'}, {'shape': 'triangle', 'color': 'purple'}, {'shape': 'heart', 'color': 'purple'}, {'shape': 'umbrella', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'purple'}, {'shape': 'down-arrow', 'color': 'purple'}, {'shape': 'star', 'color': 'purple'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image contains seven purple objects. Starting from the top left and moving clockwise, the objects are as follows:
+- A down-arrow, pointing downwards with a thick stem and a wide arrowhead.
+- A cross, with equal-length arms and slightly rounded ends.
+- A triangle, with equal sides and a sharp point at the top.
+- A cloud, with a flat bottom and three rounded bumps on the top.
+- A star, with five points and slightly concave edges.
+- A pentagon, with equal sides and angles.
+- A heart, with two rounded lobes at the top and a pointed bottom.
+- An umbrella, with a curved handle on the left, a dome-shaped top, and a small tip at the top center.","[
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""purple""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=2_nColors=5_98.png,8,2,5,"[{'shape': 'heart', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'red'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'pentagon', 'color': 'green'}, {'shape': 'pentagon', 'color': 'blue'}, {'shape': 'heart', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'black'}, {'shape': 'heart', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are four hearts, three pentagons, and one diamond present in this image. Starting with the hearts, there's a gray heart at the top of the image, two black hearts below, and a red heart at the bottom. For the pentagons, there is a red one on the left, a black one in the center, and a green one on the right. The diamond is positioned on the top right and is blue in color.","[
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""diamond"",
+      ""color"": ""blue""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=3_nColors=2_15.png,8,3,2,"[{'shape': 'umbrella', 'color': 'blue'}, {'shape': 'cross', 'color': 'red'}, {'shape': 'triangle', 'color': 'red'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'umbrella', 'color': 'blue'}, {'shape': 'cross', 'color': 'red'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'cross', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are three triangles, which are all blue; an umbrella at the top left corner of the image, which is blue as well; and four red crosses spread out across the image.","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""red""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=1_nColors=8_50.png,8,1,8,"[{'shape': 'star', 'color': 'gray'}, {'shape': 'star', 'color': 'purple'}, {'shape': 'star', 'color': 'red'}, {'shape': 'star', 'color': 'blue'}, {'shape': 'star', 'color': 'saddlebrown'}, {'shape': 'star', 'color': 'green'}, {'shape': 'star', 'color': 'gold'}, {'shape': 'star', 'color': 'black'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image contains a total of 7 objects. 
+Starting from the top left and moving clockwise, first we have a saddlebrown colored star, next a black colored star, followed by a purple colored star. 
+Moving to the bottom left, there is a blue colored star, then a gold colored star, followed by a gray colored star. 
+Finally, there is a green colored star in the center.","[
+    {
+      ""shape"": ""star"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""green""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=2_nColors=2_44.png,8,2,2,"[{'shape': 'heart', 'color': 'purple'}, {'shape': 'umbrella', 'color': 'saddlebrown'}, {'shape': 'umbrella', 'color': 'purple'}, {'shape': 'umbrella', 'color': 'purple'}, {'shape': 'heart', 'color': 'purple'}, {'shape': 'heart', 'color': 'purple'}, {'shape': 'heart', 'color': 'saddlebrown'}, {'shape': 'heart', 'color': 'purple'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are four hearts in the image, three of which are purple and one is saddlebrown. All four hearts are located at the top of the image, with the saddlebrown heart being at the far right.
+Below the hearts, there are three identical umbrellas that are purple in color.","[
+    {
+        ""shape"": ""heart"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""saddlebrown""
+    },
+    {
+        ""shape"": ""umbrella"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""umbrella"",
+        ""color"": ""purple""
+    },
+    {
+        ""shape"": ""umbrella"",
+        ""color"": ""purple""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=1_nColors=8_51.png,8,1,8,"[{'shape': 'heart', 'color': 'purple'}, {'shape': 'heart', 'color': 'green'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'heart', 'color': 'gray'}, {'shape': 'heart', 'color': 'red'}, {'shape': 'heart', 'color': 'blue'}, {'shape': 'heart', 'color': 'saddlebrown'}, {'shape': 'heart', 'color': 'gold'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are seven hearts, one in the top-middle in green, one in the top-right in gray, one at the middle-left in saddlebrown, one at the middle in purple, one at the middle-right in black, one at the bottom-left in blue, and one at the bottom-right in gold.","[
+    {
+      ""shape"": ""heart"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gold""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=8_nColors=8_27.png,8,8,8,"[{'shape': 'heart', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'gold'}, {'shape': 'star', 'color': 'saddlebrown'}, {'shape': 'down-arrow', 'color': 'purple'}, {'shape': 'triangle', 'color': 'red'}, {'shape': 'cross', 'color': 'green'}, {'shape': 'cloud', 'color': 'black'}, {'shape': 'umbrella', 'color': 'blue'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","From left to right, top to bottom:
+- A red triangle pointing upwards. 
+- A green cross. 
+- A small purple down-arrow. 
+- A blue umbrella. 
+- A gray heart. 
+- A black cloud. 
+- A brown star. 
+- A gold pentagon.","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""gold""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=8_nColors=1_5.png,8,8,1,"[{'shape': 'down-arrow', 'color': 'red'}, {'shape': 'umbrella', 'color': 'red'}, {'shape': 'pentagon', 'color': 'red'}, {'shape': 'cloud', 'color': 'red'}, {'shape': 'heart', 'color': 'red'}, {'shape': 'cross', 'color': 'red'}, {'shape': 'triangle', 'color': 'red'}, {'shape': 'star', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","From top to bottom, left to right:
+- A red cloud
+- A red cross
+- A red triangle pointing upwards
+- A red heart
+- A red star with five points
+- A red umbrella
+- A red pentagon
+- A red down arrow pointing downwards","[
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""cross"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""star"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""umbrella"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""red""
+    },
+    {
+        ""shape"": ""down-arrow"",
+        ""color"": ""red""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=3_nColors=2_25.png,8,3,2,"[{'shape': 'cloud', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'saddlebrown'}, {'shape': 'triangle', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'saddlebrown'}, {'shape': 'pentagon', 'color': 'saddlebrown'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'pentagon', 'color': 'saddlebrown'}, {'shape': 'pentagon', 'color': 'gray'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are eight objects in the image. 
+Starting at the top center and moving clockwise:
+1. A gray cloud
+2. A saddlebrown pentagon
+3. A saddlebrown pentagon
+4. A gray pentagon
+5. A saddlebrown pentagon
+6. A brown cloud
+7. A saddlebrown pentagon
+8. A gray triangle","[
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""gray""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=1_nColors=8_45.png,8,1,8,"[{'shape': 'triangle', 'color': 'red'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'triangle', 'color': 'purple'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'saddlebrown'}, {'shape': 'triangle', 'color': 'gray'}, {'shape': 'triangle', 'color': 'black'}, {'shape': 'triangle', 'color': 'gold'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are 8 triangles in the image. 
+Starting from the top and going clockwise, the first triangle is brown, the second triangle is green, the third triangle is blue, the fourth triangle is black, the fifth triangle is red, the sixth triangle is yellow, the seventh triangle is purple, and the eighth triangle is grey.","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""gray""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=5_nColors=2_24.png,8,5,2,"[{'shape': 'cross', 'color': 'gray'}, {'shape': 'pentagon', 'color': 'green'}, {'shape': 'star', 'color': 'green'}, {'shape': 'cloud', 'color': 'green'}, {'shape': 'umbrella', 'color': 'gray'}, {'shape': 'star', 'color': 'green'}, {'shape': 'pentagon', 'color': 'green'}, {'shape': 'pentagon', 'color': 'green'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","Starting from the top-left corner of the image and moving clockwise, there are:
+- Three green pentagons, one large and two small
+- Two green stars, similar in size
+- A gray umbrella with a curved handle
+- A green cross
+- A green cloud with a fluffy appearance","[
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""green""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=8_nColors=8_34.png,8,8,8,"[{'shape': 'pentagon', 'color': 'red'}, {'shape': 'umbrella', 'color': 'purple'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'down-arrow', 'color': 'gold'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'cloud', 'color': 'green'}, {'shape': 'star', 'color': 'gray'}, {'shape': 'cross', 'color': 'saddlebrown'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are several colored shapes in the image. The colors and shapes are as follows:
+
+1. A red pentagon at the top right.
+2. A saddlebrown cross to the left of the red pentagon.
+3. A green cloud below the saddlebrown cross.
+4. A gold down-arrow below the green cloud.
+5. A gray star to the right of the gold down-arrow.
+6. A purple umbrella below the green cloud, to the left of the gold down-arrow.
+7. A black heart below the gold down-arrow and to the right of the purple umbrella.
+8. A blue triangle below the black heart.","[
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cross"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""star"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""umbrella"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""blue""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=2_nColors=5_58.png,8,2,5,"[{'shape': 'cloud', 'color': 'red'}, {'shape': 'triangle', 'color': 'black'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'cloud', 'color': 'blue'}, {'shape': 'cloud', 'color': 'gray'}, {'shape': 'cloud', 'color': 'gray'}, {'shape': 'cloud', 'color': 'red'}, {'shape': 'triangle', 'color': 'red'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image shows eight objects, and the colors and shapes are described as follows:
+
+1. Black triangle
+2. Red cloud
+3. Gray cloud
+4. Red triangle
+5. Blue cloud
+6. Red cloud
+7. Green triangle
+8. Gray cloud","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""gray""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=3_nColors=3_84.png,8,3,3,"[{'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'heart', 'color': 'gray'}, {'shape': 'down-arrow', 'color': 'black'}, {'shape': 'down-arrow', 'color': 'black'}, {'shape': 'down-arrow', 'color': 'gray'}, {'shape': 'cloud', 'color': 'saddlebrown'}, {'shape': 'heart', 'color': 'black'}, {'shape': 'heart', 'color': 'saddlebrown'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There are eight objects in this image. 
+Starting from the top left corner, and working left to right, top to bottom, the objects are:
+
+- Saddlebrown cloud
+- Black down-arrow
+- Black heart
+- Gray heart
+- Saddlebrown cloud
+- Black down-arrow
+- Gold heart
+- Gray down-arrow
+
+The image contains no triangles, crosses, umbrellas, pentagons, or stars. The colors red, green, blue, purple, and gold are only used once (for the gold heart).","[
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gray""
+    },
+    {
+      ""shape"": ""cloud"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""black""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""down-arrow"",
+      ""color"": ""gray""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=8_nColors=1_0.png,8,8,1,"[{'shape': 'down-arrow', 'color': 'blue'}, {'shape': 'triangle', 'color': 'blue'}, {'shape': 'pentagon', 'color': 'blue'}, {'shape': 'cross', 'color': 'blue'}, {'shape': 'cloud', 'color': 'blue'}, {'shape': 'star', 'color': 'blue'}, {'shape': 'heart', 'color': 'blue'}, {'shape': 'umbrella', 'color': 'blue'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","From left to right, top to bottom:
+- Blue star
+- Blue cross
+- Blue pentagon
+- Blue triangle
+- Blue cloud
+- Blue down-arrow 
+- Blue heart
+- Blue umbrella","[
+    {
+        ""shape"": ""star"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""cross"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""pentagon"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""triangle"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""cloud"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""down-arrow"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""heart"",
+        ""color"": ""blue""
+    },
+    {
+        ""shape"": ""umbrella"",
+        ""color"": ""blue""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=2_nColors=5_35.png,8,2,5,"[{'shape': 'heart', 'color': 'purple'}, {'shape': 'pentagon', 'color': 'green'}, {'shape': 'pentagon', 'color': 'blue'}, {'shape': 'heart', 'color': 'saddlebrown'}, {'shape': 'pentagon', 'color': 'gold'}, {'shape': 'heart', 'color': 'green'}, {'shape': 'heart', 'color': 'blue'}, {'shape': 'pentagon', 'color': 'purple'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","There is a blue pentagon at the top left of the image.
+There is a green pentagon adjacent to the blue pentagon at its bottom right.
+There is a red heart adjacent to the blue pentagon at its bottom right. It is also on top of the green pentagon at its top left.
+There is a saddlebrown heart adjacent to the green pentagon at its bottom right.
+There is a gold pentagon adjacent to the saddlebrown heart at its top right.
+There is a purple pentagon adjacent to the saddlebrown heart at its bottom right.
+There is a purple heart adjacent to the purple pentagon at its top right.","[
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""blue""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""red""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""saddlebrown""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""gold""
+    },
+    {
+      ""shape"": ""pentagon"",
+      ""color"": ""purple""
+    },
+    {
+      ""shape"": ""heart"",
+      ""color"": ""purple""
+    }
+]"
+data/binding/images/nObjects=8_nShapes=1_nColors=1_50.png,8,1,1,"[{'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}, {'shape': 'triangle', 'color': 'green'}]","['triangle', 'cloud', 'cross', 'down-arrow', 'umbrella', 'pentagon', 'heart', 'star']","['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black']","The image contains nine green triangles arranged in three rows. The top row has three triangles, the middle row has four triangles, and the bottom row has two triangles. Each triangle is equilateral with all sides and angles being equal.","[
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    },
+    {
+      ""shape"": ""triangle"",
+      ""color"": ""green""
+    }
+]"

@@ -1,4 +1,3 @@
-import re
 import os
 import json
 import time
@@ -7,7 +6,6 @@ import requests
 from tqdm import tqdm
 from typing import Dict, Union, List
 from pathlib import Path
-import numpy as np
 import pandas as pd
 import time
 from tenacity import retry, wait_exponential, stop_after_attempt
@@ -59,6 +57,7 @@ def run_trial(
 
     # Check for easily-avoidable errors
     if 'error' in trial_response.json():
+        print('failed VLM request')
         raise ValueError('Returned error: \n' + trial_response.json()['error']['message'])
     
     # Extract the responses from the vision model and parse them with the parsing model.
@@ -70,8 +69,10 @@ def run_trial(
 
     # If the response is invalid raise an error.
     if 'error' in answer:
+        print('failed parsing request')
         raise ValueError('Returned error: \n' + answer['error']['message'])
     elif answer=='-1':
+        print('bad VLM response')
         raise ValueError(f'Invalid response: {trial_response}')
     return answer, trial_response
 
@@ -142,13 +143,21 @@ def main():
                 print(f'Failed on trial {i} with error: {e}')
                 break  # Stop the loop if there is an error and save the progress.
 
+        if i % 10 == 0:
+            # Save the results if an output file was specified, otherwise save it with the current timestamp.
+            if args.results_file:
+                results_df.to_csv(args.results_file, index=False)
+            else:
+                filename = f'results_{time.time()}.csv'
+                results_df.to_csv(filename, index=False)
+
+
     # Save the results if an output file was specified, otherwise save it with the current timestamp.
     if args.results_file:
         results_df.to_csv(args.results_file, index=False)
     else:
         filename = f'results_{time.time()}.csv'
         results_df.to_csv(filename, index=False)
-
 
 if __name__ == '__main__':
     main()
