@@ -1,4 +1,5 @@
 import os
+import copy
 import argparse
 from functools import reduce
 
@@ -127,6 +128,7 @@ def make_shape_trial(source1, features, source_relations, target_relations):
     else:
         return source1, source2, incorrect2, incorrect1, correct2, correct1, 2
 
+
 def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect1, incorrect2):
     # Get the images for the source and target pairs
     inds = np.array([source1.values[0], source2.values[0], correct1.values[0], correct2.values[0], incorrect1.values[0], incorrect2.values[0]])
@@ -139,8 +141,8 @@ def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect
     return trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs
 
 
-def generate_rmts_trial_data():
-    # Load all of the images.
+def generate_all_rmts_trial_data():
+    # Load all the images.
     imgs = np.load('imgs.npy')
 
     # Plot only some test characters.
@@ -168,77 +170,174 @@ def generate_rmts_trial_data():
     all_shapes = np.stack(all_shapes)
     features = pd.DataFrame(all_features, columns=['ind', 'shape', 'color', 'size'])
 
-    # Set up metadata fields for each bit of metadata that we want to store for every trial.
-    trial_cols = ['trial_type', 'correct_target', 'trial_path', 'source_path', 'target1_path', 'target2_path']
-    source1_cols = ['s1_ind', 's1_shape', 's1_color', 's1_size', 's1_path']
-    source2_cols = ['s2_ind', 's2_shape', 's2_color', 's2_size', 's2_path']
-    target1_1_cols = ['t1_1_ind', 't1_1_shape', 't1_1_color', 't1_1_size', 't1_1_path']
-    target1_2_cols = ['t1_2_ind', 't1_2_shape', 't1_2_color', 't1_2_size', 't1_2_path']
-    target2_1_cols = ['t2_1_ind', 't2_1_shape', 't2_1_color', 't2_1_size', 't2_1_path']
-    target2_2_cols = ['t2_2_ind', 't2_2_shape', 't2_2_color', 't2_2_size', 't2_2_path']
-    col_names = (trial_cols + source1_cols + source2_cols + target1_1_cols + target1_2_cols + target2_1_cols + target2_2_cols)
+    # Generate two separate directories for the unified and decomposed tasks.
+    os.makedirs('data/unified_RMTS', exist_ok=True)
+    os.makedirs('data/decomposed_RMTS', exist_ok=True)
 
-    # Set up a dataframe to store all the paths for the trials that we want to save.
+    # get all of the possible types of trials
     same_shape_relations = [np.array([True, True, True]), np.array([False, True, True])]
     same_color_relations = [np.array([True, True, True]), np.array([True, False, True])]
     diff_size_relations = [np.array([True, True, False]), np.array([True, True, True])]
     all_relations = [same_shape_relations, same_color_relations, diff_size_relations]
-    relation_names = ['sameShape', 'sameColor', 'diffSize']
-    trial_df = pd.DataFrame(np.zeros([len(features)*3, len(col_names)]), columns=col_names)
 
     # Generate all possible trials, and save the images and metadata.
+    trial_count = 0
+    feature_decoding_task_dict_unified = {
+        "path": [],
+        "feature": [],
+        "feature_value": [],
+        "pair": [],
+        "pair_loc": [],
+        "object_loc": [],
+        "object_ind": []
+    }
+    feature_decoding_decomposed_path_list = []
+    relation_decoding_task_dict_unified = {
+        "path": [],
+        "relation": [],
+        "relation_value": [],
+        "pair": [],
+        "pair_loc": [],
+    }
+    relation_decoding_decomposed_path_list = []
+    rmts_task_dict_unified = {
+        "path": [],
+        "correct": [],
+    }
+    rmts_task_decomposed_path_list = []
+
     for i, relations in enumerate(tqdm(all_relations)):
         for j, source1 in features.iterrows():
-            source1, source2, target1_1, target1_2, target2_1, target2_2, correct_side = make_shape_trial(source1, features, relations[0], relations[1])
-            if source1['size'] == 'large' and source2['size'] == 'small':
-                continue
-            if target1_1['size'] == 'large' and target1_2['size'] == 'small':
-                continue
-            if target2_1['size'] == 'large' and target2_2['size'] == 'small':
-                continue
+            # generate the trial info (shapes, sizes, relations)
+            # skip trials where the left shape is larger than the right shape (for any)
+            source1, source2, target1_1, target1_2, target2_1, target2_2, correct_side = (
+                make_shape_trial(source1, features, relations[0], relations[1]))
+            for (img1, img2) in [[source1['size'], source2['size']],
+                                 [target1_1['size'], target1_2['size']],
+                                 [target2_1['size'], target2_2['size']]]:
+                if img1 == 'large' and img2 == 'small':
+                    continue
 
-            trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2)
+            # generate feature decoding task information
+            loc_information_dict = [[source1.to_dict(), {"pair": "source", "pair_loc": "top", "object_loc": "left", "object_ind": 1}],
+                                    [source2.to_dict(), {"pair": "source", "pair_loc": "top", "object_loc": "right", "object_ind": 2}],
+                                    [target1_1.to_dict(), {"pair": "target1", "pair_loc": "bottom-left", "object_loc": "left", "object_ind": 1}],
+                                    [target1_2.to_dict(), {"pair": "target1", "pair_loc": "bottom-left", "object_loc": "right", "object_ind": 2}],
+                                    [target2_1.to_dict(), {"pair": "target2", "pair_loc": "bottom-right", "object_loc": "left", "object_ind": 1}],
+                                    [target2_2.to_dict(), {"pair": "target2", "pair_loc": "bottom-right", "object_loc": "right", "object_ind": 2}]]
+            for img, loc_info in loc_information_dict:
+                feature_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+                feature_decoding_task_dict_unified["feature"].append("shape")
+                feature_decoding_task_dict_unified["feature_value"].append(img["shape"])
+                feature_decoding_task_dict_unified["pair"].append(loc_info["pair"])
+                feature_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
+                feature_decoding_task_dict_unified["object_loc"].append(loc_info["object_loc"])
+                feature_decoding_task_dict_unified["object_ind"].append(loc_info["object_ind"])
+                feature_decoding_decomposed_path_list.append(
+                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+            for img, loc_info in loc_information_dict:  # repeat the shape task but for colors
+                feature_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+                feature_decoding_task_dict_unified["feature"].append("color")
+                feature_decoding_task_dict_unified["feature_value"].append(img["color"])
+                feature_decoding_task_dict_unified["pair"].append(loc_info["pair"])
+                feature_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
+                feature_decoding_task_dict_unified["object_loc"].append(loc_info["object_loc"])
+                feature_decoding_task_dict_unified["object_ind"].append(loc_info["object_ind"])
+                feature_decoding_decomposed_path_list.append(
+                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
 
-            # Save the relevant images.
-            os.makedirs(f'data/RMTS/trial{i*len(features)+j}', exist_ok=True)
-            trial_path = f'data/RMTS/trial{i*len(features)+j}/trial.png'
-            source_path = f'data/RMTS/trial{i*len(features)+j}/source_pair.png'
-            target1_path = f'data/RMTS/trial{i*len(features)+j}/target1_pair.png'
-            target2_path = f'data/RMTS/trial{i*len(features)+j}/target2_pair.png'
-            source1_path = f'data/RMTS/trial{i*len(features)+j}/source1.png'
-            source2_path = f'data/RMTS/trial{i*len(features)+j}/source2.png'
-            target1_1_path = f'data/RMTS/trial{i*len(features)+j}/target1_1.png'
-            target1_2_path = f'data/RMTS/trial{i*len(features)+j}/target1_2.png'
-            target2_1_path = f'data/RMTS/trial{i*len(features)+j}/target2_1.png'
-            target2_2_path = f'data/RMTS/trial{i*len(features)+j}/target2_2.png'
-            source_imgs[0].save(source1_path)
-            source_imgs[1].save(source2_path)
-            target1_imgs[0].save(target1_1_path)
-            target1_imgs[1].save(target1_2_path)
-            target2_imgs[0].save(target2_1_path)
-            target2_imgs[1].save(target2_2_path)
+            # create the relation decoding task information
+            relation_loc_info = [[source1.to_dict(), source2.to_dict(),
+                                  {"pair": "source", "pair_loc": "top", "pair_idx": 0}],
+                                 [target1_1.to_dict(), target1_2.to_dict(),
+                                  {"pair": "target1", "pair_loc": "bottom-left", "pair_idx": 1}],
+                                 [target2_1.to_dict(), target2_2.to_dict(),
+                                  {"pair": "target2", "pair_loc": "bottom-right", "pair_idx": 2}]]
+            for img1, img2, loc_info in relation_loc_info:
+                relation = "same" if img1["size"] == img2["size"] else "different"
+                relation_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+                relation_decoding_task_dict_unified["relation"].append("size")
+                relation_decoding_task_dict_unified["relation_value"].append(relation)
+                relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
+                relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
+                relation_decoding_decomposed_path_list.append(
+                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+            for img1, img2, loc_info in relation_loc_info:
+                relation = "same" if img1["shape"] == img2["shape"] else "different"
+                relation_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+                relation_decoding_task_dict_unified["relation"].append("shape")
+                relation_decoding_task_dict_unified["relation_value"].append(relation)
+                relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
+                relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
+                relation_decoding_decomposed_path_list.append(
+                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+            for img1, img2, loc_info in relation_loc_info:
+                relation = "same" if img1["color"] == img2["color"] else "different"
+                relation_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+                relation_decoding_task_dict_unified["relation"].append("color")
+                relation_decoding_task_dict_unified["relation_value"].append(relation)
+                relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
+                relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
+                relation_decoding_decomposed_path_list.append(
+                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+
+            # generate the RMTS task information
+            rmts_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
+            rmts_task_dict_unified["correct"].append(correct_side)
+            rmts_task_decomposed_path_list.append(
+                [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                    f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                    f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+
+
+            # Save the relevant images
+            trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = (
+                get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2))
+            trial_num = str(trial_count).zfill(3)
+            trial_path = f'data/unified_RMTS/trial{trial_num}_unified.png'
+            source_path = f'data/decomposed_RMTS/trial{trial_num}_decomposed_source.png'
+            target1_path = f'data/decomposed_RMTS/trial{trial_num}_decomposed_target1.png'
+            target2_path = f'data/decomposed_RMTS/trial{trial_num}_decomposed_target2.png'
             trial_img.save(trial_path)
             source_pair.save(source_path)
             t1_pair.save(target1_path)
             t2_pair.save(target2_path)
+            trial_count += 1
 
-            trial_df.loc[i*len(features) + j, 'trial_type'] = relation_names[i]
-            trial_df.loc[i*len(features) + j, 'correct_target'] = int(correct_side)
-            trial_df.loc[i*len(features) + j, 'trial_path'] = trial_path
-            trial_df.loc[i*len(features) + j, 'source_path'] = source_path
-            trial_df.loc[i*len(features) + j, 'target1_path'] = target1_path
-            trial_df.loc[i*len(features) + j, 'target2_path'] = target2_path
-            trial_df.loc[i*len(features) + j, source1_cols] = list(source1.values) + [source1_path]
-            trial_df.loc[i*len(features) + j, source2_cols] = list(source2.values) + [source2_path]
-            trial_df.loc[i*len(features) + j, target1_1_cols] = list(target1_1.values) + [target1_1_path]
-            trial_df.loc[i*len(features) + j, target1_2_cols] = list(target1_2.values) + [target1_2_path]
-            trial_df.loc[i*len(features) + j, target2_1_cols] = list(target2_1.values) + [target2_1_path]
-            trial_df.loc[i*len(features) + j, target2_2_cols] = list(target2_2.values) + [target2_2_path]
+    # update the list of paths for the decomposed task
+    feature_decoding_task_dict_decomposed = copy.deepcopy(feature_decoding_task_dict_unified)
+    feature_decoding_task_dict_decomposed["path"] = feature_decoding_decomposed_path_list
+    relation_decoding_task_dict_decomposed = copy.deepcopy(relation_decoding_task_dict_unified)
+    relation_decoding_task_dict_decomposed["path"] = relation_decoding_decomposed_path_list
+    rmts_task_dict_decomposed = copy.deepcopy(rmts_task_dict_unified)
+    rmts_task_dict_decomposed["path"] = rmts_task_decomposed_path_list
 
-    trial_df.loc[~(trial_df == 0).all(axis=1)].to_csv('data/RMTS/rmts_trial_df.csv', index=False)
+    # save the CSVs for the tasks
+    feature_decoding_task_df_unified = pd.DataFrame(feature_decoding_task_dict_unified)
+    feature_decoding_task_df_unified.to_csv('data/unified_RMTS/feature_decoding_task_unified.csv', index=False)
+    feature_decoding_task_df_decomposed = pd.DataFrame(feature_decoding_task_dict_decomposed)
+    feature_decoding_task_df_decomposed.to_csv('data/decomposed_RMTS/feature_decoding_task_decomposed.csv', index=False)
+    relation_decoding_task_df_unified = pd.DataFrame(relation_decoding_task_dict_unified)
+    relation_decoding_task_df_unified.to_csv('data/unified_RMTS/relation_decoding_task_unified.csv', index=False)
+    relation_decoding_task_df_decomposed = pd.DataFrame(relation_decoding_task_dict_decomposed)
+    relation_decoding_task_df_decomposed.to_csv('data/decomposed_RMTS/relation_decoding_task_decomposed.csv', index=False)
+    rmts_task_df_unified = pd.DataFrame(rmts_task_dict_unified)
+    rmts_task_df_unified.to_csv('data/unified_RMTS/rmts_task_unified.csv', index=False)
+    rmts_task_df_decomposed = pd.DataFrame(rmts_task_dict_decomposed)
+    rmts_task_df_decomposed.to_csv('data/decomposed_RMTS/rmts_task_decomposed.csv', index=False)
 
 
 if __name__ == '__main__':
-    generate_rmts_trial_data()
+    generate_all_rmts_trial_data()
 
 
