@@ -53,7 +53,7 @@ def run_trial(
     task_payload['messages'][0]['content'] += image_payload
 
     # Until the model provides a valid response, keep trying.
-    trial_response = requests.post(api_metadata['vision_endpoint'], headers=header, json=task_payload)
+    trial_response = requests.post(api_metadata['vision_endpoint'], headers=header, json=task_payload, timeout=45)
 
     # Check for easily-avoidable errors
     if 'error' in trial_response.json():
@@ -64,7 +64,7 @@ def run_trial(
     trial_response = trial_response.json()['choices'][0]['message']['content']
     trial_parse_prompt = parse_prompt + '\n' + trial_response
     parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
-    answer = requests.post(api_metadata['parse_endpoint'], headers=header, json=parse_payload)
+    answer = requests.post(api_metadata['parse_endpoint'], headers=header, json=parse_payload, timeout=45)
     answer = answer.json()['choices'][0]['message']['content']
 
     # If the response is invalid raise an error.
