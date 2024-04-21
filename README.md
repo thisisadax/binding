@@ -44,10 +44,10 @@ python gen_binding_trials.py \
 
 # Run model on binding trials.
 python run_requests.py \
---task_dir='data/binding' \
+--task_dir='data/binding_balanced' \
 --task_prompt_path='prompts/run/binding.txt' \
 --parse_prompt_path='prompts/parse/binding.txt' \
---results_file='output/binding.csv' \
+--results_file='output/binding_balanced.csv' \
 --max_tokens=500 \
 --n_trials=20 \
 --api='azure'
