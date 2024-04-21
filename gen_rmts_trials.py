@@ -15,6 +15,8 @@ from torchvision.transforms import functional as F
 import warnings
 warnings.filterwarnings("ignore")
 
+np.random.seed(0)
+
 
 def make_trial(source_pair, target_pair1, target_pair2):
     # Define the canvas to draw images on, font, and drawing tool.
@@ -58,7 +60,7 @@ def resize(image):
 
 def color_shape(img, rgb):
     img /= img.max()  # normalize image
-    rgb /= rgb.max()  # normalize rgb code
+    rgb /= (rgb.max() + 1e-6)  # normalize rgb code
     colored_img = (1-img) * rgb.reshape((3,1,1))
     colored_img += img
     return (colored_img * 255).astype(np.uint8)
@@ -131,8 +133,17 @@ def make_shape_trial(source1, features, source_relations, target_relations):
 
 def get_trial_images(shape_imgs, source1, source2, correct1, correct2, incorrect1, incorrect2):
     # Get the images for the source and target pairs
-    inds = np.array([source1.values[0], source2.values[0], correct1.values[0], correct2.values[0], incorrect1.values[0], incorrect2.values[0]])
-    trial_imgs = [F.to_pil_image(torch.tensor(img)) for img in shape_imgs[inds]]
+    trial_imgs = [F.to_pil_image(
+        torch.tensor(
+            shape_imgs[(i['shape'], i['color'], i['size'])]
+        )
+    ) for i in [source1, source2, correct1, correct2, incorrect1, incorrect2]]
+
+    # stack all images in a row and show
+    trial_img = Image.new('RGB', (768 * 2, 256), (255, 255, 255))
+    for i, img in enumerate(trial_imgs):
+        trial_img.paste(img, (256*i, 0))
+
     source_imgs, correct_target_imgs, incorrect_target_imgs = trial_imgs[:2], trial_imgs[2:4], trial_imgs[4:]
 
     # Make the trial randomly assigning the correct pair to either the left or right side.
@@ -156,25 +167,25 @@ def generate_all_rmts_trial_data():
     rgb_values = np.array([mcolors.to_rgb(color) for color in colors])
 
     # Generate all possible shapes.
-    all_shapes, all_features = [], []
+    all_features = []
+    all_shape_feature_dict = {}
     ind = 0
     for i, shape in enumerate(simple_imgs):
         for j, rgb in enumerate(rgb_values):
             rgb_shape = color_shape(shape.astype(np.float32), rgb)
             small_shape = resize(rgb_shape)
-            all_shapes.append(small_shape)
-            all_shapes.append(rgb_shape)
+            all_shape_feature_dict[(shapes[i], colors[j], 'small')] = small_shape
+            all_shape_feature_dict[(shapes[i], colors[j], 'large')] = rgb_shape
             all_features.append((ind, shapes[i], colors[j], 'small'))
-            all_features.append((ind+1, shapes[i], colors[j], 'large'))
+            all_features.append((ind + 1, shapes[i], colors[j], 'large'))
             ind += 2
-    all_shapes = np.stack(all_shapes)
     features = pd.DataFrame(all_features, columns=['ind', 'shape', 'color', 'size'])
 
     # Generate two separate directories for the unified and decomposed tasks.
     os.makedirs('data/unified_RMTS', exist_ok=True)
     os.makedirs('data/decomposed_RMTS', exist_ok=True)
 
-    # get all of the possible types of trials
+    # get all the possible types of trials
     same_shape_relations = [np.array([True, True, True]), np.array([False, True, True])]
     same_color_relations = [np.array([True, True, True]), np.array([True, False, True])]
     diff_size_relations = [np.array([True, True, False]), np.array([True, True, True])]
@@ -299,10 +310,10 @@ def generate_all_rmts_trial_data():
                     f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
                     f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
 
-
             # Save the relevant images
             trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = (
-                get_trial_images(all_shapes, source1, source2, target1_1, target1_2, target2_1, target2_2))
+                get_trial_images(all_shape_feature_dict, source1, source2,
+                                 target1_1, target1_2, target2_1, target2_2))
             trial_num = str(trial_count).zfill(3)
             trial_path = f'data/unified_RMTS/trial{trial_num}_unified.png'
             source_path = f'data/decomposed_RMTS/trial{trial_num}_decomposed_source.png'
