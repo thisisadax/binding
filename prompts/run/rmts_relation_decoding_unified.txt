@@ -1,0 +1,1 @@
+Do the two objects in the {pair} pair (the {pair_loc} pair) have the same or different {relation}? Your answer should be either "same" or "different".

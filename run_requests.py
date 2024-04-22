@@ -1,6 +1,6 @@
 import os
 import json
-import time
+import sys, traceback
 import argparse
 import requests
 from tqdm import tqdm
@@ -15,16 +15,36 @@ from utils import encode_image, get_header
 
 warnings.filterwarnings('ignore')
 
+
+def parse_task_prompt(task, task_payload, meta_info):
+    """
+    Parse the task prompt for the given task w/ the given meta_info.
+
+    Parameters:
+    task (str): The task name.
+    task_payload (str): The task payload.
+    meta_info (dict): The metadata for the task.
+
+    Returns:
+    str: The parsed task prompt.
+    """
+    if task == 'rmts':
+        meta_info['object_ind'] = "2nd" if meta_info['object_ind'] == 2 else "1st"
+        task_payload['messages'][0]['content'][0]['text'] = task_payload['messages'][0]['content'][0]['text'].format(
+            **{k: v for k, v in meta_info.items() if f"{{{k}}}" in task_payload['messages'][0]['content'][0]['text']})
+    return task_payload
+
+
 @retry(wait=wait_exponential(multiplier=1, min=1, max=20), stop=stop_after_attempt(5))
 def run_trial(
     img_path: Union[str, List[str]],
     header: Dict[str, str],
-    api_metadata: str,
+    api_metadata: Dict[str, str],
     task_payload: Dict,
     parse_payload: Dict,
     parse_prompt: str,
 ):
-    '''
+    """
     Run a trial of the serial search task.
 
     Parameters:
@@ -37,7 +57,7 @@ def run_trial(
 
     Returns:
     str: The response and the parsed response from the trial.
-    '''
+    """
     # Get rid of old images from the payload.
     task_payload['messages'][0]['content'] = [task_payload['messages'][0]['content'][0]]
 
@@ -71,7 +91,7 @@ def run_trial(
     if 'error' in answer:
         print('failed parsing request')
         raise ValueError('Returned error: \n' + answer['error']['message'])
-    elif answer=='-1':
+    elif answer == '-1':
         print('bad VLM response')
         raise ValueError(f'Invalid response: {trial_response}')
     return answer, trial_response
@@ -85,22 +105,36 @@ def parse_args() -> argparse.Namespace:
     argparse.Namespace: The parsed command line arguments.
     '''
     parser = argparse.ArgumentParser(description='Run trials for the specified task.')
-    parser.add_argument('--task_dir', type=str, required=True, help='Where the task images and metadata are stored.')
-    parser.add_argument('--task_prompt_path', type=str, required=True, help='The location of the prompt file for the task.')
-    parser.add_argument('--parse_prompt_path', type=str, required=True, help='The location of the prompt file for parsing the response.')
-    parser.add_argument('--results_file', type=str, default=None, help='The file to save the results to.')
-    parser.add_argument('--api_file', type=str, default='metadata.json', help='Location of the file containing api keys and endpoints.')
-    parser.add_argument('--task_payload', type=str, default='payloads/gpt4v_single_image.json', help='The path to the task payload JSON file.')
-    parser.add_argument('--parse_payload', type=str, default='payloads/gpt4_parse.json', help='The prompt for parsing the response.')
-    parser.add_argument('--max_tokens', type=int, default=200, help='The maximum number of tokens for the API request.')
-    parser.add_argument('--n_trials', type=int, default=None, help='The number of trials to run. Leave blank to run all trials.')
-    parser.add_argument('--api', type=str, default='azure', help='Which API to use for the requests.')
+    parser.add_argument('--task', type=str, required=True,
+                        choices=['serial_search', 'rmts', 'counting', 'popout' 'feature-binding'],
+                        help='The name of the task.')
+    parser.add_argument('--task_dir', type=str, required=True,
+                        help='Where the task images and metadata are stored.')
+    parser.add_argument('--task_prompt_path', type=str, required=True,
+                        help='The location of the prompt file for the task.')
+    parser.add_argument('--parse_prompt_path', type=str, required=True,
+                        help='The location of the prompt file for parsing the response.')
+    parser.add_argument('--results_file', type=str, default=None,
+                        help='The file to save the results to.')
+    parser.add_argument('--api_file', type=str, default='api_metadata.json',
+                        help='Location of the file containing api keys and endpoints.')
+    parser.add_argument('--task_payload', type=str, default='payloads/gpt4v_single_image.json',
+                        help='The path to the task payload JSON file.')
+    parser.add_argument('--parse_payload', type=str, default='payloads/gpt4_parse.json',
+                        help='The prompt for parsing the response.')
+    parser.add_argument('--max_tokens', type=int, default=200,
+                        help='The maximum number of tokens for the API request.')
+    parser.add_argument('--n_trials', type=int, default=None,
+                        help='The number of trials to run. Leave blank to run all trials.')
+    parser.add_argument('--api', type=str, default='azure',
+                        help='Which API to use for the requests.')
     return parser.parse_args()
 
 
 def main():
     # Parse command line arguments.
     args = parse_args()
+    print("Running trials for task:", args.task)
 
     # Load the relevant payloads and prompts.
     task_payload = json.load(open(args.task_payload, 'r'))
@@ -118,7 +152,11 @@ def main():
     # Load the task metadata and results.
     try:
         results_df = pd.read_csv(args.results_file)
-    except FileNotFoundError:
+        if 'response' not in results_df.columns or 'answer' not in results_df.columns:
+            response_df = pd.DataFrame(columns=['response', 'answer'], dtype=str)
+            response_df[['response', 'answer']] = ''
+            results_df = pd.concat([response_df, results_df], axis=1)
+    except (FileNotFoundError, ValueError):
         # If no valid results_df was provided, open the task metadata and construct a new one.
         metadata_df = pd.read_csv(os.path.join(args.task_dir, 'metadata.csv'))
         results_df = pd.DataFrame(columns=['response', 'answer'], dtype=str)
@@ -132,15 +170,23 @@ def main():
         results_df = results_df.sample(frac=1).reset_index(drop=True)
 
     # Run all the trials.
-    for i, trial in tqdm(results_df.iterrows()):
+    for i, trial in tqdm(results_df.iterrows(), total=len(results_df)):
         # Only run the trial if it hasn't been run before.
         if type(trial.response) != str:
             try:
-                answer, trial_response = run_trial(trial.path, header, api_metadata, task_payload, parse_payload, parse_prompt)
+                answer, trial_response = run_trial(
+                    img_path=trial.path,
+                    header=header,
+                    api_metadata=api_metadata,
+                    task_payload=parse_task_prompt(args.task, task_payload, trial),
+                    parse_payload=parse_payload,
+                    parse_prompt=parse_prompt)
                 results_df.loc[i, 'response'] = trial_response
                 results_df.loc[i, 'answer'] = answer
             except Exception as e:
                 print(f'Failed on trial {i} with error: {e}')
+                ex_type, ex, tb = sys.exc_info()
+                traceback.print_tb(tb)
                 break  # Stop the loop if there is an error and save the progress.
 
         if i % 10 == 0:
@@ -151,13 +197,13 @@ def main():
                 filename = f'results_{time.time()}.csv'
                 results_df.to_csv(filename, index=False)
 
-
     # Save the results if an output file was specified, otherwise save it with the current timestamp.
     if args.results_file:
         results_df.to_csv(args.results_file, index=False)
     else:
         filename = f'results_{time.time()}.csv'
         results_df.to_csv(filename, index=False)
+
 
 if __name__ == '__main__':
     main()
