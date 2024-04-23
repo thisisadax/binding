@@ -245,9 +245,9 @@ def generate_all_rmts_trial_data():
                 feature_decoding_task_dict_unified["object_loc"].append(loc_info["object_loc"])
                 feature_decoding_task_dict_unified["object_ind"].append(loc_info["object_ind"])
                 feature_decoding_decomposed_path_list.append(
-                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                    [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
             for img, loc_info in loc_information_dict:  # repeat the shape task but for colors
                 feature_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
                 feature_decoding_task_dict_unified["feature"].append("color")
@@ -257,9 +257,9 @@ def generate_all_rmts_trial_data():
                 feature_decoding_task_dict_unified["object_loc"].append(loc_info["object_loc"])
                 feature_decoding_task_dict_unified["object_ind"].append(loc_info["object_ind"])
                 feature_decoding_decomposed_path_list.append(
-                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                    [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
 
             # create the relation decoding task information
             relation_loc_info = [[source1.to_dict(), source2.to_dict(),
@@ -276,9 +276,9 @@ def generate_all_rmts_trial_data():
                 relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
                 relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
                 relation_decoding_decomposed_path_list.append(
-                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                    [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
             for img1, img2, loc_info in relation_loc_info:
                 relation = "same" if img1["shape"] == img2["shape"] else "different"
                 relation_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
@@ -287,9 +287,9 @@ def generate_all_rmts_trial_data():
                 relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
                 relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
                 relation_decoding_decomposed_path_list.append(
-                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                    [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
             for img1, img2, loc_info in relation_loc_info:
                 relation = "same" if img1["color"] == img2["color"] else "different"
                 relation_decoding_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
@@ -298,17 +298,17 @@ def generate_all_rmts_trial_data():
                 relation_decoding_task_dict_unified["pair"].append(loc_info["pair"])
                 relation_decoding_task_dict_unified["pair_loc"].append(loc_info["pair_loc"])
                 relation_decoding_decomposed_path_list.append(
-                    [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                        f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                    [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                        f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
 
             # generate the RMTS task information
             rmts_task_dict_unified["path"].append(f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_unified.png")
             rmts_task_dict_unified["correct"].append(correct_side)
             rmts_task_decomposed_path_list.append(
-                [f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
-                    f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
-                    f"data/unified_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
+                [f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_source.png",
+                    f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target1.png",
+                    f"data/decomposed_RMTS/trial{str(trial_count).zfill(3)}_decomposed_target2.png"])
 
             # Save the relevant images
             trial_img, source_pair, t1_pair, t2_pair, source_imgs, target1_imgs, target2_imgs = (

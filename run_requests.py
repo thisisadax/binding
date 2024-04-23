@@ -1,15 +1,17 @@
 import os
+import sys
 import json
-import sys, traceback
+import time
 import argparse
 import requests
-from tqdm import tqdm
-from typing import Dict, Union, List
-from pathlib import Path
-import pandas as pd
-import time
-from tenacity import retry, wait_exponential, stop_after_attempt
+import traceback
 import warnings
+from pathlib import Path
+from typing import Dict, Union, List
+
+import pandas as pd
+from tqdm import tqdm
+from tenacity import retry, wait_exponential, stop_after_attempt
 
 from utils import encode_image, get_header
 
@@ -43,6 +45,7 @@ def run_trial(
     task_payload: Dict,
     parse_payload: Dict,
     parse_prompt: str,
+    skip_parse: bool = False,
 ):
     """
     Run a trial of the serial search task.
@@ -72,15 +75,27 @@ def run_trial(
     image_payload = [{'type': 'image_url', 'image_url': {'url': f'data:image/jpeg;base64,{image}'}} for image in images]
     task_payload['messages'][0]['content'] += image_payload
 
+    # import copy
+    # fake_payload = copy.deepcopy(task_payload)
+    # replace all images with a placeholder `image here`
+    # for i in range(1, len(fake_payload['messages'][0]['content'])):
+    #     fake_payload['messages'][0]['content'][i]['image_url']['url'] = 'random'
+    from pprint import pprint
+    # print(fake_payload)
+
     # Until the model provides a valid response, keep trying.
     trial_response = requests.post(api_metadata['vision_endpoint'], headers=header, json=task_payload, timeout=45)
 
     # Check for easily-avoidable errors
     if 'error' in trial_response.json():
-        print('failed VLM request')
+        print('failed VLM request:', trial_response.json()['error']['message'])
         raise ValueError('Returned error: \n' + trial_response.json()['error']['message'])
     
     # Extract the responses from the vision model and parse them with the parsing model.
+    if skip_parse:
+        return (trial_response.json()['choices'][0]['message']['content'],
+                trial_response.json()['choices'][0]['message']['content'])
+
     trial_response = trial_response.json()['choices'][0]['message']['content']
     trial_parse_prompt = parse_prompt + '\n' + trial_response
     parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
@@ -114,6 +129,8 @@ def parse_args() -> argparse.Namespace:
                         help='The location of the prompt file for the task.')
     parser.add_argument('--parse_prompt_path', type=str, required=True,
                         help='The location of the prompt file for parsing the response.')
+    parser.add_argument('--task_file', type=str, required=True,
+                        help='The file containing the task metadata.')
     parser.add_argument('--results_file', type=str, default=None,
                         help='The file to save the results to.')
     parser.add_argument('--api_file', type=str, default='api_metadata.json',
@@ -122,6 +139,8 @@ def parse_args() -> argparse.Namespace:
                         help='The path to the task payload JSON file.')
     parser.add_argument('--parse_payload', type=str, default='payloads/gpt4_parse.json',
                         help='The prompt for parsing the response.')
+    parser.add_argument('--skip_parsing', action='store_true', default=False,
+                        help='Whether to skip the parsing step.')
     parser.add_argument('--max_tokens', type=int, default=200,
                         help='The maximum number of tokens for the API request.')
     parser.add_argument('--n_trials', type=int, default=None,
@@ -151,17 +170,12 @@ def main():
 
     # Load the task metadata and results.
     try:
-        results_df = pd.read_csv(args.results_file)
-        if 'response' not in results_df.columns or 'answer' not in results_df.columns:
-            response_df = pd.DataFrame(columns=['response', 'answer'], dtype=str)
-            response_df[['response', 'answer']] = ''
-            results_df = pd.concat([response_df, results_df], axis=1)
-    except (FileNotFoundError, ValueError):
-        # If no valid results_df was provided, open the task metadata and construct a new one.
-        metadata_df = pd.read_csv(os.path.join(args.task_dir, 'metadata.csv'))
-        results_df = pd.DataFrame(columns=['response', 'answer'], dtype=str)
-        results_df[['response', 'answer']] = ''
-        results_df = pd.concat([metadata_df, results_df], axis=1)
+        trial_df = pd.read_csv(args.task_file)
+    except FileNotFoundError:
+        raise FileNotFoundError(f'No file found at {args.task_file}')
+    results_df = pd.DataFrame(columns=['response', 'answer'], dtype=str)
+    results_df[['response', 'answer']] = ''
+    results_df = pd.concat([trial_df, results_df], axis=1)
 
     # Shuffle the trials, extracting n_trials if the argument was specified
     if args.n_trials:
@@ -175,12 +189,13 @@ def main():
         if type(trial.response) != str:
             try:
                 answer, trial_response = run_trial(
-                    img_path=trial.path,
+                    img_path=trial['path'],
                     header=header,
                     api_metadata=api_metadata,
                     task_payload=parse_task_prompt(args.task, task_payload, trial),
                     parse_payload=parse_payload,
-                    parse_prompt=parse_prompt)
+                    parse_prompt=parse_prompt,
+                    skip_parsing=args.skip_parsing)
                 results_df.loc[i, 'response'] = trial_response
                 results_df.loc[i, 'answer'] = answer
             except Exception as e:
@@ -194,14 +209,14 @@ def main():
             if args.results_file:
                 results_df.to_csv(args.results_file, index=False)
             else:
-                filename = f'results_{time.time()}.csv'
+                filename = f'results_{args.task}_{time.time()}.csv'
                 results_df.to_csv(filename, index=False)
 
     # Save the results if an output file was specified, otherwise save it with the current timestamp.
     if args.results_file:
         results_df.to_csv(args.results_file, index=False)
     else:
-        filename = f'results_{time.time()}.csv'
+        filename = f'results_{args.task}_{time.time()}.csv'
         results_df.to_csv(filename, index=False)
 
 
