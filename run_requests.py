@@ -31,7 +31,8 @@ def parse_task_prompt(task, task_payload, meta_info):
     str: The parsed task prompt.
     """
     if task == 'rmts':
-        meta_info['object_ind'] = "2nd" if meta_info['object_ind'] == 2 else "1st"
+        if 'object_ind' in meta_info:
+            meta_info['object_ind'] = "2nd" if meta_info['object_ind'] == 2 else "1st"
         task_payload['messages'][0]['content'][0]['text'] = task_payload['messages'][0]['content'][0]['text'].format(
             **{k: v for k, v in meta_info.items() if f"{{{k}}}" in task_payload['messages'][0]['content'][0]['text']})
     return task_payload
@@ -65,6 +66,8 @@ def run_trial(
     task_payload['messages'][0]['content'] = [task_payload['messages'][0]['content'][0]]
 
     # If there are multiple images, encode them all.
+    if '[' in img_path or ']' in img_path:
+        img_path = eval(img_path)
     if isinstance(img_path, (list, tuple)):
         images = [encode_image(path) for path in img_path]
     # Otherwise, add the single image.
@@ -74,14 +77,6 @@ def run_trial(
     # Add the image(s) to the payload.
     image_payload = [{'type': 'image_url', 'image_url': {'url': f'data:image/jpeg;base64,{image}'}} for image in images]
     task_payload['messages'][0]['content'] += image_payload
-
-    # import copy
-    # fake_payload = copy.deepcopy(task_payload)
-    # replace all images with a placeholder `image here`
-    # for i in range(1, len(fake_payload['messages'][0]['content'])):
-    #     fake_payload['messages'][0]['content'][i]['image_url']['url'] = 'random'
-    from pprint import pprint
-    # print(fake_payload)
 
     # Until the model provides a valid response, keep trying.
     trial_response = requests.post(api_metadata['vision_endpoint'], headers=header, json=task_payload, timeout=45)
@@ -93,14 +88,18 @@ def run_trial(
     
     # Extract the responses from the vision model and parse them with the parsing model.
     if skip_parse:
-        return (trial_response.json()['choices'][0]['message']['content'],
-                trial_response.json()['choices'][0]['message']['content'])
+        response = trial_response.json()['choices'][0]['message']['content']
+        answer = response.lower().strip()  # basic postprocessing
+        if answer.endswith('.'):
+            answer = answer[:-1]
+        return response, answer
 
     trial_response = trial_response.json()['choices'][0]['message']['content']
     trial_parse_prompt = parse_prompt + '\n' + trial_response
     parse_payload['messages'][0]['content'][0]['text'] = trial_parse_prompt # update the payload
     answer = requests.post(api_metadata['parse_endpoint'], headers=header, json=parse_payload, timeout=45)
     answer = answer.json()['choices'][0]['message']['content']
+    time.sleep(8)
 
     # If the response is invalid raise an error.
     if 'error' in answer:
@@ -188,6 +187,7 @@ def main():
         # Only run the trial if it hasn't been run before.
         if type(trial.response) != str:
             try:
+                task_payload['messages'][0]['content'][0]['text'] = task_prompt
                 answer, trial_response = run_trial(
                     img_path=trial['path'],
                     header=header,
@@ -195,13 +195,12 @@ def main():
                     task_payload=parse_task_prompt(args.task, task_payload, trial),
                     parse_payload=parse_payload,
                     parse_prompt=parse_prompt,
-                    skip_parsing=args.skip_parsing)
+                    skip_parse=args.skip_parsing)
                 results_df.loc[i, 'response'] = trial_response
                 results_df.loc[i, 'answer'] = answer
             except Exception as e:
                 print(f'Failed on trial {i} with error: {e}')
-                ex_type, ex, tb = sys.exc_info()
-                traceback.print_tb(tb)
+                raise e
                 break  # Stop the loop if there is an error and save the progress.
 
         if i % 10 == 0:

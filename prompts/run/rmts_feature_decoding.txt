@@ -1,3 +1,4 @@
 What is the {feature} of the {object_loc} ({object_ind}) object in the {pair_loc} pair, the {pair} pair? Only provide the {feature}.
 Your answer should be a single word describing the feature.
+The possible colors are: <red, green, blue, purple, saddlebrown, black>. The possible shapes are: <triangle, star, heart, cross, circle, square>.
 For instance, if I ask for color, you should return a color like "red", and if I ask for a shape, you should return a shape like "circle".
