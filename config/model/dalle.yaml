@@ -1,0 +1,5 @@
+defaults:
+  - base_t2i
+_target_: models.dalle_model.DALLEModel
+model_name: dalle
+payload_path: '${paths.root_dir}/payloads/${.model_name}.json'

@@ -1,0 +1,11 @@
+defaults:
+  - base_vlm_task
+_target_: tasks.scene_description.SceneDescriptionBalanced
+task_name: 'scene_description_NEW' # Name of the task
+n_objects: [10] # Number of objects in the display
+n_trials: 100 # Number of trials to generate per condition
+size: 40 # Size of the images
+color_names: ['red', 'green', 'blue', 'gold', 'purple', 'saddlebrown', 'gray', 'black', 'cyan', 'darkorange']
+shape_names: ['airplane', 'triangle', 'cloud', 'umbrella', 'spade', 'heart', 'star', 'circle', 'right-arrow', 'X-shape']
+shape_inds: [6, 9, 21, 34, 51, 96, 98, 100, 29, 24]
+prompt_path: '${.root_dir}/prompts/${.task_name}_${.task_variant}.txt'

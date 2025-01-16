@@ -1,0 +1,14 @@
+defaults:
+  - base_vlm_task
+_target_: tasks.rmts.RMTS
+task_name: 'rmts' # Name of the task
+condition: 'decomposed' # decomposed/unified
+subtask: 'full' # version of the RMTS task to run
+metadata_file: '${.subtask}_task_metadata.csv' # File to save the metadata to
+n_trials: 200 # Number of trials to generate per condition
+size: 28
+color_names: ['red', 'green', 'blue', 'darkorange', 'purple', 'gray']
+shape_names: ['triangle', 'cloud', 'cross', 'heart', 'circle', 'square']
+shape_inds: [9, 21, 24, 96, 100, 101]
+prompt_path: '${.root_dir}/prompts/rmts/${.condition}/${.subtask}.txt'
+font_path: '/usr/share/fonts/dejavu/DejaVuSansMono.ttf'

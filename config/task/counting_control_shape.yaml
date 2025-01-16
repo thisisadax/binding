@@ -1,0 +1,11 @@
+defaults:
+  - base_vlm_task
+_target_: tasks.counting.CountingControl
+task_name: 'counting_control_shape' # Name of the task
+n_objects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] # Number of objects in the display
+shape_inds: [6, 9, 21, 24, 34, 59, 96, 98, 100, 101, 51, 60, 5, 85, 29, 41, 28, 13, 54, 64]
+n_trials: 100 # Number of trials to generate per condition
+min_size: 25
+max_size: 40
+unique_colors: False
+prompt_path: '${.root_dir}/prompts/counting_${.task_variant}.txt'

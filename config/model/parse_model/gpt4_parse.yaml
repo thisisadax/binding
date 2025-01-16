@@ -1,0 +1,6 @@
+_target_: models.gpt4_model.GPT4ParseModel
+api_file: '${paths.root_dir}/api_metadata.json'
+model_name: gpt4
+payload_path: '${paths.root_dir}/payloads/${.model_name}.json'
+prompt_path: '${paths.root_dir}/prompts/${task.task_name}_${task.task_variant}_parse.txt'
+sleep: 0

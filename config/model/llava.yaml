@@ -1,0 +1,7 @@
+defaults:
+  - base_vlm_local
+_target_: models.llava_model.LlavaModel
+batch_size: 32
+weights_path: '../models/llava-v1.6-mistral-7b-hf'
+model_name: 'llava'
+prompt_format: "USER: <image>\n{prompt} ASSISTANT:"

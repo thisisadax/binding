@@ -1,0 +1,5 @@
+defaults:
+  - base_t2i
+_target_: models.parti_model.PartiModel
+model_name: parti
+payload_path: '${paths.root_dir}/payloads/${.model_name}.json'

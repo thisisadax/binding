@@ -1,0 +1,9 @@
+defaults:
+  - base_vlm_task
+_target_: tasks.counting.Counting
+task_name: 'counting_uniform' # Name of the task
+n_objects: null # Number of objects in the display
+n_trials: null # Number of trials to generate per condition
+size: null # Size of the images
+shape_inds: [100]
+prompt_path: '${.root_dir}/prompts/counting_${.task_variant}.txt'

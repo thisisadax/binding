@@ -1,0 +1,17 @@
+defaults:
+  - base_t2i_task
+_target_: tasks.counting.CountingT2I
+task_name: 'counting'
+n_objects: [1,2,3,4,5,6,7,8,9,10]
+prompt_path: 'prompts/counting_t2i.txt'
+metadata_file: 'counting.csv' # File to save the metadata to
+object_names: ["duck", "bird", "cat", "hawk", "fish", "bear", "cow", "horse", "puppy", "monkey", 
+               "otter", "pig", "rabbit", "jaguar", "frog", "butterfly", "mouse", "elephant", "lion", "turtle", 
+               "sheep", "chicken", "lynx", "owl", "giraffe", "tiger", "kangaroo", "rhino", "hippo", "flamingo",
+               "parrot", "raccoon", "squirrel", "dolphin", "seal", "whale", "fox", "alligator", "zebra", "skunk", 
+               "deer", "lamb", "goose", "turkey", "penguin", "koala", "pony", "rooster", "wolf", "donkey", 
+               "moose", "hen", "dog", "apple", "cookie", "cracker", "drink", "cake", "bagel", "bread", 
+               "grape", "pizza", "ice cream", "egg", "orange", "french fry", "candy", "potato chip", "raisin", "noodle", 
+               "strawberry", "pancake", "yogurt", "corn", "cheerio", "carrot", "sandwich", "coffee", "pumpkin", "potato", 
+               "bean", "soup", "chocolate", "pea", "hamburger", "donut", "pickle", "soda", "popsicle", "pretzel", 
+               "muffin", "lollipop", "pastry", "green bean", "banana", "watermelon", "taco", "pineapple", "kiwi", "cucumber"]

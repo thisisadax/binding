@@ -1,0 +1,5 @@
+api_file: '${paths.root_dir}/api_metadata.json'
+sleep: 0
+shuffle: true
+n_trials: null
+parse_model: null

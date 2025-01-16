@@ -1,0 +1,16 @@
+task_name: run_requests
+seed: 8888
+n_threads: 4
+use_gpu: True
+defaults:
+  - _self_
+  - model: default
+  - task: default
+  - paths: default
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .

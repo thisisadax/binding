@@ -1,0 +1,10 @@
+defaults:
+  - base_t2i_task
+_target_: tasks.scene_description.SceneDescriptionT2I
+task_name: scene_description
+n_objects: [3,4,5]
+n_trials: 100
+color_names: ['black', 'red', 'blue', 'green', 'purple']
+shape_names: ['teacup', 'balloon', 'candle', 'hat', 'pen']
+prompt_path: 'prompts/scene_description_t2i.txt'
+metadata_file: 'scene_description.csv' # File to save the metadata to

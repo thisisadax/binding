@@ -1,0 +1,5 @@
+defaults:
+  - base_t2i
+_target_: models.muse_model.MuseModel
+model_name: muse
+payload_path: '${paths.root_dir}/payloads/${.model_name}.json'

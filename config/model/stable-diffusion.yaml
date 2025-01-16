@@ -1,0 +1,5 @@
+defaults:
+  - base_t2i
+_target_: models.stable_diffusion_model.StableDiffusionModel
+model_name: stable-diffusion
+payload_path: '${paths.root_dir}/payloads/${.model_name}.json'

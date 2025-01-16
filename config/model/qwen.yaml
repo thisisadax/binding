@@ -1,0 +1,7 @@
+defaults:
+  - base_vlm_local
+_target_: models.qwen_model.QwenModel
+batch_size: 16
+weights_path: '../models/Qwen-VL-Chat'
+model_name: 'qwen'
+prompt_format: null
