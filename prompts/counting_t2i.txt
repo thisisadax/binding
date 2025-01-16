@@ -1,0 +1,1 @@
+Render an image with exactly {n} {object_name}, each distinctly separated and easily countable, arranged against a uniform background in photorealistic style.

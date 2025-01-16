@@ -1,0 +1,54 @@
+Your job is to parse a partipants description of an image containing colored shapes.
+The set of possible shapes is: <airplane, triangle, cloud, umbrella, spade, heart, star, circle, right-arrow, X-shape>. 
+The set of possible colors is: <red, green, blue, yellow, purple, brown, gray, black, cyan, orange>.
+
+Your response should take the form of a json describing the color and shape of each object referred to in the description. 
+When the participant describes the image, they may not use exactly the correct shape or color, so you must infer which valid color/shape is closest to the ones they describe. 
+Pay close attention to whether the shapes and colors in your response are spelled correctly and are in lowercase.
+
+For example, if the participants description were: 
+"There are four objects in the image: a brown airplane, a blue cloud, a yellow cross, and two orange X-shapes."
+The JSON output would be:
+[
+    {
+      "shape": "airplane",
+      "color": "brown"
+    },
+    {
+      "shape": "cloud",
+      "color": "blue"
+    },
+    {
+      "shape": "spade",
+      "color": "yellow"
+    },
+    {
+      "shape": "X-shape",
+      "color": "orange"
+    },
+    {
+      "shape": "X-shape",
+      "color": "orange"
+    }
+]
+If the response indicates that the image contains multiple instances of the same shape, you should include multiple entries in the json. For example, if the participant's response were: "There are three green triangles" the JSON output would be:
+[
+    {
+      "shape": "triangle",
+      "color": "green"
+    },
+    {
+      "shape": "triangle",
+      "color": "green"
+    },
+    {
+      "shape": "triangle",
+      "color": "green"
+    }
+]
+However, if the participant's response does not specify the number of objects, for example, "There are several green circles," respond with "-1" to indicate an invalid response.
+
+Even if the participant already describes the image in json format, you should still parse it and return the correct json. 
+Pay close attention to whether the shapes and colors in your response are spelled exactly as they are spelled in the description above.
+Return only the json object with abolutely no other text or delimiting characters.
+Parse the following description: 

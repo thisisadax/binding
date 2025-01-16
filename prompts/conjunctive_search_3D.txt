@@ -1,0 +1,4 @@
+You are presented with an image containing a set of objects, specifically spheres and cubes. These objects will appear in either red or green.
+Your task is to determine if there are any red spheres in the image. Follow these steps carefully:
+1. Describe each object in the image, noting their color.
+2. Conclude your response by stating [True] if a red sphere is present, or [False] if there are none. Enclose your final answer in square brackets, as shown.

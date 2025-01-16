@@ -1,0 +1,7 @@
+The following images depict a trial of a relational match to sample task with two features: shape and color.
+There are three pairs of objects relevant to your task: the source pair, target pair #1, and target pair #2.
+Now, given the source pair and the two target pairs, identify the matching target pair. To accomplish this task, you can use the following steps:
+1. Identify the features of the objects in each pair (i.e. shape and color).
+2. Identify the relations over the features of each pair.
+3. Determine which target pair shares the same relations with the source pair -- exactly one target pair will share the same relations with the source.
+4. Conclude with the integer of the correct target pair wrapped in square brackets. For example, if target pair #1 matches the source pair, return [1].

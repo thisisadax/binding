@@ -1,0 +1,23 @@
+Examine the image provided, which depicts six basic, colored shapes arranged into three distinct pairs of objects: the source pair at the top, target pair #1 on the bottom left, and target pair #2 on the bottom right.
+For each pair, identify the shapes as follows: "object1" refers to the left-most object in the pair, and the "object2" to the right-most object in the pair.
+Return the color and shape of each object in the trial in the json format described below.
+- Valid shapes: triangle, cloud, cross, heart, circle, square.
+- Valid colors: red, green, blue, darkorange, purple, and gray.
+
+Your response should be in the following format:
+{
+    source: {
+      source_object1: {shape: circle, color: purple},
+      source_object2: {shape: circle, color: purple}
+    },
+    target1: {
+      target1_object1: {shape: triangle, color: brown},
+      target1_object2: {shape: triangle, color: brown}
+    },
+    {
+      target2_object1: {shape: square, color: green},
+      target2_object2: {shape: square, color: black}
+    }
+}
+
+Response:

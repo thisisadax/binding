@@ -1,0 +1,4 @@
+You are presented with an image containing a set of letters, specifically the letters 'L' and 'T'. These letters will appear in either red or green.
+Your task is to determine if there are any green 'L's in the image. Follow these steps carefully:
+1. Describe each shape in the image, noting their color.
+2. Conclude your response by stating [True] if the letter 'L' appears in green, or [False] if there are no green 'L's. Enclose your final answer in square brackets, as shown.

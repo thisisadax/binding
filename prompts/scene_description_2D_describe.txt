@@ -1,0 +1,5 @@
+The following image contains multiple simple, colored objects. 
+The set of shapes that may be present in the image are: <airplane, triangle, cloud, umbrella, spade, heart, star, circle, right-arrow, X-shape>. 
+The set of colors that may be present in the image are: <red, green, blue, yellow, purple, brown, gray, black, cyan, orange>.
+Describe each object in the following image in as much detail as possible while reporting their color and shape.
+Be sure to precisely specify the number of objects of each type in the image. For example, don't say "there are several gray circles", instead say "there are 3 gray circles".

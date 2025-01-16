@@ -1,0 +1,5 @@
+What is the {feature} of the {object_loc} ({object_ind}) object in the {pair} pair? Only provide the {feature}.
+Your response should be a single word answer wrapped in square brackets.
+For instance, if I ask for the color of a red object, you should return [red] and nothing else. If I ask for the shape of an object that is a circle, you should return [circle].
+- Valid shapes include: triangle, cloud, cross, heart, circle, square.
+- Valid colors include: red, green, blue, darkorange, purple, and gray.

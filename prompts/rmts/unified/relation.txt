@@ -1,0 +1,3 @@
+Are the two objects in the {pair} pair (the {pair_loc} pair) the same {relation}?
+Your answer should be [True] if the objects have the same {relation} and [False] if they have a different {relation}.
+Ensure that your final answer is wrapped in square brackets.

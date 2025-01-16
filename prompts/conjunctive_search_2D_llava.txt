@@ -1,0 +1,3 @@
+You are presented with an image containing a set of letters, specifically the letters 'L' and 'T'. These letters will appear in either red or green.
+Your task is to determine if there are any green 'L's in the image. Respond with [True] if the letter 'L' appears in green, or [False] if there are no green 'L's.
+Don't include additional information in your response. If you're not sure, provide your best guess.

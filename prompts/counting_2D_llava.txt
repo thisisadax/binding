@@ -1,0 +1,3 @@
+You are presented with an image containing several shapes. Your task is to accurately count the number of shapes in the image.
+Answer with the total count of shapes as an integer, enclosed in square brackets. Don't include any additional information in your response.
+If you're not sure, provide your best guess.

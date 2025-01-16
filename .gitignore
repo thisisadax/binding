@@ -1,0 +1,13 @@
+data/*
+.vscode/*
+config/*
+figures/*
+notebooks/*
+output/*
+slurm/*
+*.sh
+*.ipynb
+*.pyc
+api_metadata.json
+google-cloud-account.json
+scene_description_3D.sh

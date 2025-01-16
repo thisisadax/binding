@@ -1,0 +1,1 @@
+Render an image in photorealistic style with exactly {objects_string} arranged against a uniform background, each distinctly separated. Include only these objects in the image and nothing else.
